@@ -10,6 +10,7 @@ interface ApiResponse {
   routes: GoalRoute[];
   allAliases: string[];
   allSlots: string[];
+  notes: Record<string, string>;
 }
 
 // ---------------------------------------------------------------------------
@@ -214,9 +215,46 @@ function RoutePill({ route }: { route: GoalRoute }) {
 }
 
 // ---------------------------------------------------------------------------
+// Slot note
+// ---------------------------------------------------------------------------
+function SlotNote({
+  slotName,
+  initial,
+}: {
+  slotName: string;
+  initial: string;
+}) {
+  const [text, setText] = useState(initial);
+  const [saving, setSaving] = useState(false);
+
+  const save = async (value: string) => {
+    setSaving(true);
+    await fetch("/api/notes", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ slotName, note: value }),
+    });
+    setSaving(false);
+  };
+
+  return (
+    <div className="note-wrap">
+      <textarea
+        className={`note-input ${saving ? "saving" : ""}`}
+        value={text}
+        placeholder="Add a note…"
+        onChange={(e) => setText(e.target.value)}
+        onBlur={(e) => save(e.target.value)}
+        rows={2}
+      />
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
 // Slot card
 // ---------------------------------------------------------------------------
-function SlotCard({ slot }: { slot: SlotResult }) {
+function SlotCard({ slot, note }: { slot: SlotResult; note: string }) {
   const sortedRoutes = [...slot.routes].sort(
     (a, b) => a.missingItems.length - b.missingItems.length,
   );
@@ -244,6 +282,7 @@ function SlotCard({ slot }: { slot: SlotResult }) {
           <RoutePill key={i} route={r} />
         ))}
       </div>
+      <SlotNote slotName={slot.slotName} initial={note} />
     </div>
   );
 }
@@ -260,6 +299,7 @@ export default function Page() {
   const [data, setData] = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [notes, setNotes] = useState<Record<string, string>>({});
 
   const fetchRoutes = useCallback(async () => {
     setLoading(true);
@@ -278,7 +318,9 @@ export default function Page() {
       }
       const res = await fetch(`/api/routes?${params}`);
       if (!res.ok) throw new Error(`Server error ${res.status}`);
-      setData(await res.json());
+      const json = await res.json();
+      setData(json);
+      setNotes(json.notes ?? {});
     } catch (e) {
       setError(e instanceof Error ? e.message : "Unknown error");
     } finally {
@@ -622,6 +664,28 @@ export default function Page() {
           word-break: break-word;
         }
 
+        /* Notes */
+        .note-wrap {
+          padding: 0 14px 10px;
+        }
+        .note-input {
+          width: 100%;
+          background: var(--surface2);
+          border: 1px solid var(--border);
+          border-radius: var(--radius);
+          padding: 8px 10px;
+          color: var(--text);
+          font-family: var(--sans);
+          font-size: 0.8rem;
+          line-height: 1.5;
+          resize: vertical;
+          outline: none;
+          transition: border-color 0.15s, opacity 0.15s;
+        }
+        .note-input::placeholder { color: var(--muted); }
+        .note-input:focus { border-color: var(--gold); }
+        .note-input.saving { opacity: 0.5; }
+
         /* Scrollbar */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
@@ -631,7 +695,7 @@ export default function Page() {
       <div className="app">
         <header className="header">
           <h1>Celeste Goaling</h1>
-          <span className="header-sub">1000 slot async · route finder</span>
+          <span className="header-sub">1000 async · route finder</span>
         </header>
 
         <div className="body">
@@ -710,7 +774,11 @@ export default function Page() {
             )}
             {!loading &&
               grouped.map((slot) => (
-                <SlotCard key={slot.slotName} slot={slot} />
+                <SlotCard
+                  key={slot.slotName}
+                  slot={slot}
+                  note={notes[slot.slotName] ?? ""}
+                />
               ))}
           </main>
         </div>
