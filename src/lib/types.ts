@@ -95,11 +95,15 @@ export interface Watch {
   id: string; // uuid
   watchSlot: string; // dependent slot being watched, e.g. "Celeste42"
   forSlot: string; // slot you're trying to goal, e.g. "Celeste696"
-  conditions: WatchCondition[];
+  conditions: WatchCondition[]; // ALL must be met
+  orConditions: WatchCondition[]; // ANY ONE must be met (empty = no or requirement)
 }
 
-// Resolved at page load — watches whose conditions are not yet met
+// Resolved at page load
 export interface ActiveWatch extends Watch {
-  metConditions: WatchCondition[]; // conditions already satisfied
-  unmetConditions: WatchCondition[]; // conditions still blocking
+  andMet: WatchCondition[]; // AND conditions already satisfied
+  andUnmet: WatchCondition[]; // AND conditions still blocking
+  orMet: WatchCondition[]; // OR conditions already satisfied
+  orUnmet: WatchCondition[]; // OR conditions not yet satisfied
+  allMet: boolean; // true when both AND and OR groups are satisfied
 }

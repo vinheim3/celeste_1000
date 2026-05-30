@@ -225,72 +225,33 @@ function RoutePill({ route }: { route: GoalRoute }) {
 // ---------------------------------------------------------------------------
 // Watch form — add a new watch on a slot
 // ---------------------------------------------------------------------------
-function AddWatchForm({
-  forSlot,
-  allSlots,
+function ConditionBuilder({
+  label,
+  conditions,
+  onChange,
   allItems,
-  onAdded,
 }: {
-  forSlot: string;
-  allSlots: string[];
+  label: string;
+  conditions: WatchCondition[];
+  onChange: (c: WatchCondition[]) => void;
   allItems: string[];
-  onAdded: (w: ActiveWatch) => void;
 }) {
-  const [open, setOpen] = useState(false);
-  const [watchSlot, setWatchSlot] = useState("");
-  const [conditions, setConditions] = useState<WatchCondition[]>([]);
   const [newCond, setNewCond] = useState<WatchCondition>({
     type: "item",
     item: "",
   });
-  const [saving, setSaving] = useState(false);
 
-  const addCondition = () => {
+  const add = () => {
     if (newCond.type === "item" && !newCond.item.trim()) return;
     if (newCond.type === "strawberries" && !newCond.count) return;
-    setConditions((c) => [...c, newCond]);
+    onChange([...conditions, newCond]);
     setNewCond({ type: "item", item: "" });
   };
 
-  const submit = async () => {
-    if (!watchSlot || conditions.length === 0) return;
-    setSaving(true);
-    const res = await fetch("/api/watches", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ watchSlot, forSlot, conditions }),
-    });
-    const { watch } = await res.json();
-    onAdded({ ...watch, metConditions: [], unmetConditions: watch.conditions });
-    setOpen(false);
-    setWatchSlot("");
-    setConditions([]);
-    setSaving(false);
-  };
-
-  if (!open)
-    return (
-      <button className="watch-add-btn" onClick={() => setOpen(true)}>
-        + Add watch
-      </button>
-    );
-
   return (
-    <div className="watch-form">
+    <div className="cond-builder">
       <div className="watch-form-row">
-        <span className="watch-form-label">Watch slot</span>
-        <div style={{ flex: 1 }}>
-          <Combobox
-            options={allSlots.filter((s) => s !== forSlot)}
-            value={watchSlot}
-            onChange={setWatchSlot}
-            placeholder="Celeste…"
-          />
-        </div>
-      </div>
-
-      <div className="watch-form-row">
-        <span className="watch-form-label">Condition</span>
+        <span className="watch-form-label">{label}</span>
         <select
           className="filter-input"
           style={{ flex: "0 0 auto", width: "auto" }}
@@ -330,20 +291,17 @@ function AddWatchForm({
             }
           />
         )}
-        <button className="watch-cond-add" onClick={addCondition}>
+        <button className="watch-cond-add" onClick={add}>
           +
         </button>
       </div>
-
       {conditions.length > 0 && (
         <div className="watch-cond-list">
           {conditions.map((c, i) => (
             <span key={i} className="watch-cond-chip">
               {c.type === "item" ? c.item : `🍓 ≥ ${c.count}`}
               <button
-                onClick={() =>
-                  setConditions((cs) => cs.filter((_, j) => j !== i))
-                }
+                onClick={() => onChange(conditions.filter((_, j) => j !== i))}
               >
                 ×
               </button>
@@ -351,6 +309,85 @@ function AddWatchForm({
           ))}
         </div>
       )}
+    </div>
+  );
+}
+
+function AddWatchForm({
+  forSlot,
+  allSlots,
+  allItems,
+  onAdded,
+}: {
+  forSlot: string;
+  allSlots: string[];
+  allItems: string[];
+  onAdded: (w: ActiveWatch) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const [watchSlot, setWatchSlot] = useState("");
+  const [conditions, setConditions] = useState<WatchCondition[]>([]);
+  const [orConditions, setOrConditions] = useState<WatchCondition[]>([]);
+  const [saving, setSaving] = useState(false);
+
+  const submit = async () => {
+    if (!watchSlot || (conditions.length === 0 && orConditions.length === 0))
+      return;
+    setSaving(true);
+    const res = await fetch("/api/watches", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ watchSlot, forSlot, conditions, orConditions }),
+    });
+    const { watch } = await res.json();
+    onAdded({
+      ...watch,
+      andMet: [],
+      andUnmet: watch.conditions,
+      orMet: [],
+      orUnmet: watch.orConditions,
+      allMet: false,
+    });
+    setOpen(false);
+    setWatchSlot("");
+    setConditions([]);
+    setOrConditions([]);
+    setSaving(false);
+  };
+
+  if (!open)
+    return (
+      <button className="watch-add-btn" onClick={() => setOpen(true)}>
+        + Add watch
+      </button>
+    );
+
+  return (
+    <div className="watch-form">
+      <div className="watch-form-row">
+        <span className="watch-form-label">Watch slot</span>
+        <div style={{ flex: 1 }}>
+          <Combobox
+            options={allSlots.filter((s) => s !== forSlot)}
+            value={watchSlot}
+            onChange={setWatchSlot}
+            placeholder="Celeste…"
+          />
+        </div>
+      </div>
+
+      <ConditionBuilder
+        label="all of"
+        conditions={conditions}
+        onChange={setConditions}
+        allItems={allItems}
+      />
+      <ConditionBuilder
+        label="any of"
+        conditions={orConditions}
+        onChange={setOrConditions}
+        allItems={allItems}
+      />
 
       <div className="watch-form-actions">
         <button className="watch-cancel-btn" onClick={() => setOpen(false)}>
@@ -359,7 +396,11 @@ function AddWatchForm({
         <button
           className="apply-btn"
           style={{ flex: 1 }}
-          disabled={!watchSlot || conditions.length === 0 || saving}
+          disabled={
+            !watchSlot ||
+            (conditions.length === 0 && orConditions.length === 0) ||
+            saving
+          }
           onClick={submit}
         >
           {saving ? "Saving…" : "Save watch"}
@@ -390,29 +431,56 @@ function WatchList({
     onDeleted(id);
   };
 
+  const condLabel = (c: WatchCondition) =>
+    c.type === "item" ? c.item : `🍓 ≥ ${c.count}`;
+
   return (
     <div className="watch-list">
       {watches.map((w) => (
-        <div key={w.id} className="watch-item">
+        <div key={w.id} className={`watch-item ${w.allMet ? "all-met" : ""}`}>
           <div className="watch-header-row">
             <span className="watch-for-label">watching</span>
-            <span className="watch-slot-name">{w.watchSlot}</span>
+            <span className={`watch-slot-name ${w.allMet ? "met" : ""}`}>
+              {w.watchSlot}
+            </span>
             <button className="watch-delete" onClick={() => deleteWatch(w.id)}>
               ×
             </button>
           </div>
-          <div className="watch-conditions">
-            {w.unmetConditions.map((c, i) => (
-              <span key={i} className="watch-cond-chip unmet">
-                {c.type === "item" ? c.item : `🍓 ≥ ${c.count}`}
-              </span>
-            ))}
-            {w.metConditions.map((c, i) => (
-              <span key={i} className="watch-cond-chip met">
-                {c.type === "item" ? c.item : `🍓 ≥ ${c.count}`}
-              </span>
-            ))}
-          </div>
+          {w.conditions.length > 0 && (
+            <div className="watch-condition-group">
+              <span className="watch-group-label">all of</span>
+              <div className="watch-conditions">
+                {w.andUnmet.map((c, i) => (
+                  <span key={i} className="watch-cond-chip unmet">
+                    {condLabel(c)}
+                  </span>
+                ))}
+                {w.andMet.map((c, i) => (
+                  <span key={i} className="watch-cond-chip met">
+                    {condLabel(c)}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+          {w.orConditions.length > 0 && (
+            <div className="watch-condition-group">
+              <span className="watch-group-label">any of</span>
+              <div className="watch-conditions">
+                {w.orUnmet.map((c, i) => (
+                  <span key={i} className="watch-cond-chip unmet">
+                    {condLabel(c)}
+                  </span>
+                ))}
+                {w.orMet.map((c, i) => (
+                  <span key={i} className="watch-cond-chip met">
+                    {condLabel(c)}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       ))}
     </div>
@@ -1006,6 +1074,11 @@ export default function Page() {
           padding: 0;
         }
         .watch-cond-chip button:hover { color: var(--pink); }
+        .cond-builder {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
         .watch-form-actions {
           display: flex;
           gap: 6px;
@@ -1038,6 +1111,21 @@ export default function Page() {
           flex-direction: column;
           gap: 5px;
         }
+        .watch-item.all-met {
+          border-left-color: var(--teal);
+        }
+        .watch-condition-group {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+        }
+        .watch-group-label {
+          font-family: var(--mono);
+          font-size: 0.6rem;
+          color: var(--muted);
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+        }
         .watch-header-row {
           display: flex;
           align-items: center;
@@ -1054,6 +1142,9 @@ export default function Page() {
           font-size: 0.8rem;
           color: var(--gold);
           flex: 1;
+        }
+        .watch-slot-name.met {
+          color: var(--teal);
         }
         .watch-delete {
           background: none;

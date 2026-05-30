@@ -235,26 +235,30 @@ export function resolveWatches(
   const active: ActiveWatch[] = [];
 
   for (const watch of watches) {
-    // Parse slot number (1-indexed) from "CelesteN"
     const idx = parseInt(watch.watchSlot.replace("Celeste", ""), 10) - 1;
     if (idx < 0 || idx >= tracker.player_items_received.length) continue;
 
     const inventory = buildInventory(tracker, datapackage, idx);
 
-    const metConditions: WatchCondition[] = [];
-    const unmetConditions: WatchCondition[] = [];
+    const condMet = (cond: WatchCondition) =>
+      cond.type === "item"
+        ? inventory.has(cond.item)
+        : (inventory.get("Strawberry") ?? 0) >= cond.count;
 
-    for (const cond of watch.conditions) {
-      const met =
-        cond.type === "item"
-          ? inventory.has(cond.item)
-          : (inventory.get("Strawberry") ?? 0) >= cond.count;
+    const andMet = watch.conditions.filter(condMet);
+    const andUnmet = watch.conditions.filter((c) => !condMet(c));
 
-      if (met) metConditions.push(cond);
-      else unmetConditions.push(cond);
-    }
+    const orMet = watch.orConditions.filter(condMet);
+    const orUnmet = watch.orConditions.filter((c) => !condMet(c));
 
-    active.push({ ...watch, metConditions, unmetConditions });
+    // AND group met when all conditions satisfied
+    const andGroupMet = andUnmet.length === 0;
+    // OR group met when at least one satisfied, or group is empty
+    const orGroupMet = watch.orConditions.length === 0 || orMet.length > 0;
+
+    const allMet = andGroupMet && orGroupMet;
+
+    active.push({ ...watch, andMet, andUnmet, orMet, orUnmet, allMet });
   }
 
   return { active };

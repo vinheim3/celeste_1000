@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Redis } from "@upstash/redis";
-import { randomUUID } from "crypto";
+
 import type { Watch } from "@/lib/types";
 
 const kv = Redis.fromEnv();
@@ -14,16 +14,15 @@ export async function GET() {
 }
 
 export async function POST(request: NextRequest) {
-  const { watchSlot, forSlot, conditions } = await request.json();
+  const { watchSlot, forSlot, conditions, orConditions } = await request.json();
 
   if (
     !watchSlot ||
     !forSlot ||
-    !Array.isArray(conditions) ||
-    conditions.length === 0
+    (!conditions?.length && !orConditions?.length)
   ) {
     return NextResponse.json(
-      { error: "watchSlot, forSlot, and conditions required" },
+      { error: "watchSlot, forSlot, and at least one condition required" },
       { status: 400 },
     );
   }
@@ -32,7 +31,8 @@ export async function POST(request: NextRequest) {
     id: crypto.randomUUID(),
     watchSlot,
     forSlot,
-    conditions,
+    conditions: conditions ?? [],
+    orConditions: orConditions ?? [],
   };
   await kv.hset(WATCHES_KEY, { [watch.id]: watch });
   return NextResponse.json({ watch });
