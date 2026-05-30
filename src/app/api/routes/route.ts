@@ -104,14 +104,11 @@ export async function GET(request: NextRequest) {
 
   // Resolve watches — auto-clear any whose conditions are all met
   const allWatches: Watch[] = Object.values(rawWatches);
-  const { active: activeWatches, clearedIds } = resolveWatches(
+  const { active: activeWatches } = resolveWatches(
     allWatches,
     tracker,
     datapackage,
   );
-  if (clearedIds.length > 0) {
-    await Promise.all(clearedIds.map((id) => kv.hdel("slot-watches", id)));
-  }
 
   // --- Build alias map from tracker ---
   const aliasMap = new Map<number, string>(

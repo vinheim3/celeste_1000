@@ -231,9 +231,8 @@ export function resolveWatches(
   watches: Watch[],
   tracker: Tracker,
   datapackage: Datapackage,
-): { active: ActiveWatch[]; clearedIds: string[] } {
+): { active: ActiveWatch[] } {
   const active: ActiveWatch[] = [];
-  const clearedIds: string[] = [];
 
   for (const watch of watches) {
     // Parse slot number (1-indexed) from "CelesteN"
@@ -255,13 +254,8 @@ export function resolveWatches(
       else unmetConditions.push(cond);
     }
 
-    if (unmetConditions.length === 0) {
-      // All conditions met — watch can be cleared
-      clearedIds.push(watch.id);
-    } else {
-      active.push({ ...watch, metConditions, unmetConditions });
-    }
+    active.push({ ...watch, metConditions, unmetConditions });
   }
 
-  return { active, clearedIds };
+  return { active };
 }
