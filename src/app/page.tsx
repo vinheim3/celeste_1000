@@ -1,7 +1,13 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import type { GoalRoute, FilterMode, SlotResult } from "@/lib/types";
+import type {
+  GoalRoute,
+  FilterMode,
+  SlotResult,
+  ActiveWatch,
+  WatchCondition,
+} from "@/lib/types";
 
 // ---------------------------------------------------------------------------
 // Types for API response
@@ -11,6 +17,8 @@ interface ApiResponse {
   allAliases: string[];
   allSlots: string[];
   notes: Record<string, string>;
+  activeWatches: ActiveWatch[];
+  allWatchItems: string[];
 }
 
 // ---------------------------------------------------------------------------
@@ -215,6 +223,203 @@ function RoutePill({ route }: { route: GoalRoute }) {
 }
 
 // ---------------------------------------------------------------------------
+// Watch form — add a new watch on a slot
+// ---------------------------------------------------------------------------
+function AddWatchForm({
+  forSlot,
+  allSlots,
+  allItems,
+  onAdded,
+}: {
+  forSlot: string;
+  allSlots: string[];
+  allItems: string[];
+  onAdded: (w: ActiveWatch) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const [watchSlot, setWatchSlot] = useState("");
+  const [conditions, setConditions] = useState<WatchCondition[]>([]);
+  const [newCond, setNewCond] = useState<WatchCondition>({
+    type: "item",
+    item: "",
+  });
+  const [saving, setSaving] = useState(false);
+
+  const addCondition = () => {
+    if (newCond.type === "item" && !newCond.item.trim()) return;
+    if (newCond.type === "strawberries" && !newCond.count) return;
+    setConditions((c) => [...c, newCond]);
+    setNewCond({ type: "item", item: "" });
+  };
+
+  const submit = async () => {
+    if (!watchSlot || conditions.length === 0) return;
+    setSaving(true);
+    const res = await fetch("/api/watches", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ watchSlot, forSlot, conditions }),
+    });
+    const { watch } = await res.json();
+    onAdded({ ...watch, metConditions: [], unmetConditions: watch.conditions });
+    setOpen(false);
+    setWatchSlot("");
+    setConditions([]);
+    setSaving(false);
+  };
+
+  if (!open)
+    return (
+      <button className="watch-add-btn" onClick={() => setOpen(true)}>
+        + Add watch
+      </button>
+    );
+
+  return (
+    <div className="watch-form">
+      <div className="watch-form-row">
+        <span className="watch-form-label">Watch slot</span>
+        <div style={{ flex: 1 }}>
+          <Combobox
+            options={allSlots.filter((s) => s !== forSlot)}
+            value={watchSlot}
+            onChange={setWatchSlot}
+            placeholder="Celeste…"
+          />
+        </div>
+      </div>
+
+      <div className="watch-form-row">
+        <span className="watch-form-label">Condition</span>
+        <select
+          className="filter-input"
+          style={{ flex: "0 0 auto", width: "auto" }}
+          value={newCond.type}
+          onChange={(e) =>
+            setNewCond(
+              e.target.value === "item"
+                ? { type: "item", item: "" }
+                : { type: "strawberries", count: 1 },
+            )
+          }
+        >
+          <option value="item">Has item</option>
+          <option value="strawberries">Strawberries ≥</option>
+        </select>
+        {newCond.type === "item" ? (
+          <div style={{ flex: 1 }}>
+            <Combobox
+              options={allItems}
+              value={newCond.item}
+              onChange={(item) => setNewCond({ type: "item", item })}
+              placeholder="Search items…"
+            />
+          </div>
+        ) : (
+          <input
+            type="number"
+            className="filter-input"
+            style={{ flex: 1 }}
+            min={1}
+            value={newCond.count}
+            onChange={(e) =>
+              setNewCond({
+                type: "strawberries",
+                count: Number(e.target.value),
+              })
+            }
+          />
+        )}
+        <button className="watch-cond-add" onClick={addCondition}>
+          +
+        </button>
+      </div>
+
+      {conditions.length > 0 && (
+        <div className="watch-cond-list">
+          {conditions.map((c, i) => (
+            <span key={i} className="watch-cond-chip">
+              {c.type === "item" ? c.item : `🍓 ≥ ${c.count}`}
+              <button
+                onClick={() =>
+                  setConditions((cs) => cs.filter((_, j) => j !== i))
+                }
+              >
+                ×
+              </button>
+            </span>
+          ))}
+        </div>
+      )}
+
+      <div className="watch-form-actions">
+        <button className="watch-cancel-btn" onClick={() => setOpen(false)}>
+          Cancel
+        </button>
+        <button
+          className="apply-btn"
+          style={{ flex: 1 }}
+          disabled={!watchSlot || conditions.length === 0 || saving}
+          onClick={submit}
+        >
+          {saving ? "Saving…" : "Save watch"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Watch list — show active watches on a slot
+// ---------------------------------------------------------------------------
+function WatchList({
+  watches,
+  onDeleted,
+}: {
+  watches: ActiveWatch[];
+  onDeleted: (id: string) => void;
+}) {
+  if (watches.length === 0) return null;
+
+  const deleteWatch = async (id: string) => {
+    await fetch("/api/watches", {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id }),
+    });
+    onDeleted(id);
+  };
+
+  return (
+    <div className="watch-list">
+      {watches.map((w) => (
+        <div key={w.id} className="watch-item">
+          <div className="watch-header-row">
+            <span className="watch-for-label">watching</span>
+            <span className="watch-slot-name">{w.watchSlot}</span>
+            <button className="watch-delete" onClick={() => deleteWatch(w.id)}>
+              ×
+            </button>
+          </div>
+          <div className="watch-conditions">
+            {w.unmetConditions.map((c, i) => (
+              <span key={i} className="watch-cond-chip unmet">
+                {c.type === "item" ? c.item : `🍓 ≥ ${c.count}`}
+              </span>
+            ))}
+            {w.metConditions.map((c, i) => (
+              <span key={i} className="watch-cond-chip met">
+                {c.type === "item" ? c.item : `🍓 ≥ ${c.count}`}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
 // Slot note
 // ---------------------------------------------------------------------------
 function SlotNote({
@@ -254,7 +459,23 @@ function SlotNote({
 // ---------------------------------------------------------------------------
 // Slot card
 // ---------------------------------------------------------------------------
-function SlotCard({ slot, note }: { slot: SlotResult; note: string }) {
+function SlotCard({
+  slot,
+  note,
+  watches,
+  allSlots,
+  allItems,
+  onWatchAdded,
+  onWatchDeleted,
+}: {
+  slot: SlotResult;
+  note: string;
+  watches: ActiveWatch[];
+  allSlots: string[];
+  allItems: string[];
+  onWatchAdded: (w: ActiveWatch) => void;
+  onWatchDeleted: (id: string) => void;
+}) {
   const sortedRoutes = [...slot.routes].sort(
     (a, b) => a.missingItems.length - b.missingItems.length,
   );
@@ -282,6 +503,13 @@ function SlotCard({ slot, note }: { slot: SlotResult; note: string }) {
           <RoutePill key={i} route={r} />
         ))}
       </div>
+      <WatchList watches={watches} onDeleted={onWatchDeleted} />
+      <AddWatchForm
+        forSlot={slot.slotName}
+        allSlots={allSlots}
+        allItems={allItems}
+        onAdded={onWatchAdded}
+      />
       <SlotNote slotName={slot.slotName} initial={note} />
     </div>
   );
@@ -300,6 +528,7 @@ export default function Page() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [notes, setNotes] = useState<Record<string, string>>({});
+  const [watches, setWatches] = useState<ActiveWatch[]>([]);
 
   const fetchRoutes = useCallback(async () => {
     setLoading(true);
@@ -321,6 +550,7 @@ export default function Page() {
       const json = await res.json();
       setData(json);
       setNotes(json.notes ?? {});
+      setWatches(json.activeWatches ?? []);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Unknown error");
     } finally {
@@ -686,6 +916,161 @@ export default function Page() {
         .note-input:focus { border-color: var(--gold); }
         .note-input.saving { opacity: 0.5; }
 
+        /* Watches */
+        .watch-add-btn {
+          display: block;
+          width: calc(100% - 28px);
+          margin: 0 14px 10px;
+          background: none;
+          border: 1px dashed var(--border);
+          border-radius: var(--radius);
+          color: var(--muted);
+          font-family: var(--mono);
+          font-size: 0.7rem;
+          padding: 6px;
+          cursor: pointer;
+          transition: border-color 0.15s, color 0.15s;
+          text-align: center;
+        }
+        .watch-add-btn:hover { border-color: var(--pink); color: var(--pink); }
+
+        .watch-form {
+          margin: 0 14px 10px;
+          background: var(--surface2);
+          border: 1px solid var(--border);
+          border-radius: var(--radius);
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+        .watch-form-row {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+        .watch-form-label {
+          font-family: var(--mono);
+          font-size: 0.65rem;
+          color: var(--muted);
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          white-space: nowrap;
+          width: 60px;
+          flex-shrink: 0;
+        }
+        .watch-cond-add {
+          background: var(--surface);
+          border: 1px solid var(--border);
+          border-radius: var(--radius);
+          color: var(--teal);
+          font-size: 1rem;
+          width: 28px;
+          height: 28px;
+          cursor: pointer;
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .watch-cond-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 4px;
+        }
+        .watch-cond-chip {
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+          background: var(--surface);
+          border: 1px solid var(--border);
+          border-radius: 4px;
+          padding: 2px 6px;
+          font-size: 0.75rem;
+          color: var(--text);
+        }
+        .watch-cond-chip.met {
+          border-color: var(--teal);
+          color: var(--teal);
+          text-decoration: line-through;
+          opacity: 0.6;
+        }
+        .watch-cond-chip.unmet { border-color: var(--gold); color: var(--gold); }
+        .watch-cond-chip button {
+          background: none;
+          border: none;
+          color: var(--muted);
+          cursor: pointer;
+          font-size: 0.9rem;
+          line-height: 1;
+          padding: 0;
+        }
+        .watch-cond-chip button:hover { color: var(--pink); }
+        .watch-form-actions {
+          display: flex;
+          gap: 6px;
+        }
+        .watch-cancel-btn {
+          background: none;
+          border: 1px solid var(--border);
+          border-radius: var(--radius);
+          color: var(--muted);
+          font-family: var(--mono);
+          font-size: 0.7rem;
+          padding: 8px 12px;
+          cursor: pointer;
+        }
+        .watch-cancel-btn:hover { border-color: var(--muted); color: var(--text); }
+
+        .watch-list {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          margin: 0 14px 6px;
+        }
+        .watch-item {
+          background: var(--surface2);
+          border: 1px solid var(--border);
+          border-left: 3px solid var(--gold);
+          border-radius: var(--radius);
+          padding: 7px 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+        .watch-header-row {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+        .watch-for-label {
+          font-family: var(--mono);
+          font-size: 0.65rem;
+          color: var(--muted);
+          text-transform: uppercase;
+        }
+        .watch-slot-name {
+          font-family: var(--mono);
+          font-size: 0.8rem;
+          color: var(--gold);
+          flex: 1;
+        }
+        .watch-delete {
+          background: none;
+          border: none;
+          color: var(--muted);
+          cursor: pointer;
+          font-size: 1rem;
+          padding: 0;
+          line-height: 1;
+        }
+        .watch-delete:hover { color: var(--pink); }
+        .watch-conditions {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 4px;
+        }
+
         /* Scrollbar */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
@@ -778,6 +1163,13 @@ export default function Page() {
                   key={slot.slotName}
                   slot={slot}
                   note={notes[slot.slotName] ?? ""}
+                  watches={watches.filter((w) => w.forSlot === slot.slotName)}
+                  allSlots={data?.allSlots ?? []}
+                  allItems={data?.allWatchItems ?? []}
+                  onWatchAdded={(w) => setWatches((ws) => [...ws, w])}
+                  onWatchDeleted={(id) =>
+                    setWatches((ws) => ws.filter((w) => w.id !== id))
+                  }
                 />
               ))}
           </main>

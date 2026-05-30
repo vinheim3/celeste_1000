@@ -2,11 +2,20 @@ import { NextRequest, NextResponse } from "next/server";
 import { Redis } from "@upstash/redis";
 
 const kv = Redis.fromEnv();
+
 import { readFileSync } from "fs";
 import { join } from "path";
-import type { Tracker, SlotData, Datapackage, Filter } from "@/lib/types";
-import { enumerateAllRoutes } from "@/lib/enumerate";
+import type {
+  Tracker,
+  SlotData,
+  Datapackage,
+  Filter,
+  Watch,
+  ActiveWatch,
+} from "@/lib/types";
+import { enumerateAllRoutes, resolveWatches } from "@/lib/enumerate";
 import { GOAL_CHECKPOINTS } from "@/lib/goals";
+import { WATCH_ITEM_EXCLUDES } from "@/lib/Watchitemexcludes";
 
 const TRACKER_ID = process.env.ARCHIPELAGO_TRACKER_ID!;
 
@@ -41,6 +50,11 @@ const goalCheckpointsanityList: boolean[] = JSON.parse(
   readFileSync(join(DATA_DIR, "goal_checkpointsanity.json"), "utf-8"),
 );
 
+// Sorted, filtered item list derived from the datapackage — computed once at module load
+const allWatchItems: string[] = Object.keys(datapackage.item_name_to_id)
+  .filter((name) => !WATCH_ITEM_EXCLUDES.has(name))
+  .sort();
+
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
 
@@ -74,16 +88,29 @@ export async function GET(request: NextRequest) {
   // --- Fetch tracker and notes in parallel ---
   let tracker: Tracker;
   let notes: Record<string, string>;
+  let rawWatches: Record<string, Watch>;
   try {
-    [tracker, notes] = await Promise.all([
+    [tracker, notes, rawWatches] = await Promise.all([
       getTracker(),
       kv.hgetall<Record<string, string>>("slot-notes").then((r) => r ?? {}),
+      kv.hgetall<Record<string, Watch>>("slot-watches").then((r) => r ?? {}),
     ]);
   } catch {
     return NextResponse.json(
       { error: "Failed to fetch data" },
       { status: 502 },
     );
+  }
+
+  // Resolve watches — auto-clear any whose conditions are all met
+  const allWatches: Watch[] = Object.values(rawWatches);
+  const { active: activeWatches, clearedIds } = resolveWatches(
+    allWatches,
+    tracker,
+    datapackage,
+  );
+  if (clearedIds.length > 0) {
+    await Promise.all(clearedIds.map((id) => kv.hdel("slot-watches", id)));
   }
 
   // --- Build alias map from tracker ---
@@ -119,5 +146,12 @@ export async function GET(request: NextRequest) {
       return n(a) - n(b);
     });
 
-  return NextResponse.json({ routes, allAliases, allSlots, notes });
+  return NextResponse.json({
+    routes,
+    allAliases,
+    allSlots,
+    notes,
+    activeWatches,
+    allWatchItems,
+  });
 }
