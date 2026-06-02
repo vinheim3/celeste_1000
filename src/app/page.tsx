@@ -500,6 +500,8 @@ function SlotNote({
   const [text, setText] = useState(initial);
   const [saving, setSaving] = useState(false);
 
+  const rows = Math.max(2, initial.split("\n").length);
+
   const save = async (value: string) => {
     setSaving(true);
     await fetch("/api/notes", {
@@ -518,7 +520,7 @@ function SlotNote({
         placeholder="Add a note…"
         onChange={(e) => setText(e.target.value)}
         onBlur={(e) => save(e.target.value)}
-        rows={2}
+        rows={rows}
       />
     </div>
   );
