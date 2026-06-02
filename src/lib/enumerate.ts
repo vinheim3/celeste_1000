@@ -128,14 +128,20 @@ export function enumerateGoalRoutes(
     const seen = new Set<string>();
 
     for (const combo of cartesianProduct(perRoomOptions)) {
-      const missingSet = [...cpMissing];
       const dts = combo.some((r) => r.is_dts ?? false);
-      for (const route of combo) {
-        missingSet.push(...missingFromRoute(inventory, route, freeItems));
-      }
-      missingSet.push(...strawbItems);
 
-      const key = JSON.stringify([[...new Set(missingSet)].sort(), dts]);
+      // Dedupe non-strawberry items — one of each satisfies all rooms needing it
+      const missingNonStrawb = [
+        ...new Set([
+          ...cpMissing,
+          ...combo.flatMap((route) =>
+            missingFromRoute(inventory, route, freeItems),
+          ),
+        ]),
+      ];
+      const missingItems = [...missingNonStrawb, ...strawbItems];
+
+      const key = JSON.stringify([missingNonStrawb.sort(), dts]);
       if (seen.has(key)) continue;
       seen.add(key);
 
@@ -145,7 +151,7 @@ export function enumerateGoalRoutes(
         goalDisplay,
         alias: null,
         checkpointItem: cpItem,
-        missingItems: missingSet,
+        missingItems,
         isDts: dts,
       });
     }

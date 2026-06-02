@@ -588,7 +588,7 @@ function SlotCard({
 // ---------------------------------------------------------------------------
 export default function Page() {
   const [mode, setMode] = useState<FilterMode>("threshold");
-  const [threshold, setThreshold] = useState(4);
+  const [threshold, setThreshold] = useState(3);
   const [alias, setAlias] = useState("");
   const [slots, setSlots] = useState<string[]>([]);
 
