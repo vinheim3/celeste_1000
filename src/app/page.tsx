@@ -43,7 +43,39 @@ function groupRoutes(routes: GoalRoute[]): SlotResult[] {
     slot.routes.push(r);
     slot.bestCount = Math.min(slot.bestCount, r.missingItems.length);
   }
+
+  // Dedupe routes with identical missing-item sets by merging their via labels
+  for (const slot of map.values()) {
+    const deduped = new Map<string, GoalRoute & { viaLabels: string[] }>();
+    for (const r of slot.routes) {
+      const key = [...r.missingItems].sort().join("\0");
+      if (deduped.has(key)) {
+        const existing = deduped.get(key)!;
+        const label = viaLabel(r);
+        if (label && !existing.viaLabels.includes(label))
+          existing.viaLabels.push(label);
+      } else {
+        deduped.set(key, { ...r, viaLabels: [viaLabel(r)] });
+      }
+    }
+    slot.routes = [...deduped.values()].map(
+      ({ viaLabels, ...r }) =>
+        ({
+          ...r,
+          // Store merged via labels back on the route for the UI to consume
+          _viaLabels: viaLabels,
+        }) as GoalRoute & { _viaLabels: string[] },
+    );
+  }
+
   return [...map.values()].sort((a, b) => a.bestCount - b.bestCount);
+}
+
+function viaLabel(r: GoalRoute): string {
+  const parts: string[] = [];
+  if (r.checkpointItem) parts.push(r.checkpointItem);
+  if (r.isDts) parts.push("DTS");
+  return parts.length > 0 ? parts.join(", ") : "Start";
 }
 
 // ---------------------------------------------------------------------------
@@ -207,11 +239,22 @@ function formatMissingItems(items: string[]): string {
 // ---------------------------------------------------------------------------
 // Route pill
 // ---------------------------------------------------------------------------
-function RoutePill({ route }: { route: GoalRoute }) {
+function RoutePill({
+  route,
+}: {
+  route: GoalRoute & { _viaLabels?: string[] };
+}) {
   const count = route.missingItems.length;
-  const via: string[] = [];
-  if (route.checkpointItem) via.push(route.checkpointItem);
-  if (route.isDts) via.push("DTS");
+  const viaLabels = route._viaLabels;
+
+  // If we have merged labels, show them; a null/empty label means "Start" (no checkpoint, no DTS)
+  const viaStr = (() => {
+    const labels = viaLabels ?? [viaLabel(route)];
+    // Only show "Start" if it appears alongside other labels
+    const filtered =
+      labels.length > 1 ? labels : labels.filter((l) => l !== "Start");
+    return filtered.length > 0 ? "via " + filtered.join(", ") : null;
+  })();
 
   return (
     <div className="route-pill">
@@ -219,9 +262,7 @@ function RoutePill({ route }: { route: GoalRoute }) {
         {count === 0 ? "✓" : count}
       </span>
       <div className="route-body">
-        {via.length > 0 && (
-          <span className="route-via">via {via.join(", ")}</span>
-        )}
+        {viaStr && <span className="route-via">{viaStr}</span>}
         {count === 0 ? (
           <span className="route-ready">Ready to goal</span>
         ) : (
