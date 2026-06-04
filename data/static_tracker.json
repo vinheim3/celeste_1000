@@ -1,0 +1,10017 @@
+{
+  "datapackage": {
+    "Archipelago": {
+      "checksum": "ac9141e9ad0318df2fa27da5f20c50a842afeecb",
+      "version": 0
+    },
+    "Celeste (Open World)": {
+      "checksum": "5d46465bedc0504eb67a549f737b1c15545e45b1",
+      "version": 0
+    }
+  },
+  "groups": [],
+  "player_game": [
+    {
+      "game": "Celeste (Open World)",
+      "player": 1,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 2,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 3,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 4,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 5,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 6,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 7,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 8,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 9,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 10,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 11,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 12,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 13,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 14,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 15,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 16,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 17,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 18,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 19,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 20,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 21,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 22,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 23,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 24,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 25,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 26,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 27,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 28,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 29,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 30,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 31,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 32,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 33,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 34,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 35,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 36,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 37,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 38,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 39,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 40,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 41,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 42,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 43,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 44,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 45,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 46,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 47,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 48,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 49,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 50,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 51,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 52,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 53,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 54,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 55,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 56,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 57,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 58,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 59,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 60,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 61,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 62,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 63,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 64,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 65,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 66,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 67,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 68,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 69,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 70,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 71,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 72,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 73,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 74,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 75,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 76,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 77,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 78,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 79,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 80,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 81,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 82,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 83,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 84,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 85,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 86,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 87,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 88,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 89,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 90,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 91,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 92,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 93,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 94,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 95,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 96,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 97,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 98,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 99,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 100,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 101,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 102,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 103,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 104,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 105,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 106,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 107,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 108,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 109,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 110,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 111,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 112,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 113,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 114,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 115,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 116,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 117,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 118,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 119,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 120,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 121,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 122,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 123,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 124,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 125,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 126,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 127,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 128,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 129,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 130,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 131,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 132,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 133,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 134,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 135,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 136,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 137,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 138,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 139,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 140,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 141,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 142,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 143,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 144,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 145,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 146,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 147,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 148,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 149,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 150,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 151,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 152,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 153,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 154,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 155,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 156,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 157,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 158,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 159,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 160,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 161,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 162,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 163,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 164,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 165,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 166,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 167,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 168,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 169,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 170,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 171,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 172,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 173,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 174,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 175,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 176,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 177,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 178,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 179,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 180,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 181,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 182,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 183,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 184,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 185,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 186,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 187,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 188,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 189,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 190,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 191,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 192,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 193,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 194,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 195,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 196,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 197,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 198,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 199,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 200,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 201,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 202,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 203,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 204,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 205,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 206,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 207,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 208,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 209,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 210,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 211,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 212,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 213,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 214,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 215,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 216,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 217,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 218,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 219,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 220,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 221,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 222,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 223,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 224,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 225,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 226,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 227,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 228,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 229,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 230,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 231,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 232,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 233,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 234,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 235,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 236,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 237,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 238,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 239,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 240,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 241,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 242,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 243,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 244,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 245,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 246,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 247,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 248,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 249,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 250,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 251,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 252,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 253,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 254,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 255,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 256,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 257,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 258,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 259,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 260,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 261,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 262,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 263,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 264,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 265,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 266,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 267,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 268,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 269,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 270,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 271,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 272,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 273,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 274,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 275,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 276,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 277,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 278,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 279,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 280,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 281,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 282,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 283,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 284,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 285,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 286,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 287,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 288,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 289,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 290,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 291,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 292,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 293,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 294,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 295,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 296,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 297,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 298,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 299,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 300,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 301,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 302,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 303,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 304,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 305,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 306,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 307,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 308,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 309,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 310,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 311,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 312,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 313,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 314,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 315,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 316,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 317,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 318,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 319,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 320,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 321,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 322,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 323,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 324,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 325,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 326,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 327,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 328,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 329,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 330,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 331,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 332,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 333,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 334,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 335,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 336,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 337,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 338,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 339,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 340,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 341,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 342,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 343,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 344,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 345,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 346,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 347,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 348,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 349,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 350,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 351,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 352,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 353,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 354,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 355,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 356,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 357,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 358,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 359,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 360,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 361,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 362,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 363,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 364,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 365,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 366,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 367,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 368,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 369,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 370,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 371,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 372,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 373,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 374,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 375,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 376,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 377,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 378,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 379,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 380,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 381,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 382,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 383,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 384,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 385,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 386,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 387,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 388,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 389,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 390,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 391,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 392,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 393,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 394,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 395,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 396,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 397,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 398,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 399,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 400,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 401,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 402,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 403,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 404,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 405,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 406,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 407,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 408,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 409,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 410,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 411,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 412,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 413,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 414,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 415,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 416,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 417,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 418,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 419,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 420,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 421,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 422,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 423,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 424,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 425,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 426,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 427,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 428,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 429,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 430,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 431,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 432,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 433,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 434,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 435,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 436,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 437,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 438,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 439,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 440,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 441,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 442,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 443,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 444,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 445,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 446,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 447,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 448,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 449,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 450,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 451,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 452,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 453,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 454,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 455,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 456,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 457,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 458,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 459,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 460,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 461,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 462,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 463,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 464,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 465,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 466,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 467,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 468,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 469,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 470,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 471,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 472,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 473,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 474,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 475,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 476,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 477,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 478,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 479,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 480,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 481,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 482,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 483,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 484,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 485,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 486,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 487,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 488,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 489,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 490,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 491,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 492,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 493,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 494,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 495,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 496,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 497,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 498,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 499,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 500,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 501,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 502,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 503,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 504,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 505,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 506,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 507,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 508,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 509,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 510,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 511,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 512,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 513,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 514,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 515,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 516,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 517,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 518,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 519,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 520,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 521,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 522,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 523,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 524,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 525,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 526,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 527,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 528,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 529,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 530,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 531,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 532,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 533,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 534,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 535,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 536,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 537,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 538,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 539,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 540,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 541,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 542,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 543,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 544,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 545,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 546,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 547,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 548,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 549,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 550,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 551,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 552,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 553,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 554,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 555,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 556,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 557,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 558,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 559,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 560,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 561,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 562,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 563,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 564,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 565,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 566,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 567,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 568,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 569,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 570,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 571,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 572,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 573,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 574,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 575,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 576,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 577,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 578,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 579,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 580,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 581,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 582,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 583,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 584,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 585,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 586,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 587,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 588,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 589,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 590,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 591,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 592,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 593,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 594,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 595,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 596,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 597,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 598,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 599,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 600,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 601,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 602,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 603,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 604,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 605,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 606,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 607,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 608,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 609,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 610,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 611,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 612,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 613,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 614,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 615,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 616,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 617,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 618,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 619,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 620,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 621,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 622,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 623,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 624,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 625,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 626,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 627,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 628,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 629,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 630,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 631,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 632,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 633,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 634,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 635,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 636,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 637,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 638,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 639,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 640,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 641,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 642,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 643,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 644,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 645,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 646,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 647,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 648,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 649,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 650,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 651,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 652,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 653,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 654,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 655,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 656,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 657,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 658,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 659,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 660,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 661,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 662,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 663,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 664,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 665,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 666,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 667,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 668,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 669,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 670,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 671,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 672,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 673,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 674,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 675,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 676,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 677,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 678,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 679,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 680,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 681,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 682,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 683,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 684,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 685,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 686,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 687,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 688,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 689,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 690,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 691,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 692,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 693,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 694,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 695,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 696,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 697,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 698,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 699,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 700,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 701,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 702,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 703,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 704,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 705,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 706,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 707,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 708,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 709,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 710,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 711,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 712,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 713,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 714,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 715,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 716,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 717,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 718,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 719,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 720,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 721,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 722,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 723,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 724,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 725,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 726,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 727,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 728,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 729,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 730,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 731,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 732,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 733,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 734,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 735,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 736,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 737,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 738,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 739,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 740,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 741,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 742,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 743,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 744,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 745,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 746,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 747,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 748,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 749,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 750,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 751,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 752,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 753,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 754,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 755,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 756,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 757,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 758,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 759,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 760,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 761,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 762,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 763,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 764,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 765,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 766,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 767,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 768,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 769,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 770,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 771,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 772,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 773,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 774,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 775,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 776,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 777,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 778,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 779,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 780,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 781,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 782,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 783,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 784,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 785,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 786,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 787,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 788,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 789,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 790,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 791,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 792,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 793,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 794,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 795,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 796,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 797,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 798,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 799,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 800,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 801,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 802,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 803,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 804,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 805,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 806,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 807,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 808,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 809,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 810,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 811,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 812,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 813,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 814,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 815,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 816,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 817,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 818,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 819,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 820,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 821,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 822,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 823,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 824,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 825,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 826,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 827,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 828,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 829,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 830,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 831,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 832,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 833,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 834,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 835,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 836,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 837,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 838,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 839,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 840,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 841,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 842,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 843,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 844,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 845,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 846,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 847,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 848,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 849,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 850,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 851,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 852,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 853,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 854,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 855,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 856,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 857,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 858,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 859,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 860,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 861,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 862,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 863,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 864,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 865,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 866,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 867,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 868,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 869,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 870,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 871,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 872,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 873,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 874,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 875,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 876,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 877,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 878,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 879,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 880,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 881,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 882,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 883,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 884,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 885,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 886,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 887,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 888,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 889,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 890,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 891,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 892,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 893,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 894,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 895,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 896,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 897,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 898,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 899,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 900,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 901,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 902,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 903,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 904,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 905,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 906,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 907,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 908,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 909,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 910,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 911,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 912,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 913,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 914,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 915,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 916,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 917,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 918,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 919,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 920,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 921,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 922,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 923,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 924,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 925,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 926,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 927,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 928,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 929,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 930,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 931,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 932,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 933,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 934,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 935,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 936,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 937,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 938,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 939,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 940,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 941,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 942,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 943,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 944,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 945,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 946,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 947,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 948,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 949,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 950,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 951,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 952,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 953,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 954,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 955,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 956,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 957,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 958,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 959,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 960,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 961,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 962,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 963,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 964,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 965,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 966,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 967,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 968,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 969,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 970,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 971,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 972,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 973,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 974,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 975,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 976,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 977,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 978,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 979,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 980,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 981,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 982,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 983,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 984,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 985,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 986,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 987,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 988,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 989,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 990,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 991,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 992,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 993,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 994,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 995,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 996,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 997,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 998,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 999,
+      "team": 0
+    },
+    {
+      "game": "Celeste (Open World)",
+      "player": 1000,
+      "team": 0
+    }
+  ],
+  "player_locations_total": [
+    {
+      "player": 1,
+      "team": 0,
+      "total_locations": 266
+    },
+    {
+      "player": 2,
+      "team": 0,
+      "total_locations": 298
+    },
+    {
+      "player": 3,
+      "team": 0,
+      "total_locations": 853
+    },
+    {
+      "player": 4,
+      "team": 0,
+      "total_locations": 1036
+    },
+    {
+      "player": 5,
+      "team": 0,
+      "total_locations": 275
+    },
+    {
+      "player": 6,
+      "team": 0,
+      "total_locations": 273
+    },
+    {
+      "player": 7,
+      "team": 0,
+      "total_locations": 1181
+    },
+    {
+      "player": 8,
+      "team": 0,
+      "total_locations": 1101
+    },
+    {
+      "player": 9,
+      "team": 0,
+      "total_locations": 298
+    },
+    {
+      "player": 10,
+      "team": 0,
+      "total_locations": 812
+    },
+    {
+      "player": 11,
+      "team": 0,
+      "total_locations": 904
+    },
+    {
+      "player": 12,
+      "team": 0,
+      "total_locations": 249
+    },
+    {
+      "player": 13,
+      "team": 0,
+      "total_locations": 974
+    },
+    {
+      "player": 14,
+      "team": 0,
+      "total_locations": 252
+    },
+    {
+      "player": 15,
+      "team": 0,
+      "total_locations": 735
+    },
+    {
+      "player": 16,
+      "team": 0,
+      "total_locations": 303
+    },
+    {
+      "player": 17,
+      "team": 0,
+      "total_locations": 832
+    },
+    {
+      "player": 18,
+      "team": 0,
+      "total_locations": 298
+    },
+    {
+      "player": 19,
+      "team": 0,
+      "total_locations": 346
+    },
+    {
+      "player": 20,
+      "team": 0,
+      "total_locations": 265
+    },
+    {
+      "player": 21,
+      "team": 0,
+      "total_locations": 957
+    },
+    {
+      "player": 22,
+      "team": 0,
+      "total_locations": 333
+    },
+    {
+      "player": 23,
+      "team": 0,
+      "total_locations": 275
+    },
+    {
+      "player": 24,
+      "team": 0,
+      "total_locations": 904
+    },
+    {
+      "player": 25,
+      "team": 0,
+      "total_locations": 974
+    },
+    {
+      "player": 26,
+      "team": 0,
+      "total_locations": 318
+    },
+    {
+      "player": 27,
+      "team": 0,
+      "total_locations": 367
+    },
+    {
+      "player": 28,
+      "team": 0,
+      "total_locations": 318
+    },
+    {
+      "player": 29,
+      "team": 0,
+      "total_locations": 1036
+    },
+    {
+      "player": 30,
+      "team": 0,
+      "total_locations": 802
+    },
+    {
+      "player": 31,
+      "team": 0,
+      "total_locations": 295
+    },
+    {
+      "player": 32,
+      "team": 0,
+      "total_locations": 280
+    },
+    {
+      "player": 33,
+      "team": 0,
+      "total_locations": 1046
+    },
+    {
+      "player": 34,
+      "team": 0,
+      "total_locations": 256
+    },
+    {
+      "player": 35,
+      "team": 0,
+      "total_locations": 310
+    },
+    {
+      "player": 36,
+      "team": 0,
+      "total_locations": 324
+    },
+    {
+      "player": 37,
+      "team": 0,
+      "total_locations": 709
+    },
+    {
+      "player": 38,
+      "team": 0,
+      "total_locations": 346
+    },
+    {
+      "player": 39,
+      "team": 0,
+      "total_locations": 967
+    },
+    {
+      "player": 40,
+      "team": 0,
+      "total_locations": 316
+    },
+    {
+      "player": 41,
+      "team": 0,
+      "total_locations": 818
+    },
+    {
+      "player": 42,
+      "team": 0,
+      "total_locations": 787
+    },
+    {
+      "player": 43,
+      "team": 0,
+      "total_locations": 288
+    },
+    {
+      "player": 44,
+      "team": 0,
+      "total_locations": 950
+    },
+    {
+      "player": 45,
+      "team": 0,
+      "total_locations": 1021
+    },
+    {
+      "player": 46,
+      "team": 0,
+      "total_locations": 858
+    },
+    {
+      "player": 47,
+      "team": 0,
+      "total_locations": 294
+    },
+    {
+      "player": 48,
+      "team": 0,
+      "total_locations": 295
+    },
+    {
+      "player": 49,
+      "team": 0,
+      "total_locations": 875
+    },
+    {
+      "player": 50,
+      "team": 0,
+      "total_locations": 908
+    },
+    {
+      "player": 51,
+      "team": 0,
+      "total_locations": 364
+    },
+    {
+      "player": 52,
+      "team": 0,
+      "total_locations": 954
+    },
+    {
+      "player": 53,
+      "team": 0,
+      "total_locations": 331
+    },
+    {
+      "player": 54,
+      "team": 0,
+      "total_locations": 832
+    },
+    {
+      "player": 55,
+      "team": 0,
+      "total_locations": 270
+    },
+    {
+      "player": 56,
+      "team": 0,
+      "total_locations": 321
+    },
+    {
+      "player": 57,
+      "team": 0,
+      "total_locations": 898
+    },
+    {
+      "player": 58,
+      "team": 0,
+      "total_locations": 266
+    },
+    {
+      "player": 59,
+      "team": 0,
+      "total_locations": 274
+    },
+    {
+      "player": 60,
+      "team": 0,
+      "total_locations": 1020
+    },
+    {
+      "player": 61,
+      "team": 0,
+      "total_locations": 259
+    },
+    {
+      "player": 62,
+      "team": 0,
+      "total_locations": 250
+    },
+    {
+      "player": 63,
+      "team": 0,
+      "total_locations": 870
+    },
+    {
+      "player": 64,
+      "team": 0,
+      "total_locations": 301
+    },
+    {
+      "player": 65,
+      "team": 0,
+      "total_locations": 310
+    },
+    {
+      "player": 66,
+      "team": 0,
+      "total_locations": 1059
+    },
+    {
+      "player": 67,
+      "team": 0,
+      "total_locations": 870
+    },
+    {
+      "player": 68,
+      "team": 0,
+      "total_locations": 288
+    },
+    {
+      "player": 69,
+      "team": 0,
+      "total_locations": 1185
+    },
+    {
+      "player": 70,
+      "team": 0,
+      "total_locations": 339
+    },
+    {
+      "player": 71,
+      "team": 0,
+      "total_locations": 301
+    },
+    {
+      "player": 72,
+      "team": 0,
+      "total_locations": 870
+    },
+    {
+      "player": 73,
+      "team": 0,
+      "total_locations": 867
+    },
+    {
+      "player": 74,
+      "team": 0,
+      "total_locations": 938
+    },
+    {
+      "player": 75,
+      "team": 0,
+      "total_locations": 340
+    },
+    {
+      "player": 76,
+      "team": 0,
+      "total_locations": 259
+    },
+    {
+      "player": 77,
+      "team": 0,
+      "total_locations": 290
+    },
+    {
+      "player": 78,
+      "team": 0,
+      "total_locations": 1102
+    },
+    {
+      "player": 79,
+      "team": 0,
+      "total_locations": 713
+    },
+    {
+      "player": 80,
+      "team": 0,
+      "total_locations": 360
+    },
+    {
+      "player": 81,
+      "team": 0,
+      "total_locations": 280
+    },
+    {
+      "player": 82,
+      "team": 0,
+      "total_locations": 804
+    },
+    {
+      "player": 83,
+      "team": 0,
+      "total_locations": 709
+    },
+    {
+      "player": 84,
+      "team": 0,
+      "total_locations": 888
+    },
+    {
+      "player": 85,
+      "team": 0,
+      "total_locations": 283
+    },
+    {
+      "player": 86,
+      "team": 0,
+      "total_locations": 809
+    },
+    {
+      "player": 87,
+      "team": 0,
+      "total_locations": 853
+    },
+    {
+      "player": 88,
+      "team": 0,
+      "total_locations": 894
+    },
+    {
+      "player": 89,
+      "team": 0,
+      "total_locations": 820
+    },
+    {
+      "player": 90,
+      "team": 0,
+      "total_locations": 267
+    },
+    {
+      "player": 91,
+      "team": 0,
+      "total_locations": 869
+    },
+    {
+      "player": 92,
+      "team": 0,
+      "total_locations": 925
+    },
+    {
+      "player": 93,
+      "team": 0,
+      "total_locations": 1078
+    },
+    {
+      "player": 94,
+      "team": 0,
+      "total_locations": 295
+    },
+    {
+      "player": 95,
+      "team": 0,
+      "total_locations": 789
+    },
+    {
+      "player": 96,
+      "team": 0,
+      "total_locations": 319
+    },
+    {
+      "player": 97,
+      "team": 0,
+      "total_locations": 974
+    },
+    {
+      "player": 98,
+      "team": 0,
+      "total_locations": 818
+    },
+    {
+      "player": 99,
+      "team": 0,
+      "total_locations": 244
+    },
+    {
+      "player": 100,
+      "team": 0,
+      "total_locations": 294
+    },
+    {
+      "player": 101,
+      "team": 0,
+      "total_locations": 1185
+    },
+    {
+      "player": 102,
+      "team": 0,
+      "total_locations": 869
+    },
+    {
+      "player": 103,
+      "team": 0,
+      "total_locations": 822
+    },
+    {
+      "player": 104,
+      "team": 0,
+      "total_locations": 937
+    },
+    {
+      "player": 105,
+      "team": 0,
+      "total_locations": 256
+    },
+    {
+      "player": 106,
+      "team": 0,
+      "total_locations": 983
+    },
+    {
+      "player": 107,
+      "team": 0,
+      "total_locations": 266
+    },
+    {
+      "player": 108,
+      "team": 0,
+      "total_locations": 1020
+    },
+    {
+      "player": 109,
+      "team": 0,
+      "total_locations": 252
+    },
+    {
+      "player": 110,
+      "team": 0,
+      "total_locations": 1046
+    },
+    {
+      "player": 111,
+      "team": 0,
+      "total_locations": 1036
+    },
+    {
+      "player": 112,
+      "team": 0,
+      "total_locations": 964
+    },
+    {
+      "player": 113,
+      "team": 0,
+      "total_locations": 921
+    },
+    {
+      "player": 114,
+      "team": 0,
+      "total_locations": 307
+    },
+    {
+      "player": 115,
+      "team": 0,
+      "total_locations": 1139
+    },
+    {
+      "player": 116,
+      "team": 0,
+      "total_locations": 1020
+    },
+    {
+      "player": 117,
+      "team": 0,
+      "total_locations": 282
+    },
+    {
+      "player": 118,
+      "team": 0,
+      "total_locations": 858
+    },
+    {
+      "player": 119,
+      "team": 0,
+      "total_locations": 253
+    },
+    {
+      "player": 120,
+      "team": 0,
+      "total_locations": 385
+    },
+    {
+      "player": 121,
+      "team": 0,
+      "total_locations": 1101
+    },
+    {
+      "player": 122,
+      "team": 0,
+      "total_locations": 335
+    },
+    {
+      "player": 123,
+      "team": 0,
+      "total_locations": 950
+    },
+    {
+      "player": 124,
+      "team": 0,
+      "total_locations": 259
+    },
+    {
+      "player": 125,
+      "team": 0,
+      "total_locations": 1020
+    },
+    {
+      "player": 126,
+      "team": 0,
+      "total_locations": 374
+    },
+    {
+      "player": 127,
+      "team": 0,
+      "total_locations": 815
+    },
+    {
+      "player": 128,
+      "team": 0,
+      "total_locations": 1185
+    },
+    {
+      "player": 129,
+      "team": 0,
+      "total_locations": 287
+    },
+    {
+      "player": 130,
+      "team": 0,
+      "total_locations": 354
+    },
+    {
+      "player": 131,
+      "team": 0,
+      "total_locations": 949
+    },
+    {
+      "player": 132,
+      "team": 0,
+      "total_locations": 858
+    },
+    {
+      "player": 133,
+      "team": 0,
+      "total_locations": 371
+    },
+    {
+      "player": 134,
+      "team": 0,
+      "total_locations": 892
+    },
+    {
+      "player": 135,
+      "team": 0,
+      "total_locations": 1066
+    },
+    {
+      "player": 136,
+      "team": 0,
+      "total_locations": 886
+    },
+    {
+      "player": 137,
+      "team": 0,
+      "total_locations": 804
+    },
+    {
+      "player": 138,
+      "team": 0,
+      "total_locations": 763
+    },
+    {
+      "player": 139,
+      "team": 0,
+      "total_locations": 267
+    },
+    {
+      "player": 140,
+      "team": 0,
+      "total_locations": 1073
+    },
+    {
+      "player": 141,
+      "team": 0,
+      "total_locations": 764
+    },
+    {
+      "player": 142,
+      "team": 0,
+      "total_locations": 268
+    },
+    {
+      "player": 143,
+      "team": 0,
+      "total_locations": 274
+    },
+    {
+      "player": 144,
+      "team": 0,
+      "total_locations": 1185
+    },
+    {
+      "player": 145,
+      "team": 0,
+      "total_locations": 263
+    },
+    {
+      "player": 146,
+      "team": 0,
+      "total_locations": 270
+    },
+    {
+      "player": 147,
+      "team": 0,
+      "total_locations": 804
+    },
+    {
+      "player": 148,
+      "team": 0,
+      "total_locations": 271
+    },
+    {
+      "player": 149,
+      "team": 0,
+      "total_locations": 278
+    },
+    {
+      "player": 150,
+      "team": 0,
+      "total_locations": 789
+    },
+    {
+      "player": 151,
+      "team": 0,
+      "total_locations": 954
+    },
+    {
+      "player": 152,
+      "team": 0,
+      "total_locations": 246
+    },
+    {
+      "player": 153,
+      "team": 0,
+      "total_locations": 734
+    },
+    {
+      "player": 154,
+      "team": 0,
+      "total_locations": 980
+    },
+    {
+      "player": 155,
+      "team": 0,
+      "total_locations": 263
+    },
+    {
+      "player": 156,
+      "team": 0,
+      "total_locations": 1074
+    },
+    {
+      "player": 157,
+      "team": 0,
+      "total_locations": 290
+    },
+    {
+      "player": 158,
+      "team": 0,
+      "total_locations": 259
+    },
+    {
+      "player": 159,
+      "team": 0,
+      "total_locations": 815
+    },
+    {
+      "player": 160,
+      "team": 0,
+      "total_locations": 246
+    },
+    {
+      "player": 161,
+      "team": 0,
+      "total_locations": 1135
+    },
+    {
+      "player": 162,
+      "team": 0,
+      "total_locations": 903
+    },
+    {
+      "player": 163,
+      "team": 0,
+      "total_locations": 954
+    },
+    {
+      "player": 164,
+      "team": 0,
+      "total_locations": 835
+    },
+    {
+      "player": 165,
+      "team": 0,
+      "total_locations": 1073
+    },
+    {
+      "player": 166,
+      "team": 0,
+      "total_locations": 1033
+    },
+    {
+      "player": 167,
+      "team": 0,
+      "total_locations": 841
+    },
+    {
+      "player": 168,
+      "team": 0,
+      "total_locations": 316
+    },
+    {
+      "player": 169,
+      "team": 0,
+      "total_locations": 294
+    },
+    {
+      "player": 170,
+      "team": 0,
+      "total_locations": 978
+    },
+    {
+      "player": 171,
+      "team": 0,
+      "total_locations": 924
+    },
+    {
+      "player": 172,
+      "team": 0,
+      "total_locations": 300
+    },
+    {
+      "player": 173,
+      "team": 0,
+      "total_locations": 861
+    },
+    {
+      "player": 174,
+      "team": 0,
+      "total_locations": 771
+    },
+    {
+      "player": 175,
+      "team": 0,
+      "total_locations": 908
+    },
+    {
+      "player": 176,
+      "team": 0,
+      "total_locations": 334
+    },
+    {
+      "player": 177,
+      "team": 0,
+      "total_locations": 256
+    },
+    {
+      "player": 178,
+      "team": 0,
+      "total_locations": 336
+    },
+    {
+      "player": 179,
+      "team": 0,
+      "total_locations": 334
+    },
+    {
+      "player": 180,
+      "team": 0,
+      "total_locations": 327
+    },
+    {
+      "player": 181,
+      "team": 0,
+      "total_locations": 847
+    },
+    {
+      "player": 182,
+      "team": 0,
+      "total_locations": 318
+    },
+    {
+      "player": 183,
+      "team": 0,
+      "total_locations": 256
+    },
+    {
+      "player": 184,
+      "team": 0,
+      "total_locations": 265
+    },
+    {
+      "player": 185,
+      "team": 0,
+      "total_locations": 1181
+    },
+    {
+      "player": 186,
+      "team": 0,
+      "total_locations": 360
+    },
+    {
+      "player": 187,
+      "team": 0,
+      "total_locations": 267
+    },
+    {
+      "player": 188,
+      "team": 0,
+      "total_locations": 1062
+    },
+    {
+      "player": 189,
+      "team": 0,
+      "total_locations": 247
+    },
+    {
+      "player": 190,
+      "team": 0,
+      "total_locations": 265
+    },
+    {
+      "player": 191,
+      "team": 0,
+      "total_locations": 1139
+    },
+    {
+      "player": 192,
+      "team": 0,
+      "total_locations": 1185
+    },
+    {
+      "player": 193,
+      "team": 0,
+      "total_locations": 271
+    },
+    {
+      "player": 194,
+      "team": 0,
+      "total_locations": 381
+    },
+    {
+      "player": 195,
+      "team": 0,
+      "total_locations": 233
+    },
+    {
+      "player": 196,
+      "team": 0,
+      "total_locations": 307
+    },
+    {
+      "player": 197,
+      "team": 0,
+      "total_locations": 271
+    },
+    {
+      "player": 198,
+      "team": 0,
+      "total_locations": 949
+    },
+    {
+      "player": 199,
+      "team": 0,
+      "total_locations": 815
+    },
+    {
+      "player": 200,
+      "team": 0,
+      "total_locations": 301
+    },
+    {
+      "player": 201,
+      "team": 0,
+      "total_locations": 993
+    },
+    {
+      "player": 202,
+      "team": 0,
+      "total_locations": 978
+    },
+    {
+      "player": 203,
+      "team": 0,
+      "total_locations": 1006
+    },
+    {
+      "player": 204,
+      "team": 0,
+      "total_locations": 1089
+    },
+    {
+      "player": 205,
+      "team": 0,
+      "total_locations": 764
+    },
+    {
+      "player": 206,
+      "team": 0,
+      "total_locations": 265
+    },
+    {
+      "player": 207,
+      "team": 0,
+      "total_locations": 885
+    },
+    {
+      "player": 208,
+      "team": 0,
+      "total_locations": 857
+    },
+    {
+      "player": 209,
+      "team": 0,
+      "total_locations": 288
+    },
+    {
+      "player": 210,
+      "team": 0,
+      "total_locations": 305
+    },
+    {
+      "player": 211,
+      "team": 0,
+      "total_locations": 729
+    },
+    {
+      "player": 212,
+      "team": 0,
+      "total_locations": 804
+    },
+    {
+      "player": 213,
+      "team": 0,
+      "total_locations": 685
+    },
+    {
+      "player": 214,
+      "team": 0,
+      "total_locations": 1006
+    },
+    {
+      "player": 215,
+      "team": 0,
+      "total_locations": 381
+    },
+    {
+      "player": 216,
+      "team": 0,
+      "total_locations": 331
+    },
+    {
+      "player": 217,
+      "team": 0,
+      "total_locations": 763
+    },
+    {
+      "player": 218,
+      "team": 0,
+      "total_locations": 317
+    },
+    {
+      "player": 219,
+      "team": 0,
+      "total_locations": 331
+    },
+    {
+      "player": 220,
+      "team": 0,
+      "total_locations": 882
+    },
+    {
+      "player": 221,
+      "team": 0,
+      "total_locations": 802
+    },
+    {
+      "player": 222,
+      "team": 0,
+      "total_locations": 335
+    },
+    {
+      "player": 223,
+      "team": 0,
+      "total_locations": 817
+    },
+    {
+      "player": 224,
+      "team": 0,
+      "total_locations": 1102
+    },
+    {
+      "player": 225,
+      "team": 0,
+      "total_locations": 331
+    },
+    {
+      "player": 226,
+      "team": 0,
+      "total_locations": 237
+    },
+    {
+      "player": 227,
+      "team": 0,
+      "total_locations": 804
+    },
+    {
+      "player": 228,
+      "team": 0,
+      "total_locations": 263
+    },
+    {
+      "player": 229,
+      "team": 0,
+      "total_locations": 763
+    },
+    {
+      "player": 230,
+      "team": 0,
+      "total_locations": 283
+    },
+    {
+      "player": 231,
+      "team": 0,
+      "total_locations": 289
+    },
+    {
+      "player": 232,
+      "team": 0,
+      "total_locations": 1033
+    },
+    {
+      "player": 233,
+      "team": 0,
+      "total_locations": 1003
+    },
+    {
+      "player": 234,
+      "team": 0,
+      "total_locations": 309
+    },
+    {
+      "player": 235,
+      "team": 0,
+      "total_locations": 322
+    },
+    {
+      "player": 236,
+      "team": 0,
+      "total_locations": 888
+    },
+    {
+      "player": 237,
+      "team": 0,
+      "total_locations": 896
+    },
+    {
+      "player": 238,
+      "team": 0,
+      "total_locations": 321
+    },
+    {
+      "player": 239,
+      "team": 0,
+      "total_locations": 1003
+    },
+    {
+      "player": 240,
+      "team": 0,
+      "total_locations": 1185
+    },
+    {
+      "player": 241,
+      "team": 0,
+      "total_locations": 906
+    },
+    {
+      "player": 242,
+      "team": 0,
+      "total_locations": 330
+    },
+    {
+      "player": 243,
+      "team": 0,
+      "total_locations": 1125
+    },
+    {
+      "player": 244,
+      "team": 0,
+      "total_locations": 330
+    },
+    {
+      "player": 245,
+      "team": 0,
+      "total_locations": 1019
+    },
+    {
+      "player": 246,
+      "team": 0,
+      "total_locations": 1112
+    },
+    {
+      "player": 247,
+      "team": 0,
+      "total_locations": 1042
+    },
+    {
+      "player": 248,
+      "team": 0,
+      "total_locations": 265
+    },
+    {
+      "player": 249,
+      "team": 0,
+      "total_locations": 290
+    },
+    {
+      "player": 250,
+      "team": 0,
+      "total_locations": 316
+    },
+    {
+      "player": 251,
+      "team": 0,
+      "total_locations": 791
+    },
+    {
+      "player": 252,
+      "team": 0,
+      "total_locations": 1022
+    },
+    {
+      "player": 253,
+      "team": 0,
+      "total_locations": 276
+    },
+    {
+      "player": 254,
+      "team": 0,
+      "total_locations": 996
+    },
+    {
+      "player": 255,
+      "team": 0,
+      "total_locations": 1003
+    },
+    {
+      "player": 256,
+      "team": 0,
+      "total_locations": 274
+    },
+    {
+      "player": 257,
+      "team": 0,
+      "total_locations": 1052
+    },
+    {
+      "player": 258,
+      "team": 0,
+      "total_locations": 270
+    },
+    {
+      "player": 259,
+      "team": 0,
+      "total_locations": 272
+    },
+    {
+      "player": 260,
+      "team": 0,
+      "total_locations": 762
+    },
+    {
+      "player": 261,
+      "team": 0,
+      "total_locations": 765
+    },
+    {
+      "player": 262,
+      "team": 0,
+      "total_locations": 1073
+    },
+    {
+      "player": 263,
+      "team": 0,
+      "total_locations": 297
+    },
+    {
+      "player": 264,
+      "team": 0,
+      "total_locations": 993
+    },
+    {
+      "player": 265,
+      "team": 0,
+      "total_locations": 298
+    },
+    {
+      "player": 266,
+      "team": 0,
+      "total_locations": 295
+    },
+    {
+      "player": 267,
+      "team": 0,
+      "total_locations": 290
+    },
+    {
+      "player": 268,
+      "team": 0,
+      "total_locations": 890
+    },
+    {
+      "player": 269,
+      "team": 0,
+      "total_locations": 298
+    },
+    {
+      "player": 270,
+      "team": 0,
+      "total_locations": 274
+    },
+    {
+      "player": 271,
+      "team": 0,
+      "total_locations": 349
+    },
+    {
+      "player": 272,
+      "team": 0,
+      "total_locations": 259
+    },
+    {
+      "player": 273,
+      "team": 0,
+      "total_locations": 283
+    },
+    {
+      "player": 274,
+      "team": 0,
+      "total_locations": 897
+    },
+    {
+      "player": 275,
+      "team": 0,
+      "total_locations": 934
+    },
+    {
+      "player": 276,
+      "team": 0,
+      "total_locations": 250
+    },
+    {
+      "player": 277,
+      "team": 0,
+      "total_locations": 333
+    },
+    {
+      "player": 278,
+      "team": 0,
+      "total_locations": 293
+    },
+    {
+      "player": 279,
+      "team": 0,
+      "total_locations": 1106
+    },
+    {
+      "player": 280,
+      "team": 0,
+      "total_locations": 831
+    },
+    {
+      "player": 281,
+      "team": 0,
+      "total_locations": 861
+    },
+    {
+      "player": 282,
+      "team": 0,
+      "total_locations": 981
+    },
+    {
+      "player": 283,
+      "team": 0,
+      "total_locations": 364
+    },
+    {
+      "player": 284,
+      "team": 0,
+      "total_locations": 740
+    },
+    {
+      "player": 285,
+      "team": 0,
+      "total_locations": 275
+    },
+    {
+      "player": 286,
+      "team": 0,
+      "total_locations": 1043
+    },
+    {
+      "player": 287,
+      "team": 0,
+      "total_locations": 275
+    },
+    {
+      "player": 288,
+      "team": 0,
+      "total_locations": 1043
+    },
+    {
+      "player": 289,
+      "team": 0,
+      "total_locations": 733
+    },
+    {
+      "player": 290,
+      "team": 0,
+      "total_locations": 287
+    },
+    {
+      "player": 291,
+      "team": 0,
+      "total_locations": 336
+    },
+    {
+      "player": 292,
+      "team": 0,
+      "total_locations": 915
+    },
+    {
+      "player": 293,
+      "team": 0,
+      "total_locations": 329
+    },
+    {
+      "player": 294,
+      "team": 0,
+      "total_locations": 267
+    },
+    {
+      "player": 295,
+      "team": 0,
+      "total_locations": 996
+    },
+    {
+      "player": 296,
+      "team": 0,
+      "total_locations": 294
+    },
+    {
+      "player": 297,
+      "team": 0,
+      "total_locations": 974
+    },
+    {
+      "player": 298,
+      "team": 0,
+      "total_locations": 378
+    },
+    {
+      "player": 299,
+      "team": 0,
+      "total_locations": 1098
+    },
+    {
+      "player": 300,
+      "team": 0,
+      "total_locations": 890
+    },
+    {
+      "player": 301,
+      "team": 0,
+      "total_locations": 890
+    },
+    {
+      "player": 302,
+      "team": 0,
+      "total_locations": 290
+    },
+    {
+      "player": 303,
+      "team": 0,
+      "total_locations": 840
+    },
+    {
+      "player": 304,
+      "team": 0,
+      "total_locations": 851
+    },
+    {
+      "player": 305,
+      "team": 0,
+      "total_locations": 270
+    },
+    {
+      "player": 306,
+      "team": 0,
+      "total_locations": 815
+    },
+    {
+      "player": 307,
+      "team": 0,
+      "total_locations": 765
+    },
+    {
+      "player": 308,
+      "team": 0,
+      "total_locations": 1022
+    },
+    {
+      "player": 309,
+      "team": 0,
+      "total_locations": 278
+    },
+    {
+      "player": 310,
+      "team": 0,
+      "total_locations": 321
+    },
+    {
+      "player": 311,
+      "team": 0,
+      "total_locations": 273
+    },
+    {
+      "player": 312,
+      "team": 0,
+      "total_locations": 1068
+    },
+    {
+      "player": 313,
+      "team": 0,
+      "total_locations": 303
+    },
+    {
+      "player": 314,
+      "team": 0,
+      "total_locations": 1006
+    },
+    {
+      "player": 315,
+      "team": 0,
+      "total_locations": 954
+    },
+    {
+      "player": 316,
+      "team": 0,
+      "total_locations": 1059
+    },
+    {
+      "player": 317,
+      "team": 0,
+      "total_locations": 270
+    },
+    {
+      "player": 318,
+      "team": 0,
+      "total_locations": 947
+    },
+    {
+      "player": 319,
+      "team": 0,
+      "total_locations": 890
+    },
+    {
+      "player": 320,
+      "team": 0,
+      "total_locations": 249
+    },
+    {
+      "player": 321,
+      "team": 0,
+      "total_locations": 283
+    },
+    {
+      "player": 322,
+      "team": 0,
+      "total_locations": 1139
+    },
+    {
+      "player": 323,
+      "team": 0,
+      "total_locations": 787
+    },
+    {
+      "player": 324,
+      "team": 0,
+      "total_locations": 976
+    },
+    {
+      "player": 325,
+      "team": 0,
+      "total_locations": 732
+    },
+    {
+      "player": 326,
+      "team": 0,
+      "total_locations": 257
+    },
+    {
+      "player": 327,
+      "team": 0,
+      "total_locations": 731
+    },
+    {
+      "player": 328,
+      "team": 0,
+      "total_locations": 263
+    },
+    {
+      "player": 329,
+      "team": 0,
+      "total_locations": 904
+    },
+    {
+      "player": 330,
+      "team": 0,
+      "total_locations": 1101
+    },
+    {
+      "player": 331,
+      "team": 0,
+      "total_locations": 280
+    },
+    {
+      "player": 332,
+      "team": 0,
+      "total_locations": 257
+    },
+    {
+      "player": 333,
+      "team": 0,
+      "total_locations": 294
+    },
+    {
+      "player": 334,
+      "team": 0,
+      "total_locations": 283
+    },
+    {
+      "player": 335,
+      "team": 0,
+      "total_locations": 335
+    },
+    {
+      "player": 336,
+      "team": 0,
+      "total_locations": 870
+    },
+    {
+      "player": 337,
+      "team": 0,
+      "total_locations": 259
+    },
+    {
+      "player": 338,
+      "team": 0,
+      "total_locations": 283
+    },
+    {
+      "player": 339,
+      "team": 0,
+      "total_locations": 333
+    },
+    {
+      "player": 340,
+      "team": 0,
+      "total_locations": 278
+    },
+    {
+      "player": 341,
+      "team": 0,
+      "total_locations": 318
+    },
+    {
+      "player": 342,
+      "team": 0,
+      "total_locations": 902
+    },
+    {
+      "player": 343,
+      "team": 0,
+      "total_locations": 360
+    },
+    {
+      "player": 344,
+      "team": 0,
+      "total_locations": 294
+    },
+    {
+      "player": 345,
+      "team": 0,
+      "total_locations": 367
+    },
+    {
+      "player": 346,
+      "team": 0,
+      "total_locations": 1185
+    },
+    {
+      "player": 347,
+      "team": 0,
+      "total_locations": 367
+    },
+    {
+      "player": 348,
+      "team": 0,
+      "total_locations": 1024
+    },
+    {
+      "player": 349,
+      "team": 0,
+      "total_locations": 897
+    },
+    {
+      "player": 350,
+      "team": 0,
+      "total_locations": 354
+    },
+    {
+      "player": 351,
+      "team": 0,
+      "total_locations": 978
+    },
+    {
+      "player": 352,
+      "team": 0,
+      "total_locations": 952
+    },
+    {
+      "player": 353,
+      "team": 0,
+      "total_locations": 251
+    },
+    {
+      "player": 354,
+      "team": 0,
+      "total_locations": 737
+    },
+    {
+      "player": 355,
+      "team": 0,
+      "total_locations": 1059
+    },
+    {
+      "player": 356,
+      "team": 0,
+      "total_locations": 297
+    },
+    {
+      "player": 357,
+      "team": 0,
+      "total_locations": 787
+    },
+    {
+      "player": 358,
+      "team": 0,
+      "total_locations": 886
+    },
+    {
+      "player": 359,
+      "team": 0,
+      "total_locations": 1000
+    },
+    {
+      "player": 360,
+      "team": 0,
+      "total_locations": 273
+    },
+    {
+      "player": 361,
+      "team": 0,
+      "total_locations": 874
+    },
+    {
+      "player": 362,
+      "team": 0,
+      "total_locations": 233
+    },
+    {
+      "player": 363,
+      "team": 0,
+      "total_locations": 1051
+    },
+    {
+      "player": 364,
+      "team": 0,
+      "total_locations": 967
+    },
+    {
+      "player": 365,
+      "team": 0,
+      "total_locations": 741
+    },
+    {
+      "player": 366,
+      "team": 0,
+      "total_locations": 832
+    },
+    {
+      "player": 367,
+      "team": 0,
+      "total_locations": 249
+    },
+    {
+      "player": 368,
+      "team": 0,
+      "total_locations": 364
+    },
+    {
+      "player": 369,
+      "team": 0,
+      "total_locations": 249
+    },
+    {
+      "player": 370,
+      "team": 0,
+      "total_locations": 267
+    },
+    {
+      "player": 371,
+      "team": 0,
+      "total_locations": 1089
+    },
+    {
+      "player": 372,
+      "team": 0,
+      "total_locations": 314
+    },
+    {
+      "player": 373,
+      "team": 0,
+      "total_locations": 249
+    },
+    {
+      "player": 374,
+      "team": 0,
+      "total_locations": 252
+    },
+    {
+      "player": 375,
+      "team": 0,
+      "total_locations": 321
+    },
+    {
+      "player": 376,
+      "team": 0,
+      "total_locations": 385
+    },
+    {
+      "player": 377,
+      "team": 0,
+      "total_locations": 245
+    },
+    {
+      "player": 378,
+      "team": 0,
+      "total_locations": 354
+    },
+    {
+      "player": 379,
+      "team": 0,
+      "total_locations": 1033
+    },
+    {
+      "player": 380,
+      "team": 0,
+      "total_locations": 302
+    },
+    {
+      "player": 381,
+      "team": 0,
+      "total_locations": 290
+    },
+    {
+      "player": 382,
+      "team": 0,
+      "total_locations": 1046
+    },
+    {
+      "player": 383,
+      "team": 0,
+      "total_locations": 287
+    },
+    {
+      "player": 384,
+      "team": 0,
+      "total_locations": 280
+    },
+    {
+      "player": 385,
+      "team": 0,
+      "total_locations": 736
+    },
+    {
+      "player": 386,
+      "team": 0,
+      "total_locations": 301
+    },
+    {
+      "player": 387,
+      "team": 0,
+      "total_locations": 335
+    },
+    {
+      "player": 388,
+      "team": 0,
+      "total_locations": 307
+    },
+    {
+      "player": 389,
+      "team": 0,
+      "total_locations": 290
+    },
+    {
+      "player": 390,
+      "team": 0,
+      "total_locations": 272
+    },
+    {
+      "player": 391,
+      "team": 0,
+      "total_locations": 1022
+    },
+    {
+      "player": 392,
+      "team": 0,
+      "total_locations": 1043
+    },
+    {
+      "player": 393,
+      "team": 0,
+      "total_locations": 835
+    },
+    {
+      "player": 394,
+      "team": 0,
+      "total_locations": 274
+    },
+    {
+      "player": 395,
+      "team": 0,
+      "total_locations": 812
+    },
+    {
+      "player": 396,
+      "team": 0,
+      "total_locations": 884
+    },
+    {
+      "player": 397,
+      "team": 0,
+      "total_locations": 886
+    },
+    {
+      "player": 398,
+      "team": 0,
+      "total_locations": 317
+    },
+    {
+      "player": 399,
+      "team": 0,
+      "total_locations": 259
+    },
+    {
+      "player": 400,
+      "team": 0,
+      "total_locations": 802
+    },
+    {
+      "player": 401,
+      "team": 0,
+      "total_locations": 256
+    },
+    {
+      "player": 402,
+      "team": 0,
+      "total_locations": 954
+    },
+    {
+      "player": 403,
+      "team": 0,
+      "total_locations": 1008
+    },
+    {
+      "player": 404,
+      "team": 0,
+      "total_locations": 814
+    },
+    {
+      "player": 405,
+      "team": 0,
+      "total_locations": 351
+    },
+    {
+      "player": 406,
+      "team": 0,
+      "total_locations": 283
+    },
+    {
+      "player": 407,
+      "team": 0,
+      "total_locations": 1181
+    },
+    {
+      "player": 408,
+      "team": 0,
+      "total_locations": 772
+    },
+    {
+      "player": 409,
+      "team": 0,
+      "total_locations": 316
+    },
+    {
+      "player": 410,
+      "team": 0,
+      "total_locations": 764
+    },
+    {
+      "player": 411,
+      "team": 0,
+      "total_locations": 367
+    },
+    {
+      "player": 412,
+      "team": 0,
+      "total_locations": 897
+    },
+    {
+      "player": 413,
+      "team": 0,
+      "total_locations": 298
+    },
+    {
+      "player": 414,
+      "team": 0,
+      "total_locations": 978
+    },
+    {
+      "player": 415,
+      "team": 0,
+      "total_locations": 1102
+    },
+    {
+      "player": 416,
+      "team": 0,
+      "total_locations": 294
+    },
+    {
+      "player": 417,
+      "team": 0,
+      "total_locations": 263
+    },
+    {
+      "player": 418,
+      "team": 0,
+      "total_locations": 861
+    },
+    {
+      "player": 419,
+      "team": 0,
+      "total_locations": 318
+    },
+    {
+      "player": 420,
+      "team": 0,
+      "total_locations": 841
+    },
+    {
+      "player": 421,
+      "team": 0,
+      "total_locations": 1185
+    },
+    {
+      "player": 422,
+      "team": 0,
+      "total_locations": 301
+    },
+    {
+      "player": 423,
+      "team": 0,
+      "total_locations": 897
+    },
+    {
+      "player": 424,
+      "team": 0,
+      "total_locations": 976
+    },
+    {
+      "player": 425,
+      "team": 0,
+      "total_locations": 1003
+    },
+    {
+      "player": 426,
+      "team": 0,
+      "total_locations": 301
+    },
+    {
+      "player": 427,
+      "team": 0,
+      "total_locations": 274
+    },
+    {
+      "player": 428,
+      "team": 0,
+      "total_locations": 321
+    },
+    {
+      "player": 429,
+      "team": 0,
+      "total_locations": 1004
+    },
+    {
+      "player": 430,
+      "team": 0,
+      "total_locations": 857
+    },
+    {
+      "player": 431,
+      "team": 0,
+      "total_locations": 897
+    },
+    {
+      "player": 432,
+      "team": 0,
+      "total_locations": 360
+    },
+    {
+      "player": 433,
+      "team": 0,
+      "total_locations": 283
+    },
+    {
+      "player": 434,
+      "team": 0,
+      "total_locations": 1006
+    },
+    {
+      "player": 435,
+      "team": 0,
+      "total_locations": 300
+    },
+    {
+      "player": 436,
+      "team": 0,
+      "total_locations": 959
+    },
+    {
+      "player": 437,
+      "team": 0,
+      "total_locations": 784
+    },
+    {
+      "player": 438,
+      "team": 0,
+      "total_locations": 969
+    },
+    {
+      "player": 439,
+      "team": 0,
+      "total_locations": 920
+    },
+    {
+      "player": 440,
+      "team": 0,
+      "total_locations": 950
+    },
+    {
+      "player": 441,
+      "team": 0,
+      "total_locations": 1043
+    },
+    {
+      "player": 442,
+      "team": 0,
+      "total_locations": 252
+    },
+    {
+      "player": 443,
+      "team": 0,
+      "total_locations": 1033
+    },
+    {
+      "player": 444,
+      "team": 0,
+      "total_locations": 1029
+    },
+    {
+      "player": 445,
+      "team": 0,
+      "total_locations": 1000
+    },
+    {
+      "player": 446,
+      "team": 0,
+      "total_locations": 1098
+    },
+    {
+      "player": 447,
+      "team": 0,
+      "total_locations": 812
+    },
+    {
+      "player": 448,
+      "team": 0,
+      "total_locations": 251
+    },
+    {
+      "player": 449,
+      "team": 0,
+      "total_locations": 286
+    },
+    {
+      "player": 450,
+      "team": 0,
+      "total_locations": 1024
+    },
+    {
+      "player": 451,
+      "team": 0,
+      "total_locations": 766
+    },
+    {
+      "player": 452,
+      "team": 0,
+      "total_locations": 1125
+    },
+    {
+      "player": 453,
+      "team": 0,
+      "total_locations": 731
+    },
+    {
+      "player": 454,
+      "team": 0,
+      "total_locations": 834
+    },
+    {
+      "player": 455,
+      "team": 0,
+      "total_locations": 303
+    },
+    {
+      "player": 456,
+      "team": 0,
+      "total_locations": 310
+    },
+    {
+      "player": 457,
+      "team": 0,
+      "total_locations": 286
+    },
+    {
+      "player": 458,
+      "team": 0,
+      "total_locations": 897
+    },
+    {
+      "player": 459,
+      "team": 0,
+      "total_locations": 259
+    },
+    {
+      "player": 460,
+      "team": 0,
+      "total_locations": 1021
+    },
+    {
+      "player": 461,
+      "team": 0,
+      "total_locations": 271
+    },
+    {
+      "player": 462,
+      "team": 0,
+      "total_locations": 1098
+    },
+    {
+      "player": 463,
+      "team": 0,
+      "total_locations": 759
+    },
+    {
+      "player": 464,
+      "team": 0,
+      "total_locations": 1101
+    },
+    {
+      "player": 465,
+      "team": 0,
+      "total_locations": 249
+    },
+    {
+      "player": 466,
+      "team": 0,
+      "total_locations": 1069
+    },
+    {
+      "player": 467,
+      "team": 0,
+      "total_locations": 330
+    },
+    {
+      "player": 468,
+      "team": 0,
+      "total_locations": 267
+    },
+    {
+      "player": 469,
+      "team": 0,
+      "total_locations": 945
+    },
+    {
+      "player": 470,
+      "team": 0,
+      "total_locations": 1021
+    },
+    {
+      "player": 471,
+      "team": 0,
+      "total_locations": 249
+    },
+    {
+      "player": 472,
+      "team": 0,
+      "total_locations": 270
+    },
+    {
+      "player": 473,
+      "team": 0,
+      "total_locations": 828
+    },
+    {
+      "player": 474,
+      "team": 0,
+      "total_locations": 926
+    },
+    {
+      "player": 475,
+      "team": 0,
+      "total_locations": 256
+    },
+    {
+      "player": 476,
+      "team": 0,
+      "total_locations": 837
+    },
+    {
+      "player": 477,
+      "team": 0,
+      "total_locations": 857
+    },
+    {
+      "player": 478,
+      "team": 0,
+      "total_locations": 274
+    },
+    {
+      "player": 479,
+      "team": 0,
+      "total_locations": 246
+    },
+    {
+      "player": 480,
+      "team": 0,
+      "total_locations": 272
+    },
+    {
+      "player": 481,
+      "team": 0,
+      "total_locations": 853
+    },
+    {
+      "player": 482,
+      "team": 0,
+      "total_locations": 952
+    },
+    {
+      "player": 483,
+      "team": 0,
+      "total_locations": 1073
+    },
+    {
+      "player": 484,
+      "team": 0,
+      "total_locations": 757
+    },
+    {
+      "player": 485,
+      "team": 0,
+      "total_locations": 898
+    },
+    {
+      "player": 486,
+      "team": 0,
+      "total_locations": 290
+    },
+    {
+      "player": 487,
+      "team": 0,
+      "total_locations": 336
+    },
+    {
+      "player": 488,
+      "team": 0,
+      "total_locations": 997
+    },
+    {
+      "player": 489,
+      "team": 0,
+      "total_locations": 276
+    },
+    {
+      "player": 490,
+      "team": 0,
+      "total_locations": 1106
+    },
+    {
+      "player": 491,
+      "team": 0,
+      "total_locations": 904
+    },
+    {
+      "player": 492,
+      "team": 0,
+      "total_locations": 1006
+    },
+    {
+      "player": 493,
+      "team": 0,
+      "total_locations": 707
+    },
+    {
+      "player": 494,
+      "team": 0,
+      "total_locations": 349
+    },
+    {
+      "player": 495,
+      "team": 0,
+      "total_locations": 1102
+    },
+    {
+      "player": 496,
+      "team": 0,
+      "total_locations": 381
+    },
+    {
+      "player": 497,
+      "team": 0,
+      "total_locations": 304
+    },
+    {
+      "player": 498,
+      "team": 0,
+      "total_locations": 855
+    },
+    {
+      "player": 499,
+      "team": 0,
+      "total_locations": 864
+    },
+    {
+      "player": 500,
+      "team": 0,
+      "total_locations": 279
+    },
+    {
+      "player": 501,
+      "team": 0,
+      "total_locations": 244
+    },
+    {
+      "player": 502,
+      "team": 0,
+      "total_locations": 263
+    },
+    {
+      "player": 503,
+      "team": 0,
+      "total_locations": 886
+    },
+    {
+      "player": 504,
+      "team": 0,
+      "total_locations": 886
+    },
+    {
+      "player": 505,
+      "team": 0,
+      "total_locations": 251
+    },
+    {
+      "player": 506,
+      "team": 0,
+      "total_locations": 259
+    },
+    {
+      "player": 507,
+      "team": 0,
+      "total_locations": 904
+    },
+    {
+      "player": 508,
+      "team": 0,
+      "total_locations": 263
+    },
+    {
+      "player": 509,
+      "team": 0,
+      "total_locations": 263
+    },
+    {
+      "player": 510,
+      "team": 0,
+      "total_locations": 969
+    },
+    {
+      "player": 511,
+      "team": 0,
+      "total_locations": 351
+    },
+    {
+      "player": 512,
+      "team": 0,
+      "total_locations": 252
+    },
+    {
+      "player": 513,
+      "team": 0,
+      "total_locations": 986
+    },
+    {
+      "player": 514,
+      "team": 0,
+      "total_locations": 253
+    },
+    {
+      "player": 515,
+      "team": 0,
+      "total_locations": 1029
+    },
+    {
+      "player": 516,
+      "team": 0,
+      "total_locations": 246
+    },
+    {
+      "player": 517,
+      "team": 0,
+      "total_locations": 974
+    },
+    {
+      "player": 518,
+      "team": 0,
+      "total_locations": 987
+    },
+    {
+      "player": 519,
+      "team": 0,
+      "total_locations": 290
+    },
+    {
+      "player": 520,
+      "team": 0,
+      "total_locations": 917
+    },
+    {
+      "player": 521,
+      "team": 0,
+      "total_locations": 252
+    },
+    {
+      "player": 522,
+      "team": 0,
+      "total_locations": 259
+    },
+    {
+      "player": 523,
+      "team": 0,
+      "total_locations": 256
+    },
+    {
+      "player": 524,
+      "team": 0,
+      "total_locations": 950
+    },
+    {
+      "player": 525,
+      "team": 0,
+      "total_locations": 333
+    },
+    {
+      "player": 526,
+      "team": 0,
+      "total_locations": 263
+    },
+    {
+      "player": 527,
+      "team": 0,
+      "total_locations": 249
+    },
+    {
+      "player": 528,
+      "team": 0,
+      "total_locations": 317
+    },
+    {
+      "player": 529,
+      "team": 0,
+      "total_locations": 861
+    },
+    {
+      "player": 530,
+      "team": 0,
+      "total_locations": 256
+    },
+    {
+      "player": 531,
+      "team": 0,
+      "total_locations": 765
+    },
+    {
+      "player": 532,
+      "team": 0,
+      "total_locations": 294
+    },
+    {
+      "player": 533,
+      "team": 0,
+      "total_locations": 253
+    },
+    {
+      "player": 534,
+      "team": 0,
+      "total_locations": 354
+    },
+    {
+      "player": 535,
+      "team": 0,
+      "total_locations": 1055
+    },
+    {
+      "player": 536,
+      "team": 0,
+      "total_locations": 331
+    },
+    {
+      "player": 537,
+      "team": 0,
+      "total_locations": 328
+    },
+    {
+      "player": 538,
+      "team": 0,
+      "total_locations": 271
+    },
+    {
+      "player": 539,
+      "team": 0,
+      "total_locations": 319
+    },
+    {
+      "player": 540,
+      "team": 0,
+      "total_locations": 772
+    },
+    {
+      "player": 541,
+      "team": 0,
+      "total_locations": 261
+    },
+    {
+      "player": 542,
+      "team": 0,
+      "total_locations": 256
+    },
+    {
+      "player": 543,
+      "team": 0,
+      "total_locations": 281
+    },
+    {
+      "player": 544,
+      "team": 0,
+      "total_locations": 818
+    },
+    {
+      "player": 545,
+      "team": 0,
+      "total_locations": 947
+    },
+    {
+      "player": 546,
+      "team": 0,
+      "total_locations": 1098
+    },
+    {
+      "player": 547,
+      "team": 0,
+      "total_locations": 293
+    },
+    {
+      "player": 548,
+      "team": 0,
+      "total_locations": 818
+    },
+    {
+      "player": 549,
+      "team": 0,
+      "total_locations": 759
+    },
+    {
+      "player": 550,
+      "team": 0,
+      "total_locations": 251
+    },
+    {
+      "player": 551,
+      "team": 0,
+      "total_locations": 314
+    },
+    {
+      "player": 552,
+      "team": 0,
+      "total_locations": 1098
+    },
+    {
+      "player": 553,
+      "team": 0,
+      "total_locations": 288
+    },
+    {
+      "player": 554,
+      "team": 0,
+      "total_locations": 1069
+    },
+    {
+      "player": 555,
+      "team": 0,
+      "total_locations": 284
+    },
+    {
+      "player": 556,
+      "team": 0,
+      "total_locations": 288
+    },
+    {
+      "player": 557,
+      "team": 0,
+      "total_locations": 252
+    },
+    {
+      "player": 558,
+      "team": 0,
+      "total_locations": 318
+    },
+    {
+      "player": 559,
+      "team": 0,
+      "total_locations": 770
+    },
+    {
+      "player": 560,
+      "team": 0,
+      "total_locations": 802
+    },
+    {
+      "player": 561,
+      "team": 0,
+      "total_locations": 304
+    },
+    {
+      "player": 562,
+      "team": 0,
+      "total_locations": 812
+    },
+    {
+      "player": 563,
+      "team": 0,
+      "total_locations": 811
+    },
+    {
+      "player": 564,
+      "team": 0,
+      "total_locations": 1069
+    },
+    {
+      "player": 565,
+      "team": 0,
+      "total_locations": 1024
+    },
+    {
+      "player": 566,
+      "team": 0,
+      "total_locations": 295
+    },
+    {
+      "player": 567,
+      "team": 0,
+      "total_locations": 267
+    },
+    {
+      "player": 568,
+      "team": 0,
+      "total_locations": 299
+    },
+    {
+      "player": 569,
+      "team": 0,
+      "total_locations": 289
+    },
+    {
+      "player": 570,
+      "team": 0,
+      "total_locations": 1020
+    },
+    {
+      "player": 571,
+      "team": 0,
+      "total_locations": 360
+    },
+    {
+      "player": 572,
+      "team": 0,
+      "total_locations": 811
+    },
+    {
+      "player": 573,
+      "team": 0,
+      "total_locations": 853
+    },
+    {
+      "player": 574,
+      "team": 0,
+      "total_locations": 321
+    },
+    {
+      "player": 575,
+      "team": 0,
+      "total_locations": 333
+    },
+    {
+      "player": 576,
+      "team": 0,
+      "total_locations": 317
+    },
+    {
+      "player": 577,
+      "team": 0,
+      "total_locations": 1181
+    },
+    {
+      "player": 578,
+      "team": 0,
+      "total_locations": 1062
+    },
+    {
+      "player": 579,
+      "team": 0,
+      "total_locations": 870
+    },
+    {
+      "player": 580,
+      "team": 0,
+      "total_locations": 978
+    },
+    {
+      "player": 581,
+      "team": 0,
+      "total_locations": 269
+    },
+    {
+      "player": 582,
+      "team": 0,
+      "total_locations": 820
+    },
+    {
+      "player": 583,
+      "team": 0,
+      "total_locations": 385
+    },
+    {
+      "player": 584,
+      "team": 0,
+      "total_locations": 251
+    },
+    {
+      "player": 585,
+      "team": 0,
+      "total_locations": 270
+    },
+    {
+      "player": 586,
+      "team": 0,
+      "total_locations": 1033
+    },
+    {
+      "player": 587,
+      "team": 0,
+      "total_locations": 954
+    },
+    {
+      "player": 588,
+      "team": 0,
+      "total_locations": 267
+    },
+    {
+      "player": 589,
+      "team": 0,
+      "total_locations": 364
+    },
+    {
+      "player": 590,
+      "team": 0,
+      "total_locations": 283
+    },
+    {
+      "player": 591,
+      "team": 0,
+      "total_locations": 770
+    },
+    {
+      "player": 592,
+      "team": 0,
+      "total_locations": 857
+    },
+    {
+      "player": 593,
+      "team": 0,
+      "total_locations": 861
+    },
+    {
+      "player": 594,
+      "team": 0,
+      "total_locations": 291
+    },
+    {
+      "player": 595,
+      "team": 0,
+      "total_locations": 334
+    },
+    {
+      "player": 596,
+      "team": 0,
+      "total_locations": 1092
+    },
+    {
+      "player": 597,
+      "team": 0,
+      "total_locations": 1108
+    },
+    {
+      "player": 598,
+      "team": 0,
+      "total_locations": 913
+    },
+    {
+      "player": 599,
+      "team": 0,
+      "total_locations": 812
+    },
+    {
+      "player": 600,
+      "team": 0,
+      "total_locations": 944
+    },
+    {
+      "player": 601,
+      "team": 0,
+      "total_locations": 890
+    },
+    {
+      "player": 602,
+      "team": 0,
+      "total_locations": 330
+    },
+    {
+      "player": 603,
+      "team": 0,
+      "total_locations": 271
+    },
+    {
+      "player": 604,
+      "team": 0,
+      "total_locations": 1105
+    },
+    {
+      "player": 605,
+      "team": 0,
+      "total_locations": 855
+    },
+    {
+      "player": 606,
+      "team": 0,
+      "total_locations": 1020
+    },
+    {
+      "player": 607,
+      "team": 0,
+      "total_locations": 787
+    },
+    {
+      "player": 608,
+      "team": 0,
+      "total_locations": 1181
+    },
+    {
+      "player": 609,
+      "team": 0,
+      "total_locations": 964
+    },
+    {
+      "player": 610,
+      "team": 0,
+      "total_locations": 1020
+    },
+    {
+      "player": 611,
+      "team": 0,
+      "total_locations": 938
+    },
+    {
+      "player": 612,
+      "team": 0,
+      "total_locations": 954
+    },
+    {
+      "player": 613,
+      "team": 0,
+      "total_locations": 765
+    },
+    {
+      "player": 614,
+      "team": 0,
+      "total_locations": 886
+    },
+    {
+      "player": 615,
+      "team": 0,
+      "total_locations": 294
+    },
+    {
+      "player": 616,
+      "team": 0,
+      "total_locations": 290
+    },
+    {
+      "player": 617,
+      "team": 0,
+      "total_locations": 242
+    },
+    {
+      "player": 618,
+      "team": 0,
+      "total_locations": 952
+    },
+    {
+      "player": 619,
+      "team": 0,
+      "total_locations": 950
+    },
+    {
+      "player": 620,
+      "team": 0,
+      "total_locations": 333
+    },
+    {
+      "player": 621,
+      "team": 0,
+      "total_locations": 980
+    },
+    {
+      "player": 622,
+      "team": 0,
+      "total_locations": 925
+    },
+    {
+      "player": 623,
+      "team": 0,
+      "total_locations": 311
+    },
+    {
+      "player": 624,
+      "team": 0,
+      "total_locations": 331
+    },
+    {
+      "player": 625,
+      "team": 0,
+      "total_locations": 286
+    },
+    {
+      "player": 626,
+      "team": 0,
+      "total_locations": 318
+    },
+    {
+      "player": 627,
+      "team": 0,
+      "total_locations": 861
+    },
+    {
+      "player": 628,
+      "team": 0,
+      "total_locations": 263
+    },
+    {
+      "player": 629,
+      "team": 0,
+      "total_locations": 894
+    },
+    {
+      "player": 630,
+      "team": 0,
+      "total_locations": 741
+    },
+    {
+      "player": 631,
+      "team": 0,
+      "total_locations": 333
+    },
+    {
+      "player": 632,
+      "team": 0,
+      "total_locations": 385
+    },
+    {
+      "player": 633,
+      "team": 0,
+      "total_locations": 709
+    },
+    {
+      "player": 634,
+      "team": 0,
+      "total_locations": 330
+    },
+    {
+      "player": 635,
+      "team": 0,
+      "total_locations": 978
+    },
+    {
+      "player": 636,
+      "team": 0,
+      "total_locations": 298
+    },
+    {
+      "player": 637,
+      "team": 0,
+      "total_locations": 297
+    },
+    {
+      "player": 638,
+      "team": 0,
+      "total_locations": 737
+    },
+    {
+      "player": 639,
+      "team": 0,
+      "total_locations": 969
+    },
+    {
+      "player": 640,
+      "team": 0,
+      "total_locations": 815
+    },
+    {
+      "player": 641,
+      "team": 0,
+      "total_locations": 302
+    },
+    {
+      "player": 642,
+      "team": 0,
+      "total_locations": 337
+    },
+    {
+      "player": 643,
+      "team": 0,
+      "total_locations": 251
+    },
+    {
+      "player": 644,
+      "team": 0,
+      "total_locations": 282
+    },
+    {
+      "player": 645,
+      "team": 0,
+      "total_locations": 700
+    },
+    {
+      "player": 646,
+      "team": 0,
+      "total_locations": 314
+    },
+    {
+      "player": 647,
+      "team": 0,
+      "total_locations": 303
+    },
+    {
+      "player": 648,
+      "team": 0,
+      "total_locations": 952
+    },
+    {
+      "player": 649,
+      "team": 0,
+      "total_locations": 898
+    },
+    {
+      "player": 650,
+      "team": 0,
+      "total_locations": 947
+    },
+    {
+      "player": 651,
+      "team": 0,
+      "total_locations": 281
+    },
+    {
+      "player": 652,
+      "team": 0,
+      "total_locations": 924
+    },
+    {
+      "player": 653,
+      "team": 0,
+      "total_locations": 820
+    },
+    {
+      "player": 654,
+      "team": 0,
+      "total_locations": 381
+    },
+    {
+      "player": 655,
+      "team": 0,
+      "total_locations": 255
+    },
+    {
+      "player": 656,
+      "team": 0,
+      "total_locations": 853
+    },
+    {
+      "player": 657,
+      "team": 0,
+      "total_locations": 297
+    },
+    {
+      "player": 658,
+      "team": 0,
+      "total_locations": 354
+    },
+    {
+      "player": 659,
+      "team": 0,
+      "total_locations": 1092
+    },
+    {
+      "player": 660,
+      "team": 0,
+      "total_locations": 1043
+    },
+    {
+      "player": 661,
+      "team": 0,
+      "total_locations": 996
+    },
+    {
+      "player": 662,
+      "team": 0,
+      "total_locations": 234
+    },
+    {
+      "player": 663,
+      "team": 0,
+      "total_locations": 243
+    },
+    {
+      "player": 664,
+      "team": 0,
+      "total_locations": 857
+    },
+    {
+      "player": 665,
+      "team": 0,
+      "total_locations": 844
+    },
+    {
+      "player": 666,
+      "team": 0,
+      "total_locations": 1106
+    },
+    {
+      "player": 667,
+      "team": 0,
+      "total_locations": 284
+    },
+    {
+      "player": 668,
+      "team": 0,
+      "total_locations": 252
+    },
+    {
+      "player": 669,
+      "team": 0,
+      "total_locations": 791
+    },
+    {
+      "player": 670,
+      "team": 0,
+      "total_locations": 281
+    },
+    {
+      "player": 671,
+      "team": 0,
+      "total_locations": 815
+    },
+    {
+      "player": 672,
+      "team": 0,
+      "total_locations": 271
+    },
+    {
+      "player": 673,
+      "team": 0,
+      "total_locations": 973
+    },
+    {
+      "player": 674,
+      "team": 0,
+      "total_locations": 685
+    },
+    {
+      "player": 675,
+      "team": 0,
+      "total_locations": 1147
+    },
+    {
+      "player": 676,
+      "team": 0,
+      "total_locations": 249
+    },
+    {
+      "player": 677,
+      "team": 0,
+      "total_locations": 908
+    },
+    {
+      "player": 678,
+      "team": 0,
+      "total_locations": 294
+    },
+    {
+      "player": 679,
+      "team": 0,
+      "total_locations": 763
+    },
+    {
+      "player": 680,
+      "team": 0,
+      "total_locations": 314
+    },
+    {
+      "player": 681,
+      "team": 0,
+      "total_locations": 839
+    },
+    {
+      "player": 682,
+      "team": 0,
+      "total_locations": 333
+    },
+    {
+      "player": 683,
+      "team": 0,
+      "total_locations": 278
+    },
+    {
+      "player": 684,
+      "team": 0,
+      "total_locations": 269
+    },
+    {
+      "player": 685,
+      "team": 0,
+      "total_locations": 1108
+    },
+    {
+      "player": 686,
+      "team": 0,
+      "total_locations": 367
+    },
+    {
+      "player": 687,
+      "team": 0,
+      "total_locations": 820
+    },
+    {
+      "player": 688,
+      "team": 0,
+      "total_locations": 364
+    },
+    {
+      "player": 689,
+      "team": 0,
+      "total_locations": 385
+    },
+    {
+      "player": 690,
+      "team": 0,
+      "total_locations": 281
+    },
+    {
+      "player": 691,
+      "team": 0,
+      "total_locations": 771
+    },
+    {
+      "player": 692,
+      "team": 0,
+      "total_locations": 1000
+    },
+    {
+      "player": 693,
+      "team": 0,
+      "total_locations": 298
+    },
+    {
+      "player": 694,
+      "team": 0,
+      "total_locations": 791
+    },
+    {
+      "player": 695,
+      "team": 0,
+      "total_locations": 312
+    },
+    {
+      "player": 696,
+      "team": 0,
+      "total_locations": 284
+    },
+    {
+      "player": 697,
+      "team": 0,
+      "total_locations": 282
+    },
+    {
+      "player": 698,
+      "team": 0,
+      "total_locations": 298
+    },
+    {
+      "player": 699,
+      "team": 0,
+      "total_locations": 317
+    },
+    {
+      "player": 700,
+      "team": 0,
+      "total_locations": 701
+    },
+    {
+      "player": 701,
+      "team": 0,
+      "total_locations": 364
+    },
+    {
+      "player": 702,
+      "team": 0,
+      "total_locations": 735
+    },
+    {
+      "player": 703,
+      "team": 0,
+      "total_locations": 259
+    },
+    {
+      "player": 704,
+      "team": 0,
+      "total_locations": 947
+    },
+    {
+      "player": 705,
+      "team": 0,
+      "total_locations": 816
+    },
+    {
+      "player": 706,
+      "team": 0,
+      "total_locations": 765
+    },
+    {
+      "player": 707,
+      "team": 0,
+      "total_locations": 1073
+    },
+    {
+      "player": 708,
+      "team": 0,
+      "total_locations": 249
+    },
+    {
+      "player": 709,
+      "team": 0,
+      "total_locations": 1004
+    },
+    {
+      "player": 710,
+      "team": 0,
+      "total_locations": 310
+    },
+    {
+      "player": 711,
+      "team": 0,
+      "total_locations": 265
+    },
+    {
+      "player": 712,
+      "team": 0,
+      "total_locations": 1046
+    },
+    {
+      "player": 713,
+      "team": 0,
+      "total_locations": 351
+    },
+    {
+      "player": 714,
+      "team": 0,
+      "total_locations": 804
+    },
+    {
+      "player": 715,
+      "team": 0,
+      "total_locations": 270
+    },
+    {
+      "player": 716,
+      "team": 0,
+      "total_locations": 354
+    },
+    {
+      "player": 717,
+      "team": 0,
+      "total_locations": 306
+    },
+    {
+      "player": 718,
+      "team": 0,
+      "total_locations": 287
+    },
+    {
+      "player": 719,
+      "team": 0,
+      "total_locations": 1059
+    },
+    {
+      "player": 720,
+      "team": 0,
+      "total_locations": 292
+    },
+    {
+      "player": 721,
+      "team": 0,
+      "total_locations": 344
+    },
+    {
+      "player": 722,
+      "team": 0,
+      "total_locations": 381
+    },
+    {
+      "player": 723,
+      "team": 0,
+      "total_locations": 1073
+    },
+    {
+      "player": 724,
+      "team": 0,
+      "total_locations": 926
+    },
+    {
+      "player": 725,
+      "team": 0,
+      "total_locations": 1078
+    },
+    {
+      "player": 726,
+      "team": 0,
+      "total_locations": 853
+    },
+    {
+      "player": 727,
+      "team": 0,
+      "total_locations": 282
+    },
+    {
+      "player": 728,
+      "team": 0,
+      "total_locations": 1073
+    },
+    {
+      "player": 729,
+      "team": 0,
+      "total_locations": 870
+    },
+    {
+      "player": 730,
+      "team": 0,
+      "total_locations": 270
+    },
+    {
+      "player": 731,
+      "team": 0,
+      "total_locations": 1050
+    },
+    {
+      "player": 732,
+      "team": 0,
+      "total_locations": 364
+    },
+    {
+      "player": 733,
+      "team": 0,
+      "total_locations": 313
+    },
+    {
+      "player": 734,
+      "team": 0,
+      "total_locations": 952
+    },
+    {
+      "player": 735,
+      "team": 0,
+      "total_locations": 950
+    },
+    {
+      "player": 736,
+      "team": 0,
+      "total_locations": 908
+    },
+    {
+      "player": 737,
+      "team": 0,
+      "total_locations": 816
+    },
+    {
+      "player": 738,
+      "team": 0,
+      "total_locations": 250
+    },
+    {
+      "player": 739,
+      "team": 0,
+      "total_locations": 274
+    },
+    {
+      "player": 740,
+      "team": 0,
+      "total_locations": 363
+    },
+    {
+      "player": 741,
+      "team": 0,
+      "total_locations": 257
+    },
+    {
+      "player": 742,
+      "team": 0,
+      "total_locations": 937
+    },
+    {
+      "player": 743,
+      "team": 0,
+      "total_locations": 1106
+    },
+    {
+      "player": 744,
+      "team": 0,
+      "total_locations": 1181
+    },
+    {
+      "player": 745,
+      "team": 0,
+      "total_locations": 249
+    },
+    {
+      "player": 746,
+      "team": 0,
+      "total_locations": 733
+    },
+    {
+      "player": 747,
+      "team": 0,
+      "total_locations": 897
+    },
+    {
+      "player": 748,
+      "team": 0,
+      "total_locations": 251
+    },
+    {
+      "player": 749,
+      "team": 0,
+      "total_locations": 333
+    },
+    {
+      "player": 750,
+      "team": 0,
+      "total_locations": 235
+    },
+    {
+      "player": 751,
+      "team": 0,
+      "total_locations": 1101
+    },
+    {
+      "player": 752,
+      "team": 0,
+      "total_locations": 894
+    },
+    {
+      "player": 753,
+      "team": 0,
+      "total_locations": 858
+    },
+    {
+      "player": 754,
+      "team": 0,
+      "total_locations": 1046
+    },
+    {
+      "player": 755,
+      "team": 0,
+      "total_locations": 249
+    },
+    {
+      "player": 756,
+      "team": 0,
+      "total_locations": 819
+    },
+    {
+      "player": 757,
+      "team": 0,
+      "total_locations": 741
+    },
+    {
+      "player": 758,
+      "team": 0,
+      "total_locations": 302
+    },
+    {
+      "player": 759,
+      "team": 0,
+      "total_locations": 1059
+    },
+    {
+      "player": 760,
+      "team": 0,
+      "total_locations": 1069
+    },
+    {
+      "player": 761,
+      "team": 0,
+      "total_locations": 853
+    },
+    {
+      "player": 762,
+      "team": 0,
+      "total_locations": 313
+    },
+    {
+      "player": 763,
+      "team": 0,
+      "total_locations": 763
+    },
+    {
+      "player": 764,
+      "team": 0,
+      "total_locations": 351
+    },
+    {
+      "player": 765,
+      "team": 0,
+      "total_locations": 1036
+    },
+    {
+      "player": 766,
+      "team": 0,
+      "total_locations": 360
+    },
+    {
+      "player": 767,
+      "team": 0,
+      "total_locations": 1004
+    },
+    {
+      "player": 768,
+      "team": 0,
+      "total_locations": 950
+    },
+    {
+      "player": 769,
+      "team": 0,
+      "total_locations": 256
+    },
+    {
+      "player": 770,
+      "team": 0,
+      "total_locations": 787
+    },
+    {
+      "player": 771,
+      "team": 0,
+      "total_locations": 247
+    },
+    {
+      "player": 772,
+      "team": 0,
+      "total_locations": 288
+    },
+    {
+      "player": 773,
+      "team": 0,
+      "total_locations": 286
+    },
+    {
+      "player": 774,
+      "team": 0,
+      "total_locations": 890
+    },
+    {
+      "player": 775,
+      "team": 0,
+      "total_locations": 766
+    },
+    {
+      "player": 776,
+      "team": 0,
+      "total_locations": 745
+    },
+    {
+      "player": 777,
+      "team": 0,
+      "total_locations": 1185
+    },
+    {
+      "player": 778,
+      "team": 0,
+      "total_locations": 784
+    },
+    {
+      "player": 779,
+      "team": 0,
+      "total_locations": 271
+    },
+    {
+      "player": 780,
+      "team": 0,
+      "total_locations": 926
+    },
+    {
+      "player": 781,
+      "team": 0,
+      "total_locations": 832
+    },
+    {
+      "player": 782,
+      "team": 0,
+      "total_locations": 807
+    },
+    {
+      "player": 783,
+      "team": 0,
+      "total_locations": 858
+    },
+    {
+      "player": 784,
+      "team": 0,
+      "total_locations": 792
+    },
+    {
+      "player": 785,
+      "team": 0,
+      "total_locations": 892
+    },
+    {
+      "player": 786,
+      "team": 0,
+      "total_locations": 862
+    },
+    {
+      "player": 787,
+      "team": 0,
+      "total_locations": 1000
+    },
+    {
+      "player": 788,
+      "team": 0,
+      "total_locations": 261
+    },
+    {
+      "player": 789,
+      "team": 0,
+      "total_locations": 339
+    },
+    {
+      "player": 790,
+      "team": 0,
+      "total_locations": 245
+    },
+    {
+      "player": 791,
+      "team": 0,
+      "total_locations": 354
+    },
+    {
+      "player": 792,
+      "team": 0,
+      "total_locations": 980
+    },
+    {
+      "player": 793,
+      "team": 0,
+      "total_locations": 1073
+    },
+    {
+      "player": 794,
+      "team": 0,
+      "total_locations": 253
+    },
+    {
+      "player": 795,
+      "team": 0,
+      "total_locations": 908
+    },
+    {
+      "player": 796,
+      "team": 0,
+      "total_locations": 351
+    },
+    {
+      "player": 797,
+      "team": 0,
+      "total_locations": 1106
+    },
+    {
+      "player": 798,
+      "team": 0,
+      "total_locations": 298
+    },
+    {
+      "player": 799,
+      "team": 0,
+      "total_locations": 749
+    },
+    {
+      "player": 800,
+      "team": 0,
+      "total_locations": 263
+    },
+    {
+      "player": 801,
+      "team": 0,
+      "total_locations": 304
+    },
+    {
+      "player": 802,
+      "team": 0,
+      "total_locations": 256
+    },
+    {
+      "player": 803,
+      "team": 0,
+      "total_locations": 309
+    },
+    {
+      "player": 804,
+      "team": 0,
+      "total_locations": 858
+    },
+    {
+      "player": 805,
+      "team": 0,
+      "total_locations": 713
+    },
+    {
+      "player": 806,
+      "team": 0,
+      "total_locations": 908
+    },
+    {
+      "player": 807,
+      "team": 0,
+      "total_locations": 331
+    },
+    {
+      "player": 808,
+      "team": 0,
+      "total_locations": 853
+    },
+    {
+      "player": 809,
+      "team": 0,
+      "total_locations": 314
+    },
+    {
+      "player": 810,
+      "team": 0,
+      "total_locations": 260
+    },
+    {
+      "player": 811,
+      "team": 0,
+      "total_locations": 280
+    },
+    {
+      "player": 812,
+      "team": 0,
+      "total_locations": 743
+    },
+    {
+      "player": 813,
+      "team": 0,
+      "total_locations": 1049
+    },
+    {
+      "player": 814,
+      "team": 0,
+      "total_locations": 249
+    },
+    {
+      "player": 815,
+      "team": 0,
+      "total_locations": 967
+    },
+    {
+      "player": 816,
+      "team": 0,
+      "total_locations": 1135
+    },
+    {
+      "player": 817,
+      "team": 0,
+      "total_locations": 892
+    },
+    {
+      "player": 818,
+      "team": 0,
+      "total_locations": 251
+    },
+    {
+      "player": 819,
+      "team": 0,
+      "total_locations": 298
+    },
+    {
+      "player": 820,
+      "team": 0,
+      "total_locations": 280
+    },
+    {
+      "player": 821,
+      "team": 0,
+      "total_locations": 950
+    },
+    {
+      "player": 822,
+      "team": 0,
+      "total_locations": 765
+    },
+    {
+      "player": 823,
+      "team": 0,
+      "total_locations": 954
+    },
+    {
+      "player": 824,
+      "team": 0,
+      "total_locations": 238
+    },
+    {
+      "player": 825,
+      "team": 0,
+      "total_locations": 300
+    },
+    {
+      "player": 826,
+      "team": 0,
+      "total_locations": 241
+    },
+    {
+      "player": 827,
+      "team": 0,
+      "total_locations": 950
+    },
+    {
+      "player": 828,
+      "team": 0,
+      "total_locations": 996
+    },
+    {
+      "player": 829,
+      "team": 0,
+      "total_locations": 924
+    },
+    {
+      "player": 830,
+      "team": 0,
+      "total_locations": 278
+    },
+    {
+      "player": 831,
+      "team": 0,
+      "total_locations": 1135
+    },
+    {
+      "player": 832,
+      "team": 0,
+      "total_locations": 867
+    },
+    {
+      "player": 833,
+      "team": 0,
+      "total_locations": 353
+    },
+    {
+      "player": 834,
+      "team": 0,
+      "total_locations": 817
+    },
+    {
+      "player": 835,
+      "team": 0,
+      "total_locations": 310
+    },
+    {
+      "player": 836,
+      "team": 0,
+      "total_locations": 310
+    },
+    {
+      "player": 837,
+      "team": 0,
+      "total_locations": 1139
+    },
+    {
+      "player": 838,
+      "team": 0,
+      "total_locations": 1102
+    },
+    {
+      "player": 839,
+      "team": 0,
+      "total_locations": 790
+    },
+    {
+      "player": 840,
+      "team": 0,
+      "total_locations": 1125
+    },
+    {
+      "player": 841,
+      "team": 0,
+      "total_locations": 800
+    },
+    {
+      "player": 842,
+      "team": 0,
+      "total_locations": 702
+    },
+    {
+      "player": 843,
+      "team": 0,
+      "total_locations": 1181
+    },
+    {
+      "player": 844,
+      "team": 0,
+      "total_locations": 256
+    },
+    {
+      "player": 845,
+      "team": 0,
+      "total_locations": 1139
+    },
+    {
+      "player": 846,
+      "team": 0,
+      "total_locations": 270
+    },
+    {
+      "player": 847,
+      "team": 0,
+      "total_locations": 722
+    },
+    {
+      "player": 848,
+      "team": 0,
+      "total_locations": 253
+    },
+    {
+      "player": 849,
+      "team": 0,
+      "total_locations": 266
+    },
+    {
+      "player": 850,
+      "team": 0,
+      "total_locations": 307
+    },
+    {
+      "player": 851,
+      "team": 0,
+      "total_locations": 1073
+    },
+    {
+      "player": 852,
+      "team": 0,
+      "total_locations": 684
+    },
+    {
+      "player": 853,
+      "team": 0,
+      "total_locations": 260
+    },
+    {
+      "player": 854,
+      "team": 0,
+      "total_locations": 354
+    },
+    {
+      "player": 855,
+      "team": 0,
+      "total_locations": 735
+    },
+    {
+      "player": 856,
+      "team": 0,
+      "total_locations": 797
+    },
+    {
+      "player": 857,
+      "team": 0,
+      "total_locations": 298
+    },
+    {
+      "player": 858,
+      "team": 0,
+      "total_locations": 256
+    },
+    {
+      "player": 859,
+      "team": 0,
+      "total_locations": 291
+    },
+    {
+      "player": 860,
+      "team": 0,
+      "total_locations": 280
+    },
+    {
+      "player": 861,
+      "team": 0,
+      "total_locations": 713
+    },
+    {
+      "player": 862,
+      "team": 0,
+      "total_locations": 908
+    },
+    {
+      "player": 863,
+      "team": 0,
+      "total_locations": 349
+    },
+    {
+      "player": 864,
+      "team": 0,
+      "total_locations": 270
+    },
+    {
+      "player": 865,
+      "team": 0,
+      "total_locations": 894
+    },
+    {
+      "player": 866,
+      "team": 0,
+      "total_locations": 259
+    },
+    {
+      "player": 867,
+      "team": 0,
+      "total_locations": 1185
+    },
+    {
+      "player": 868,
+      "team": 0,
+      "total_locations": 770
+    },
+    {
+      "player": 869,
+      "team": 0,
+      "total_locations": 250
+    },
+    {
+      "player": 870,
+      "team": 0,
+      "total_locations": 894
+    },
+    {
+      "player": 871,
+      "team": 0,
+      "total_locations": 782
+    },
+    {
+      "player": 872,
+      "team": 0,
+      "total_locations": 260
+    },
+    {
+      "player": 873,
+      "team": 0,
+      "total_locations": 1185
+    },
+    {
+      "player": 874,
+      "team": 0,
+      "total_locations": 251
+    },
+    {
+      "player": 875,
+      "team": 0,
+      "total_locations": 295
+    },
+    {
+      "player": 876,
+      "team": 0,
+      "total_locations": 1089
+    },
+    {
+      "player": 877,
+      "team": 0,
+      "total_locations": 1033
+    },
+    {
+      "player": 878,
+      "team": 0,
+      "total_locations": 858
+    },
+    {
+      "player": 879,
+      "team": 0,
+      "total_locations": 729
+    },
+    {
+      "player": 880,
+      "team": 0,
+      "total_locations": 898
+    },
+    {
+      "player": 881,
+      "team": 0,
+      "total_locations": 307
+    },
+    {
+      "player": 882,
+      "team": 0,
+      "total_locations": 364
+    },
+    {
+      "player": 883,
+      "team": 0,
+      "total_locations": 321
+    },
+    {
+      "player": 884,
+      "team": 0,
+      "total_locations": 321
+    },
+    {
+      "player": 885,
+      "team": 0,
+      "total_locations": 298
+    },
+    {
+      "player": 886,
+      "team": 0,
+      "total_locations": 1033
+    },
+    {
+      "player": 887,
+      "team": 0,
+      "total_locations": 1024
+    },
+    {
+      "player": 888,
+      "team": 0,
+      "total_locations": 304
+    },
+    {
+      "player": 889,
+      "team": 0,
+      "total_locations": 820
+    },
+    {
+      "player": 890,
+      "team": 0,
+      "total_locations": 259
+    },
+    {
+      "player": 891,
+      "team": 0,
+      "total_locations": 344
+    },
+    {
+      "player": 892,
+      "team": 0,
+      "total_locations": 256
+    },
+    {
+      "player": 893,
+      "team": 0,
+      "total_locations": 861
+    },
+    {
+      "player": 894,
+      "team": 0,
+      "total_locations": 832
+    },
+    {
+      "player": 895,
+      "team": 0,
+      "total_locations": 321
+    },
+    {
+      "player": 896,
+      "team": 0,
+      "total_locations": 835
+    },
+    {
+      "player": 897,
+      "team": 0,
+      "total_locations": 899
+    },
+    {
+      "player": 898,
+      "team": 0,
+      "total_locations": 1101
+    },
+    {
+      "player": 899,
+      "team": 0,
+      "total_locations": 260
+    },
+    {
+      "player": 900,
+      "team": 0,
+      "total_locations": 301
+    },
+    {
+      "player": 901,
+      "team": 0,
+      "total_locations": 787
+    },
+    {
+      "player": 902,
+      "team": 0,
+      "total_locations": 1181
+    },
+    {
+      "player": 903,
+      "team": 0,
+      "total_locations": 993
+    },
+    {
+      "player": 904,
+      "team": 0,
+      "total_locations": 271
+    },
+    {
+      "player": 905,
+      "team": 0,
+      "total_locations": 350
+    },
+    {
+      "player": 906,
+      "team": 0,
+      "total_locations": 769
+    },
+    {
+      "player": 907,
+      "team": 0,
+      "total_locations": 1185
+    },
+    {
+      "player": 908,
+      "team": 0,
+      "total_locations": 318
+    },
+    {
+      "player": 909,
+      "team": 0,
+      "total_locations": 882
+    },
+    {
+      "player": 910,
+      "team": 0,
+      "total_locations": 281
+    },
+    {
+      "player": 911,
+      "team": 0,
+      "total_locations": 1000
+    },
+    {
+      "player": 912,
+      "team": 0,
+      "total_locations": 288
+    },
+    {
+      "player": 913,
+      "team": 0,
+      "total_locations": 286
+    },
+    {
+      "player": 914,
+      "team": 0,
+      "total_locations": 732
+    },
+    {
+      "player": 915,
+      "team": 0,
+      "total_locations": 908
+    },
+    {
+      "player": 916,
+      "team": 0,
+      "total_locations": 950
+    },
+    {
+      "player": 917,
+      "team": 0,
+      "total_locations": 892
+    },
+    {
+      "player": 918,
+      "team": 0,
+      "total_locations": 969
+    },
+    {
+      "player": 919,
+      "team": 0,
+      "total_locations": 259
+    },
+    {
+      "player": 920,
+      "team": 0,
+      "total_locations": 1092
+    },
+    {
+      "player": 921,
+      "team": 0,
+      "total_locations": 290
+    },
+    {
+      "player": 922,
+      "team": 0,
+      "total_locations": 950
+    },
+    {
+      "player": 923,
+      "team": 0,
+      "total_locations": 259
+    },
+    {
+      "player": 924,
+      "team": 0,
+      "total_locations": 701
+    },
+    {
+      "player": 925,
+      "team": 0,
+      "total_locations": 1181
+    },
+    {
+      "player": 926,
+      "team": 0,
+      "total_locations": 331
+    },
+    {
+      "player": 927,
+      "team": 0,
+      "total_locations": 287
+    },
+    {
+      "player": 928,
+      "team": 0,
+      "total_locations": 973
+    },
+    {
+      "player": 929,
+      "team": 0,
+      "total_locations": 263
+    },
+    {
+      "player": 930,
+      "team": 0,
+      "total_locations": 908
+    },
+    {
+      "player": 931,
+      "team": 0,
+      "total_locations": 306
+    },
+    {
+      "player": 932,
+      "team": 0,
+      "total_locations": 1073
+    },
+    {
+      "player": 933,
+      "team": 0,
+      "total_locations": 1098
+    },
+    {
+      "player": 934,
+      "team": 0,
+      "total_locations": 306
+    },
+    {
+      "player": 935,
+      "team": 0,
+      "total_locations": 266
+    },
+    {
+      "player": 936,
+      "team": 0,
+      "total_locations": 815
+    },
+    {
+      "player": 937,
+      "team": 0,
+      "total_locations": 1006
+    },
+    {
+      "player": 938,
+      "team": 0,
+      "total_locations": 1106
+    },
+    {
+      "player": 939,
+      "team": 0,
+      "total_locations": 1024
+    },
+    {
+      "player": 940,
+      "team": 0,
+      "total_locations": 292
+    },
+    {
+      "player": 941,
+      "team": 0,
+      "total_locations": 1024
+    },
+    {
+      "player": 942,
+      "team": 0,
+      "total_locations": 996
+    },
+    {
+      "player": 943,
+      "team": 0,
+      "total_locations": 349
+    },
+    {
+      "player": 944,
+      "team": 0,
+      "total_locations": 908
+    },
+    {
+      "player": 945,
+      "team": 0,
+      "total_locations": 321
+    },
+    {
+      "player": 946,
+      "team": 0,
+      "total_locations": 1050
+    },
+    {
+      "player": 947,
+      "team": 0,
+      "total_locations": 1003
+    },
+    {
+      "player": 948,
+      "team": 0,
+      "total_locations": 255
+    },
+    {
+      "player": 949,
+      "team": 0,
+      "total_locations": 257
+    },
+    {
+      "player": 950,
+      "team": 0,
+      "total_locations": 281
+    },
+    {
+      "player": 951,
+      "team": 0,
+      "total_locations": 1058
+    },
+    {
+      "player": 952,
+      "team": 0,
+      "total_locations": 278
+    },
+    {
+      "player": 953,
+      "team": 0,
+      "total_locations": 949
+    },
+    {
+      "player": 954,
+      "team": 0,
+      "total_locations": 804
+    },
+    {
+      "player": 955,
+      "team": 0,
+      "total_locations": 265
+    },
+    {
+      "player": 956,
+      "team": 0,
+      "total_locations": 282
+    },
+    {
+      "player": 957,
+      "team": 0,
+      "total_locations": 854
+    },
+    {
+      "player": 958,
+      "team": 0,
+      "total_locations": 280
+    },
+    {
+      "player": 959,
+      "team": 0,
+      "total_locations": 713
+    },
+    {
+      "player": 960,
+      "team": 0,
+      "total_locations": 312
+    },
+    {
+      "player": 961,
+      "team": 0,
+      "total_locations": 1073
+    },
+    {
+      "player": 962,
+      "team": 0,
+      "total_locations": 1089
+    },
+    {
+      "player": 963,
+      "team": 0,
+      "total_locations": 1078
+    },
+    {
+      "player": 964,
+      "team": 0,
+      "total_locations": 347
+    },
+    {
+      "player": 965,
+      "team": 0,
+      "total_locations": 1046
+    },
+    {
+      "player": 966,
+      "team": 0,
+      "total_locations": 1046
+    },
+    {
+      "player": 967,
+      "team": 0,
+      "total_locations": 770
+    },
+    {
+      "player": 968,
+      "team": 0,
+      "total_locations": 288
+    },
+    {
+      "player": 969,
+      "team": 0,
+      "total_locations": 263
+    },
+    {
+      "player": 970,
+      "team": 0,
+      "total_locations": 820
+    },
+    {
+      "player": 971,
+      "team": 0,
+      "total_locations": 328
+    },
+    {
+      "player": 972,
+      "team": 0,
+      "total_locations": 762
+    },
+    {
+      "player": 973,
+      "team": 0,
+      "total_locations": 295
+    },
+    {
+      "player": 974,
+      "team": 0,
+      "total_locations": 267
+    },
+    {
+      "player": 975,
+      "team": 0,
+      "total_locations": 281
+    },
+    {
+      "player": 976,
+      "team": 0,
+      "total_locations": 898
+    },
+    {
+      "player": 977,
+      "team": 0,
+      "total_locations": 278
+    },
+    {
+      "player": 978,
+      "team": 0,
+      "total_locations": 263
+    },
+    {
+      "player": 979,
+      "team": 0,
+      "total_locations": 350
+    },
+    {
+      "player": 980,
+      "team": 0,
+      "total_locations": 853
+    },
+    {
+      "player": 981,
+      "team": 0,
+      "total_locations": 273
+    },
+    {
+      "player": 982,
+      "team": 0,
+      "total_locations": 340
+    },
+    {
+      "player": 983,
+      "team": 0,
+      "total_locations": 1068
+    },
+    {
+      "player": 984,
+      "team": 0,
+      "total_locations": 709
+    },
+    {
+      "player": 985,
+      "team": 0,
+      "total_locations": 290
+    },
+    {
+      "player": 986,
+      "team": 0,
+      "total_locations": 880
+    },
+    {
+      "player": 987,
+      "team": 0,
+      "total_locations": 301
+    },
+    {
+      "player": 988,
+      "team": 0,
+      "total_locations": 967
+    },
+    {
+      "player": 989,
+      "team": 0,
+      "total_locations": 1021
+    },
+    {
+      "player": 990,
+      "team": 0,
+      "total_locations": 948
+    },
+    {
+      "player": 991,
+      "team": 0,
+      "total_locations": 937
+    },
+    {
+      "player": 992,
+      "team": 0,
+      "total_locations": 897
+    },
+    {
+      "player": 993,
+      "team": 0,
+      "total_locations": 857
+    },
+    {
+      "player": 994,
+      "team": 0,
+      "total_locations": 708
+    },
+    {
+      "player": 995,
+      "team": 0,
+      "total_locations": 1022
+    },
+    {
+      "player": 996,
+      "team": 0,
+      "total_locations": 385
+    },
+    {
+      "player": 997,
+      "team": 0,
+      "total_locations": 264
+    },
+    {
+      "player": 998,
+      "team": 0,
+      "total_locations": 351
+    },
+    {
+      "player": 999,
+      "team": 0,
+      "total_locations": 249
+    },
+    {
+      "player": 1000,
+      "team": 0,
+      "total_locations": 743
+    }
+  ]
+}

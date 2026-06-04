@@ -35,6 +35,8 @@ function groupRoutes(routes: GoalRoute[]): SlotResult[] {
         alias: r.alias,
         routes: [],
         bestCount: Infinity,
+        checkedLocations: r.checkedLocations,
+        totalLocations: r.totalLocations,
       });
     }
     const slot = map.get(r.slotName)!;
@@ -563,6 +565,9 @@ function SlotCard({
           ) : (
             slot.slotName
           )}
+          <span className="loc-count">
+            ({slot.checkedLocations}/{slot.totalLocations})
+          </span>
         </span>
         <span className="best-count">
           {slot.bestCount === 0 ? "✓" : `${slot.bestCount} min`}
@@ -943,6 +948,11 @@ export default function Page() {
           color: var(--muted);
           font-family: var(--mono);
           font-size: 0.75rem;
+        }
+        .loc-count {
+          color: var(--muted);
+          font-family: var(--mono);
+          font-size: 0.7rem;
         }
         .best-count {
           font-family: var(--mono);

@@ -25,6 +25,8 @@ export interface GoalRoute {
   checkpointItem: string | null;
   missingItems: string[];
   isDts: boolean;
+  checkedLocations: number;
+  totalLocations: number;
 }
 
 // Grouped by slot for the UI
@@ -35,6 +37,8 @@ export interface SlotResult {
   alias: string | null;
   routes: GoalRoute[];
   bestCount: number; // length of shortest route, for sorting
+  checkedLocations: number;
+  totalLocations: number;
 }
 
 // Tracker shape (subset we care about)
@@ -55,6 +59,7 @@ export interface TrackerAlias {
 
 export interface Tracker {
   player_items_received: TrackerPlayerItems[];
+  player_checks_done: { locations: number[] }[]; // 0-based array, index = player - 1
   aliases: TrackerAlias[];
 }
 
@@ -72,6 +77,15 @@ export interface SlotData {
 export interface Datapackage {
   item_name_to_id: Record<string, number>;
   location_name_to_id: Record<string, number>;
+}
+
+export interface StaticTracker {
+  player_locations_total: {
+    player: number;
+    team: number;
+    total_locations: number;
+  }[];
+  // other fields omitted
 }
 
 export type FilterMode = "threshold" | "alias" | "slots";

@@ -4,6 +4,7 @@ import type {
   Tracker,
   SlotData,
   Datapackage,
+  StaticTracker,
   Filter,
 } from "./types";
 import { GOAL_CHECKPOINTS, GOAL_DISPLAY, GOAL_KEYS } from "./goals";
@@ -121,6 +122,8 @@ export function enumerateGoalRoutes(
         checkpointItem: cpItem,
         missingItems: [...cpMissing, ...strawbItems],
         isDts: false,
+        checkedLocations: 0,
+        totalLocations: 0,
       });
       continue;
     }
@@ -153,6 +156,8 @@ export function enumerateGoalRoutes(
         checkpointItem: cpItem,
         missingItems,
         isDts: dts,
+        checkedLocations: 0,
+        totalLocations: 0,
       });
     }
   }
@@ -168,12 +173,22 @@ export function enumerateAllRoutes(
   tracker: Tracker,
   slotDataList: SlotData[],
   datapackage: Datapackage,
+  staticTracker: StaticTracker,
   goalCheckpointsanityList: boolean[],
   aliasMap: Map<number, string>,
   filter: Filter,
 ): GoalRoute[] {
   const numPlayers = tracker.player_items_received.length;
   const allViable: GoalRoute[] = [];
+
+  // Build lookup map for total locations (1-based player field from static tracker)
+  const totalLocMap = new Map<number, number>(
+    staticTracker.player_locations_total.map((e) => [
+      e.player,
+      e.total_locations,
+    ]),
+  );
+  // player_checks_done is a 0-based array — index directly by i in the loop below
 
   for (let i = 0; i < numPlayers; i++) {
     const slotName = `Celeste${i + 1}`;
@@ -219,9 +234,14 @@ export function enumerateAllRoutes(
         ? routes.filter((r) => r.missingItems.length <= (filter.threshold ?? 3))
         : routes;
 
-    // Attach alias
+    const playerNum = i + 1;
+    const checkedLocations =
+      tracker.player_checks_done[i]?.locations.length ?? 0;
+    const totalLocations = totalLocMap.get(playerNum) ?? 0;
+
+    // Attach alias and location counts
     for (const r of viable) {
-      allViable.push({ ...r, alias });
+      allViable.push({ ...r, alias, checkedLocations, totalLocations });
     }
   }
 

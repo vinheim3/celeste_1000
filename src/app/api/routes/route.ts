@@ -9,6 +9,7 @@ import type {
   Tracker,
   SlotData,
   Datapackage,
+  StaticTracker,
   Filter,
   Watch,
   ActiveWatch,
@@ -48,6 +49,9 @@ const datapackage: Datapackage = JSON.parse(
 );
 const goalCheckpointsanityList: boolean[] = JSON.parse(
   readFileSync(join(DATA_DIR, "goal_checkpointsanity.json"), "utf-8"),
+);
+const staticTracker: StaticTracker = JSON.parse(
+  readFileSync(join(DATA_DIR, "static_tracker.json"), "utf-8"),
 );
 
 // Sorted, filtered item list derived from the datapackage — computed once at module load
@@ -120,6 +124,7 @@ export async function GET(request: NextRequest) {
     tracker,
     slotDataList,
     datapackage,
+    staticTracker,
     goalCheckpointsanityList,
     aliasMap,
     filter,
