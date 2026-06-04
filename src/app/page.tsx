@@ -590,7 +590,7 @@ function SlotCard({
 // ---------------------------------------------------------------------------
 export default function Page() {
   const [mode, setMode] = useState<FilterMode>("threshold");
-  const [threshold, setThreshold] = useState(3);
+  const [thresholdInput, setThresholdInput] = useState("3");
   const [alias, setAlias] = useState("");
   const [slots, setSlots] = useState<string[]>([]);
 
@@ -607,7 +607,8 @@ export default function Page() {
       const params = new URLSearchParams();
       if (mode === "threshold") {
         params.set("filter", "threshold");
-        params.set("threshold", String(threshold));
+        const t = thresholdInput === "" ? 0 : parseInt(thresholdInput, 10);
+        params.set("threshold", String(isNaN(t) ? 0 : t));
       } else if (mode === "alias") {
         params.set("filter", "alias");
         params.set("alias", alias);
@@ -626,7 +627,7 @@ export default function Page() {
     } finally {
       setLoading(false);
     }
-  }, [mode, threshold, alias, slots]);
+  }, [mode, thresholdInput, alias, slots]);
 
   // Initial load
   useEffect(() => {
@@ -695,21 +696,62 @@ export default function Page() {
           font-family: var(--mono);
         }
 
-        /* Layout */
+        /* Layout — sidebar on desktop, filter bar on top for mobile */
         .body {
-          display: grid;
-          grid-template-columns: 280px 1fr;
+          display: flex;
+          flex-direction: column;
           min-height: 0;
         }
 
-        /* Sidebar */
         .sidebar {
-          border-right: 1px solid var(--border);
-          padding: 24px 20px;
+          border-bottom: 1px solid var(--border);
+          padding: 16px 20px;
           background: var(--surface);
           display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: flex-end;
+          gap: 12px;
+        }
+        .filter-section {
+          flex: 1;
+          min-width: 180px;
+        }
+        .sidebar-actions {
+          display: flex;
           flex-direction: column;
-          gap: 24px;
+          gap: 8px;
+          align-self: flex-end;
+        }
+
+        @media (min-width: 640px) {
+          .body {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            grid-template-rows: 1fr;
+            min-height: 0;
+            flex-direction: unset;
+          }
+          .sidebar {
+            border-bottom: none;
+            border-right: 1px solid var(--border);
+            padding: 24px 20px;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: stretch;
+            gap: 24px;
+            overflow-y: auto;
+          }
+          .filter-section {
+            flex: unset;
+            min-width: unset;
+          }
+          .results {
+            overflow-y: auto;
+          }
+          .sidebar-actions {
+            align-self: unset;
+          }
         }
 
         .filter-section label {
@@ -837,8 +879,7 @@ export default function Page() {
 
         /* Results */
         .results {
-          padding: 24px 28px;
-          overflow-y: auto;
+          padding: 16px 20px;
           display: flex;
           flex-direction: column;
           gap: 12px;
@@ -1197,12 +1238,10 @@ export default function Page() {
                 <input
                   type="number"
                   className="filter-input"
-                  min={1}
-                  max={30}
-                  value={threshold}
-                  onChange={(e) =>
-                    setThreshold(Math.max(1, Number(e.target.value)))
-                  }
+                  min={0}
+                  max={242}
+                  value={thresholdInput}
+                  onChange={(e) => setThresholdInput(e.target.value)}
                 />
               )}
 
@@ -1225,22 +1264,23 @@ export default function Page() {
               )}
             </div>
 
-            <button
-              className="apply-btn"
-              onClick={fetchRoutes}
-              disabled={loading}
-            >
-              {loading ? "Loading…" : "Apply"}
-            </button>
-
-            {data && !loading && (
-              <div className="result-count">
-                <span>{grouped.length}</span> slot
-                {grouped.length !== 1 ? "s" : ""} ·{" "}
-                <span>{data.routes.length}</span> route
-                {data.routes.length !== 1 ? "s" : ""}
-              </div>
-            )}
+            <div className="sidebar-actions">
+              <button
+                className="apply-btn"
+                onClick={fetchRoutes}
+                disabled={loading}
+              >
+                {loading ? "Loading…" : "Apply"}
+              </button>
+              {data && !loading && (
+                <div className="result-count">
+                  <span>{grouped.length}</span> slot
+                  {grouped.length !== 1 ? "s" : ""} ·{" "}
+                  <span>{data.routes.length}</span> route
+                  {data.routes.length !== 1 ? "s" : ""}
+                </div>
+              )}
+            </div>
           </aside>
 
           {/* Results */}

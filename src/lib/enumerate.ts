@@ -216,7 +216,7 @@ export function enumerateAllRoutes(
     // Apply threshold filter
     const viable =
       filter.mode === "threshold"
-        ? routes.filter((r) => r.missingItems.length <= (filter.threshold ?? 4))
+        ? routes.filter((r) => r.missingItems.length <= (filter.threshold ?? 3))
         : routes;
 
     // Attach alias
