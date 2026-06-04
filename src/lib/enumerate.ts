@@ -209,6 +209,11 @@ export function enumerateAllRoutes(
     if (filter.mode === "alias" && alias !== filter.alias) continue;
     // Slots filter: skip if slot not in list
     if (filter.mode === "slots" && !filter.slots?.includes(slotName)) continue;
+    // Goal filter: skip if goal display doesn't match
+    if (filter.mode === "goal" && filter.goal) {
+      const display = GOAL_DISPLAY[goalArea] ?? goalArea;
+      if (display !== filter.goal) continue;
+    }
 
     const checkpointsanity = Boolean(slotData.checkpointsanity);
     const goalCheckpointsanity = goalCheckpointsanityList[i] ?? false;

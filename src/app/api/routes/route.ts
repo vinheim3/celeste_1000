@@ -82,6 +82,9 @@ export async function GET(request: NextRequest) {
         { status: 400 },
       );
     filter = { mode: "slots", slots };
+  } else if (filterMode === "goal") {
+    const goal = searchParams.get("goal") ?? "";
+    filter = { mode: "goal", goal };
   } else {
     filter = {
       mode: "threshold",

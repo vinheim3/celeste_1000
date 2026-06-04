@@ -9,6 +9,17 @@ import type {
   WatchCondition,
 } from "@/lib/types";
 
+const GOAL_OPTIONS = [
+  "7a",
+  "7b",
+  "7c",
+  "8a",
+  "8b",
+  "8c",
+  "Empty Space",
+  "Farewell",
+] as const;
+
 // ---------------------------------------------------------------------------
 // Types for API response
 // ---------------------------------------------------------------------------
@@ -649,6 +660,7 @@ export default function Page() {
   const [thresholdInput, setThresholdInput] = useState("3");
   const [alias, setAlias] = useState("");
   const [slots, setSlots] = useState<string[]>([]);
+  const [goalFilter, setGoalFilter] = useState("");
 
   const [data, setData] = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState(false);
@@ -668,9 +680,12 @@ export default function Page() {
       } else if (mode === "alias") {
         params.set("filter", "alias");
         params.set("alias", alias);
-      } else {
+      } else if (mode === "slots") {
         params.set("filter", "slots");
         for (const s of slots) params.append("slot", s);
+      } else {
+        params.set("filter", "goal");
+        params.set("goal", goalFilter);
       }
       const res = await fetch(`/api/routes?${params}`);
       if (!res.ok) throw new Error(`Server error ${res.status}`);
@@ -683,7 +698,7 @@ export default function Page() {
     } finally {
       setLoading(false);
     }
-  }, [mode, thresholdInput, alias, slots]);
+  }, [mode, thresholdInput, alias, slots, goalFilter]);
 
   // Initial load
   useEffect(() => {
@@ -822,7 +837,7 @@ export default function Page() {
 
         .mode-tabs {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: 4px;
           margin-bottom: 14px;
         }
@@ -1284,15 +1299,17 @@ export default function Page() {
             <div className="filter-section">
               <label>Filter mode</label>
               <div className="mode-tabs">
-                {(["threshold", "alias", "slots"] as FilterMode[]).map((m) => (
-                  <button
-                    key={m}
-                    className={`mode-tab ${mode === m ? "active" : ""}`}
-                    onClick={() => setMode(m)}
-                  >
-                    {m}
-                  </button>
-                ))}
+                {(["threshold", "alias", "slots", "goal"] as FilterMode[]).map(
+                  (m) => (
+                    <button
+                      key={m}
+                      className={`mode-tab ${mode === m ? "active" : ""}`}
+                      onClick={() => setMode(m)}
+                    >
+                      {m}
+                    </button>
+                  ),
+                )}
               </div>
 
               {mode === "threshold" && (
@@ -1321,6 +1338,15 @@ export default function Page() {
                   value={slots}
                   onChange={setSlots}
                   placeholder="Search slots…"
+                />
+              )}
+
+              {mode === "goal" && (
+                <Combobox
+                  options={[...GOAL_OPTIONS]}
+                  value={goalFilter}
+                  onChange={setGoalFilter}
+                  placeholder="Select goal…"
                 />
               )}
             </div>

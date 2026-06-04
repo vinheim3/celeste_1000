@@ -88,13 +88,14 @@ export interface StaticTracker {
   // other fields omitted
 }
 
-export type FilterMode = "threshold" | "alias" | "slots";
+export type FilterMode = "threshold" | "alias" | "slots" | "goal";
 
 export interface Filter {
   mode: FilterMode;
   threshold?: number;
   alias?: string;
   slots?: string[];
+  goal?: string; // GOAL_DISPLAY value e.g. "7a", "Farewell"
 }
 
 // ---------------------------------------------------------------------------
