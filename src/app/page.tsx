@@ -196,6 +196,14 @@ function MultiCombobox({
   );
 }
 
+function formatMissingItems(items: string[]): string {
+  const counts = new Map<string, number>();
+  for (const item of items) counts.set(item, (counts.get(item) ?? 0) + 1);
+  return [...counts.entries()]
+    .map(([item, n]) => (n > 1 ? `${item} x${n}` : item))
+    .join(", ");
+}
+
 // ---------------------------------------------------------------------------
 // Route pill
 // ---------------------------------------------------------------------------
@@ -217,7 +225,9 @@ function RoutePill({ route }: { route: GoalRoute }) {
         {count === 0 ? (
           <span className="route-ready">Ready to goal</span>
         ) : (
-          <span className="route-items">{route.missingItems.join(", ")}</span>
+          <span className="route-items">
+            {formatMissingItems(route.missingItems)}
+          </span>
         )}
       </div>
     </div>
