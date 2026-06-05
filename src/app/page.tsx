@@ -7,6 +7,7 @@ import type {
   SlotResult,
   ActiveWatch,
   WatchCondition,
+  SlotHint,
 } from "@/lib/types";
 
 const GOAL_OPTIONS = [
@@ -30,12 +31,16 @@ interface ApiResponse {
   notes: Record<string, string>;
   activeWatches: ActiveWatch[];
   allWatchItems: string[];
+  hintsBySlot: Record<string, SlotHint[]>;
 }
 
 // ---------------------------------------------------------------------------
 // Group flat routes into per-slot results
 // ---------------------------------------------------------------------------
-function groupRoutes(routes: GoalRoute[]): SlotResult[] {
+function groupRoutes(
+  routes: GoalRoute[],
+  hintsBySlot: Record<string, SlotHint[]>,
+): SlotResult[] {
   const map = new Map<string, SlotResult>();
   for (const r of routes) {
     if (!map.has(r.slotName)) {
@@ -48,6 +53,7 @@ function groupRoutes(routes: GoalRoute[]): SlotResult[] {
         bestCount: Infinity,
         checkedLocations: r.checkedLocations,
         totalLocations: r.totalLocations,
+        hints: [],
       });
     }
     const slot = map.get(r.slotName)!;
@@ -77,6 +83,11 @@ function groupRoutes(routes: GoalRoute[]): SlotResult[] {
           _viaLabels: viaLabels,
         }) as GoalRoute & { _viaLabels: string[] },
     );
+  }
+
+  // Attach hints to each slot
+  for (const slot of map.values()) {
+    slot.hints = hintsBySlot[slot.slotName] ?? [];
   }
 
   return [...map.values()].sort((a, b) => a.bestCount - b.bestCount);
@@ -552,6 +563,33 @@ function WatchList({
 }
 
 // ---------------------------------------------------------------------------
+// Slot hints
+// ---------------------------------------------------------------------------
+function SlotHints({ hints }: { hints: SlotHint[] }) {
+  if (hints.length === 0) return null;
+
+  const formatSlot = (slot: string, alias: string | null) =>
+    alias ? `${alias} (${slot})` : slot;
+
+  return (
+    <div className="slot-hints">
+      <div className="slot-hints-label">hints</div>
+      {hints.map((h, i) => (
+        <div key={i} className="hint-row">
+          <span className="hint-item">{h.item}</span>
+          <span className="hint-arrow">→</span>
+          <span className="hint-location">{h.location}</span>
+          <span className="hint-in">in</span>
+          <span className="hint-finder">
+            {formatSlot(h.findingSlot, h.findingAlias)}
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
 // Slot note
 // ---------------------------------------------------------------------------
 function SlotNote({
@@ -602,7 +640,7 @@ function SlotCard({
   onWatchAdded,
   onWatchDeleted,
 }: {
-  slot: SlotResult;
+  slot: SlotResult; // slot.hints carries the hint data
   note: string;
   watches: ActiveWatch[];
   allSlots: string[];
@@ -640,6 +678,7 @@ function SlotCard({
           <RoutePill key={i} route={r} />
         ))}
       </div>
+      <SlotHints hints={slot.hints} />
       <WatchList watches={watches} onDeleted={onWatchDeleted} />
       <AddWatchForm
         forSlot={slot.slotName}
@@ -705,7 +744,7 @@ export default function Page() {
     fetchRoutes();
   }, []);
 
-  const grouped = data ? groupRoutes(data.routes) : [];
+  const grouped = data ? groupRoutes(data.routes, data.hintsBySlot ?? {}) : [];
 
   return (
     <>
@@ -1279,6 +1318,52 @@ export default function Page() {
           display: flex;
           flex-wrap: wrap;
           gap: 4px;
+        }
+
+        /* Hints */
+        .slot-hints {
+          margin: 0 14px 8px;
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+        }
+        .slot-hints-label {
+          font-family: var(--mono);
+          font-size: 0.6rem;
+          color: var(--muted);
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          margin-bottom: 2px;
+        }
+        .hint-row {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: baseline;
+          gap: 4px;
+          font-size: 0.78rem;
+          line-height: 1.4;
+        }
+        .hint-item {
+          color: var(--teal);
+          font-weight: 500;
+        }
+        .hint-arrow {
+          color: var(--muted);
+          font-family: var(--mono);
+          font-size: 0.7rem;
+        }
+        .hint-location {
+          color: var(--text);
+        }
+        .hint-in {
+          color: var(--muted);
+          font-size: 0.7rem;
+          font-family: var(--mono);
+        }
+        .hint-finder {
+          color: var(--gold);
+          font-family: var(--mono);
+          font-size: 0.72rem;
         }
 
         /* Scrollbar */

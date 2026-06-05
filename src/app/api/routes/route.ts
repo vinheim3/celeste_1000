@@ -13,12 +13,56 @@ import type {
   Filter,
   Watch,
   ActiveWatch,
+  SlotHint,
 } from "@/lib/types";
 import { enumerateAllRoutes, resolveWatches } from "@/lib/enumerate";
 import { GOAL_CHECKPOINTS } from "@/lib/goals";
 import { WATCH_ITEM_EXCLUDES } from "@/lib/Watchitemexcludes";
 
 const TRACKER_ID = process.env.ARCHIPELAGO_TRACKER_ID!;
+
+function buildSlotHints(
+  tracker: Tracker,
+  datapackage: Datapackage,
+  aliasMap: Map<number, string>,
+): Map<string, SlotHint[]> {
+  const idToItem = Object.fromEntries(
+    Object.entries(datapackage.item_name_to_id).map(([k, v]) => [v, k]),
+  );
+  const idToLocation = Object.fromEntries(
+    Object.entries(datapackage.location_name_to_id).map(([k, v]) => [v, k]),
+  );
+
+  // Map: receivingSlot -> hints where that slot is the receiver
+  const hintsBySlot = new Map<string, SlotHint[]>();
+
+  for (const playerHints of tracker.hints) {
+    for (const hint of playerHints.hints) {
+      const [receivingIdx, findingIdx, locationId, itemId, found] = hint;
+      if (found) continue;
+      if (receivingIdx !== playerHints.player) continue;
+
+      const receivingSlot = `Celeste${receivingIdx}`;
+      const findingSlot = `Celeste${findingIdx}`;
+      const item = idToItem[itemId] ?? `Item#${itemId}`;
+      const location = idToLocation[locationId] ?? `Location#${locationId}`;
+
+      const slotHint: SlotHint = {
+        receivingSlot,
+        receivingAlias: aliasMap.get(receivingIdx) ?? null,
+        findingSlot,
+        findingAlias: aliasMap.get(findingIdx) ?? null,
+        item,
+        location,
+      };
+
+      if (!hintsBySlot.has(receivingSlot)) hintsBySlot.set(receivingSlot, []);
+      hintsBySlot.get(receivingSlot)!.push(slotHint);
+    }
+  }
+
+  return hintsBySlot;
+}
 
 // No Next.js data cache — the 7MB tracker response exceeds its 2MB limit.
 // Instead we keep a module-level in-process cache with a 60s TTL.
@@ -122,6 +166,9 @@ export async function GET(request: NextRequest) {
     tracker.aliases.map((a) => [a.player, a.alias]),
   );
 
+  // --- Build hint map ---
+  const hintsBySlot = buildSlotHints(tracker, datapackage, aliasMap);
+
   // --- Run enumeration ---
   const routes = enumerateAllRoutes(
     tracker,
@@ -151,6 +198,7 @@ export async function GET(request: NextRequest) {
       return n(a) - n(b);
     });
 
+  const hintsBySlotObj = Object.fromEntries(hintsBySlot);
   return NextResponse.json({
     routes,
     allAliases,
@@ -158,5 +206,6 @@ export async function GET(request: NextRequest) {
     notes,
     activeWatches,
     allWatchItems,
+    hintsBySlot: hintsBySlotObj,
   });
 }

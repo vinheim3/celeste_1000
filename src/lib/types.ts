@@ -39,6 +39,7 @@ export interface SlotResult {
   bestCount: number; // length of shortest route, for sorting
   checkedLocations: number;
   totalLocations: number;
+  hints: SlotHint[];
 }
 
 // Tracker shape (subset we care about)
@@ -47,19 +48,30 @@ export interface TrackerPlayerItems {
   items: [number, number, number, number][]; // [item_id, location_id, sending_player, flags]
 }
 
-export interface TrackerPlayerHints {
-  player: number;
-  hints: unknown[];
-}
-
 export interface TrackerAlias {
   player: number;
   alias: string;
 }
 
+export interface TrackerPlayerHintEntry {
+  player: number;
+  team: number;
+  hints: [
+    number, // receiving_player (1-indexed)
+    number, // finding_player (1-indexed)
+    number, // location_id
+    number, // item_id
+    boolean, // found
+    string, // entrance (ignored)
+    number, // item_flags (ignored)
+    number, // status (ignored)
+  ][];
+}
+
 export interface Tracker {
   player_items_received: TrackerPlayerItems[];
   player_checks_done: { locations: number[] }[]; // 0-based array, index = player - 1
+  hints: TrackerPlayerHintEntry[];
   aliases: TrackerAlias[];
 }
 
@@ -86,6 +98,16 @@ export interface StaticTracker {
     total_locations: number;
   }[];
   // other fields omitted
+}
+
+// A resolved hint for display against a slot
+export interface SlotHint {
+  receivingSlot: string; // e.g. "Celeste518"
+  receivingAlias: string | null;
+  findingSlot: string; // e.g. "Celeste78"
+  findingAlias: string | null;
+  item: string;
+  location: string;
 }
 
 export type FilterMode = "threshold" | "alias" | "slots" | "goal";
