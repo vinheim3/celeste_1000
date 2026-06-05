@@ -496,6 +496,7 @@ export const GOAL_CHECKPOINTS: GoalCheckpoints = {
                 "Coins",
                 "Fire and Ice Balls",
                 "Dash Refills",
+                "Bumpers",
               ],
             },
           ],
@@ -517,6 +518,7 @@ export const GOAL_CHECKPOINTS: GoalCheckpoints = {
                 "Coins",
                 "Fire and Ice Balls",
                 "Dash Refills",
+                "Bumpers",
               ],
             },
           ],
@@ -538,6 +540,7 @@ export const GOAL_CHECKPOINTS: GoalCheckpoints = {
                 "Coins",
                 "Fire and Ice Balls",
                 "Dash Refills",
+                "Bumpers",
               ],
             },
           ],
@@ -552,12 +555,12 @@ export const GOAL_CHECKPOINTS: GoalCheckpoints = {
         rooms: [
           [
             {
-              requires: ["Core Toggles", "Badeline Boosters"],
+              requires: ["Core Toggles", "Badeline Boosters", "Bumpers"],
             },
           ],
           [
             { requires: ["Core Blocks"] },
-            { requires: ["Bumpers", "Dash Refills", "Fire and Ice Balls"] },
+            { requires: ["Dash Refills", "Fire and Ice Balls"] },
           ],
           [
             { requires: ["Pink Cassette Blocks"] },

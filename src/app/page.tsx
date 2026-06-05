@@ -826,7 +826,7 @@ export default function Page() {
   const [notes, setNotes] = useState<Record<string, string>>({});
   const [watches, setWatches] = useState<ActiveWatch[]>([]);
   const [inventorySlot, setInventorySlot] = useState<SlotResult | null>(null);
-  const [omitSupersets, setOmitSupersets] = useState(false);
+  const [omitSupersets, setOmitSupersets] = useState(true);
 
   const fetchRoutes = useCallback(async () => {
     setLoading(true);
