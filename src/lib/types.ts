@@ -40,6 +40,7 @@ export interface SlotResult {
   checkedLocations: number;
   totalLocations: number;
   hints: SlotHint[];
+  inventory: InventoryCategories | null;
 }
 
 // Tracker shape (subset we care about)
@@ -98,6 +99,12 @@ export interface StaticTracker {
     total_locations: number;
   }[];
   // other fields omitted
+}
+
+export interface InventoryCategories {
+  items: string[]; // gameplay mechanics
+  keysAndGems: string[]; // keys and collectible gems
+  checkpoints: string[]; // chapter checkpoint unlocks
 }
 
 // A resolved hint for display against a slot

@@ -8,6 +8,7 @@ import type {
   ActiveWatch,
   WatchCondition,
   SlotHint,
+  InventoryCategories,
 } from "@/lib/types";
 
 const GOAL_OPTIONS = [
@@ -33,6 +34,7 @@ interface ApiResponse {
   allWatchItems: string[];
   hintsBySlot: Record<string, SlotHint[]>;
   slotAliasMap: Record<string, string>;
+  inventoryBySlot: Record<string, InventoryCategories>;
 }
 
 // ---------------------------------------------------------------------------
@@ -41,6 +43,7 @@ interface ApiResponse {
 function groupRoutes(
   routes: GoalRoute[],
   hintsBySlot: Record<string, SlotHint[]>,
+  inventoryBySlot: Record<string, InventoryCategories>,
 ): SlotResult[] {
   const map = new Map<string, SlotResult>();
   for (const r of routes) {
@@ -55,6 +58,7 @@ function groupRoutes(
         checkedLocations: r.checkedLocations,
         totalLocations: r.totalLocations,
         hints: [],
+        inventory: null,
       });
     }
     const slot = map.get(r.slotName)!;
@@ -86,9 +90,10 @@ function groupRoutes(
     );
   }
 
-  // Attach hints to each slot
+  // Attach hints and inventory to each slot
   for (const slot of map.values()) {
     slot.hints = hintsBySlot[slot.slotName] ?? [];
+    slot.inventory = inventoryBySlot[slot.slotName] ?? null;
   }
 
   return [...map.values()].sort((a, b) => a.bestCount - b.bestCount);
@@ -573,6 +578,77 @@ function WatchList({
 }
 
 // ---------------------------------------------------------------------------
+// Inventory modal
+// ---------------------------------------------------------------------------
+const INV_TABS = ["Items", "Keys / Gems", "Checkpoints"] as const;
+type InvTab = (typeof INV_TABS)[number];
+
+function InventoryModal({
+  slot,
+  onClose,
+}: {
+  slot: SlotResult;
+  onClose: () => void;
+}) {
+  const [tab, setTab] = useState<InvTab>("Items");
+  const inv = slot.inventory;
+  const lists: Record<InvTab, string[]> = {
+    Items: inv?.items ?? [],
+    "Keys / Gems": inv?.keysAndGems ?? [],
+    Checkpoints: inv?.checkpoints ?? [],
+  };
+  const onBackdrop = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) onClose();
+  };
+  return (
+    <div className="modal-backdrop" onClick={onBackdrop}>
+      <div className="modal-box" role="dialog" aria-modal="true">
+        <div className="modal-header">
+          <span className="modal-title">
+            {slot.alias ? (
+              <>
+                {slot.alias}{" "}
+                <span className="modal-slot-sub">{slot.slotName}</span>
+              </>
+            ) : (
+              slot.slotName
+            )}
+          </span>
+          <button className="modal-close" onClick={onClose} aria-label="Close">
+            ×
+          </button>
+        </div>
+        <div className="modal-tabs">
+          {INV_TABS.map((t) => (
+            <button
+              key={t}
+              className={`modal-tab ${tab === t ? "active" : ""}`}
+              onClick={() => setTab(t)}
+            >
+              {t}
+              <span className="modal-tab-count">{lists[t].length}</span>
+            </button>
+          ))}
+        </div>
+        <div className="modal-body">
+          {lists[tab].length === 0 ? (
+            <p className="modal-empty">Nothing here yet.</p>
+          ) : (
+            <ul className="modal-item-list">
+              {lists[tab].map((item, i) => (
+                <li key={i} className="modal-item">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
 // Slot hints
 // ---------------------------------------------------------------------------
 function SlotHints({ hints }: { hints: SlotHint[] }) {
@@ -648,6 +724,7 @@ function SlotCard({
   allSlots,
   allItems,
   slotAliases,
+  onViewInventory,
   onWatchAdded,
   onWatchDeleted,
 }: {
@@ -657,6 +734,7 @@ function SlotCard({
   allSlots: string[];
   allItems: string[];
   slotAliases: Map<string, string>;
+  onViewInventory: (slot: SlotResult) => void;
   onWatchAdded: (w: ActiveWatch) => void;
   onWatchDeleted: (id: string) => void;
 }) {
@@ -684,6 +762,11 @@ function SlotCard({
         <span className="best-count">
           {slot.bestCount === 0 ? "✓" : `${slot.bestCount} min`}
         </span>
+      </div>
+      <div className="slot-inv-btn-row">
+        <button className="slot-inv-btn" onClick={() => onViewInventory(slot)}>
+          View Inventory
+        </button>
       </div>
       <div className="route-list">
         {sortedRoutes.map((r, i) => (
@@ -722,6 +805,7 @@ export default function Page() {
   const [error, setError] = useState<string | null>(null);
   const [notes, setNotes] = useState<Record<string, string>>({});
   const [watches, setWatches] = useState<ActiveWatch[]>([]);
+  const [inventorySlot, setInventorySlot] = useState<SlotResult | null>(null);
 
   const fetchRoutes = useCallback(async () => {
     setLoading(true);
@@ -760,7 +844,13 @@ export default function Page() {
     fetchRoutes();
   }, []);
 
-  const grouped = data ? groupRoutes(data.routes, data.hintsBySlot ?? {}) : [];
+  const grouped = data
+    ? groupRoutes(
+        data.routes,
+        data.hintsBySlot ?? {},
+        data.inventoryBySlot ?? {},
+      )
+    : [];
   const slotAliases = new Map(Object.entries(data?.slotAliasMap ?? {}));
 
   return (
@@ -1387,6 +1477,95 @@ export default function Page() {
           font-size: 0.72rem;
         }
 
+        /* Inventory button */
+        .slot-inv-btn-row { padding: 6px 14px 2px; }
+        .slot-inv-btn {
+          background: none;
+          border: 1px solid var(--border);
+          border-radius: var(--radius);
+          color: var(--muted);
+          font-family: var(--mono);
+          font-size: 0.65rem;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          padding: 4px 10px;
+          cursor: pointer;
+          transition: border-color 0.15s, color 0.15s;
+        }
+        .slot-inv-btn:hover { border-color: var(--teal); color: var(--teal); }
+
+        /* Modal */
+        .modal-backdrop {
+          position: fixed;
+          inset: 0;
+          background: rgba(0,0,0,0.6);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 200;
+          padding: 16px;
+        }
+        .modal-box {
+          background: var(--surface);
+          border: 1px solid var(--border);
+          border-radius: var(--radius);
+          width: 100%;
+          max-width: 480px;
+          max-height: 80vh;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+        }
+        .modal-header {
+          display: flex;
+          align-items: center;
+          padding: 14px 16px;
+          border-bottom: 1px solid var(--border);
+          gap: 10px;
+        }
+        .modal-title {
+          flex: 1;
+          font-size: 0.9rem;
+          font-weight: 600;
+          display: flex;
+          align-items: baseline;
+          gap: 8px;
+        }
+        .modal-slot-sub { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); }
+        .modal-close {
+          background: none; border: none; color: var(--muted);
+          font-size: 1.2rem; cursor: pointer; line-height: 1; padding: 0 2px;
+        }
+        .modal-close:hover { color: var(--pink); }
+        .modal-tabs {
+          display: flex;
+          border-bottom: 1px solid var(--border);
+        }
+        .modal-tab {
+          flex: 1; background: none; border: none;
+          border-bottom: 2px solid transparent;
+          color: var(--muted);
+          font-family: var(--mono); font-size: 0.65rem;
+          text-transform: uppercase; letter-spacing: 0.08em;
+          padding: 10px 4px; cursor: pointer;
+          display: flex; align-items: center; justify-content: center; gap: 5px;
+          transition: color 0.15s, border-color 0.15s;
+          margin-bottom: -1px;
+        }
+        .modal-tab.active { color: var(--teal); border-bottom-color: var(--teal); }
+        .modal-tab:hover:not(.active) { color: var(--text); }
+        .modal-tab-count {
+          background: var(--surface2); border-radius: 4px;
+          padding: 1px 5px; font-size: 0.6rem;
+        }
+        .modal-body { overflow-y: auto; padding: 12px 16px; flex: 1; }
+        .modal-empty { color: var(--muted); font-size: 0.8rem; text-align: center; padding: 24px 0; }
+        .modal-item-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+        .modal-item {
+          font-size: 0.82rem; padding: 5px 8px;
+          border-radius: 4px; background: var(--surface2); color: var(--text);
+        }
+
         /* Scrollbar */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
@@ -1493,6 +1672,7 @@ export default function Page() {
                   allSlots={data?.allSlots ?? []}
                   allItems={data?.allWatchItems ?? []}
                   slotAliases={slotAliases}
+                  onViewInventory={setInventorySlot}
                   onWatchAdded={(w) => setWatches((ws) => [...ws, w])}
                   onWatchDeleted={(id) =>
                     setWatches((ws) => ws.filter((w) => w.id !== id))
@@ -1502,6 +1682,12 @@ export default function Page() {
           </main>
         </div>
       </div>
+      {inventorySlot && (
+        <InventoryModal
+          slot={inventorySlot}
+          onClose={() => setInventorySlot(null)}
+        />
+      )}
     </>
   );
 }

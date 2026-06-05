@@ -14,6 +14,7 @@ import type {
   Watch,
   ActiveWatch,
   SlotHint,
+  InventoryCategories,
 } from "@/lib/types";
 import { enumerateAllRoutes, resolveWatches } from "@/lib/enumerate";
 import { GOAL_CHECKPOINTS } from "@/lib/goals";
@@ -62,6 +63,121 @@ function buildSlotHints(
   }
 
   return hintsBySlot;
+}
+
+// ---------------------------------------------------------------------------
+// Item categorisation
+// ---------------------------------------------------------------------------
+
+const KEY_PATTERN = / Keys?( \d+)?$/;
+const GEM_PATTERN = /- Gem \d+$/;
+
+const CHECKPOINT_ITEMS = new Set([
+  "The Summit A - 500 M",
+  "The Summit A - 1000 M",
+  "The Summit A - 1500 M",
+  "The Summit A - 2000 M",
+  "The Summit A - 2500 M",
+  "The Summit A - 3000 M",
+  "The Summit B - 500 M",
+  "The Summit B - 1000 M",
+  "The Summit B - 1500 M",
+  "The Summit B - 2000 M",
+  "The Summit B - 2500 M",
+  "The Summit B - 3000 M",
+  "Core A - Into the Core",
+  "Core A - Hot and Cold",
+  "Core A - Heart of the Mountain",
+  "Core B - Into the Core",
+  "Core B - Burning or Freezing",
+  "Core B - Heartbeat",
+  "Farewell - Singular",
+  "Farewell - Power Source",
+  "Farewell - Remembered",
+  "Farewell - Event Horizon",
+  "Farewell - Determination",
+  "Farewell - Stubbornness",
+  "Farewell - Reconciliation",
+  "Farewell - Farewell",
+  "Forsaken City A - Crossing",
+  "Forsaken City A - Chasm",
+  "Forsaken City B - Contraption",
+  "Forsaken City B - Scrap Pit",
+  "Old Site A - Intervention",
+  "Old Site A - Awake",
+  "Old Site B - Combination Lock",
+  "Old Site B - Dream Altar",
+  "Celestial Resort A - Huge Mess",
+  "Celestial Resort A - Elevator Shaft",
+  "Celestial Resort A - Presidential Suite",
+  "Celestial Resort B - Staff Quarters",
+  "Celestial Resort B - Library",
+  "Celestial Resort B - Rooftop",
+  "Golden Ridge A - Shrine",
+  "Golden Ridge A - Old Trail",
+  "Golden Ridge A - Cliff Face",
+  "Golden Ridge B - Stepping Stones",
+  "Golden Ridge B - Gusty Canyon",
+  "Golden Ridge B - Eye of the Storm",
+  "Mirror Temple A - Unravelling",
+  "Mirror Temple A - Search",
+  "Mirror Temple A - Depths",
+  "Mirror Temple A - Rescue",
+  "Mirror Temple B - Central Chamber",
+  "Mirror Temple B - Through the Mirror",
+  "Mirror Temple B - Mix Master",
+  "Reflection A - Hollows",
+  "Reflection A - Reflection",
+  "Reflection A - Rock Bottom",
+  "Reflection A - Resolution",
+  "Reflection B - Rock Bottom",
+  "Reflection B - Reflection",
+  "Reflection B - Reprieve",
+]);
+
+const EXTRA_KEYS = new Set(["Granny's House Keys"]);
+
+function categoriseItem(name: string): keyof InventoryCategories {
+  if (CHECKPOINT_ITEMS.has(name)) return "checkpoints";
+  if (KEY_PATTERN.test(name) || GEM_PATTERN.test(name) || EXTRA_KEYS.has(name))
+    return "keysAndGems";
+  return "items";
+}
+
+function buildInventoryMap(
+  tracker: Tracker,
+  datapackage: Datapackage,
+): Map<string, InventoryCategories> {
+  const idToName = Object.fromEntries(
+    Object.entries(datapackage.item_name_to_id).map(([k, v]) => [v, k]),
+  );
+  const result = new Map<string, InventoryCategories>();
+
+  for (let i = 0; i < tracker.player_items_received.length; i++) {
+    const slotName = `Celeste${i + 1}`;
+    const cats: InventoryCategories = {
+      items: [],
+      keysAndGems: [],
+      checkpoints: [],
+    };
+    const seen = new Set<string>();
+
+    for (const [itemId, , , flags] of tracker.player_items_received[i]?.items ??
+      []) {
+      if (!(flags & 3)) continue;
+      const name = idToName[itemId];
+      if (!name || seen.has(name)) continue;
+      seen.add(name);
+      cats[categoriseItem(name)].push(name);
+    }
+
+    cats.items.sort();
+    cats.keysAndGems.sort();
+    cats.checkpoints.sort();
+    result.set(slotName, cats);
+  }
+
+  return result;
 }
 
 // No Next.js data cache — the 7MB tracker response exceeds its 2MB limit.
@@ -166,6 +282,10 @@ export async function GET(request: NextRequest) {
     tracker.aliases.map((a) => [a.player, a.alias]),
   );
 
+  // --- Build inventory map ---
+  const inventoryMap = buildInventoryMap(tracker, datapackage);
+  const inventoryBySlot = Object.fromEntries(inventoryMap);
+
   // --- Build hint map ---
   const hintsBySlot = buildSlotHints(tracker, datapackage, aliasMap);
 
@@ -213,5 +333,6 @@ export async function GET(request: NextRequest) {
     allWatchItems,
     hintsBySlot: hintsBySlotObj,
     slotAliasMap,
+    inventoryBySlot,
   });
 }
