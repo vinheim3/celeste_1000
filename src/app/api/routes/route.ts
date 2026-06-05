@@ -160,7 +160,7 @@ function buildInventoryMap(
       keysAndGems: [],
       checkpoints: [],
     };
-    const seen = new Set<string>();
+    const seen = new Set<string>(["Strawberry"]);
 
     for (const [itemId, , , flags] of tracker.player_items_received[i]?.items ??
       []) {
