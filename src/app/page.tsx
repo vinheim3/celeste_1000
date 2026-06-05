@@ -44,6 +44,7 @@ function groupRoutes(
   routes: GoalRoute[],
   hintsBySlot: Record<string, SlotHint[]>,
   inventoryBySlot: Record<string, InventoryCategories>,
+  omitSupersets: boolean = false,
 ): SlotResult[] {
   const map = new Map<string, SlotResult>();
   for (const r of routes) {
@@ -94,6 +95,25 @@ function groupRoutes(
   for (const slot of map.values()) {
     slot.hints = hintsBySlot[slot.slotName] ?? [];
     slot.inventory = inventoryBySlot[slot.slotName] ?? null;
+  }
+
+  // Optionally remove routes that are strict supersets of cheaper routes
+  if (omitSupersets) {
+    for (const slot of map.values()) {
+      slot.routes = slot.routes.filter((candidate) => {
+        const candidateSet = new Set(candidate.missingItems);
+        return !slot.routes.some((other) => {
+          if (other === candidate) return false;
+          const otherSet = new Set(other.missingItems);
+          if (otherSet.size >= candidateSet.size) return false;
+          return [...otherSet].every((item) => candidateSet.has(item));
+        });
+      });
+      slot.bestCount = Math.min(
+        ...slot.routes.map((r) => r.missingItems.length),
+        Infinity,
+      );
+    }
   }
 
   return [...map.values()].sort((a, b) => a.bestCount - b.bestCount);
@@ -806,6 +826,7 @@ export default function Page() {
   const [notes, setNotes] = useState<Record<string, string>>({});
   const [watches, setWatches] = useState<ActiveWatch[]>([]);
   const [inventorySlot, setInventorySlot] = useState<SlotResult | null>(null);
+  const [omitSupersets, setOmitSupersets] = useState(false);
 
   const fetchRoutes = useCallback(async () => {
     setLoading(true);
@@ -849,6 +870,7 @@ export default function Page() {
         data.routes,
         data.hintsBySlot ?? {},
         data.inventoryBySlot ?? {},
+        omitSupersets,
       )
     : [];
   const slotAliases = new Map(Object.entries(data?.slotAliasMap ?? {}));
@@ -1084,6 +1106,26 @@ export default function Page() {
         }
         .apply-btn:hover { opacity: 0.85; }
         .apply-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+        .toggle-label {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          font-family: var(--mono);
+          font-size: 0.7rem;
+          color: var(--muted);
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          cursor: pointer;
+          user-select: none;
+        }
+        .toggle-label input[type=checkbox] {
+          accent-color: var(--teal);
+          width: 13px;
+          height: 13px;
+          cursor: pointer;
+        }
+        .toggle-label:hover { color: var(--text); }
 
         .result-count {
           font-family: var(--mono);
@@ -1637,6 +1679,14 @@ export default function Page() {
             </div>
 
             <div className="sidebar-actions">
+              <label className="toggle-label">
+                <input
+                  type="checkbox"
+                  checked={omitSupersets}
+                  onChange={(e) => setOmitSupersets(e.target.checked)}
+                />
+                Hide supersets
+              </label>
               <button
                 className="apply-btn"
                 onClick={fetchRoutes}
