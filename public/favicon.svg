@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- left leaf pointing up-left -->
+  <ellipse cx="35" cy="20" rx="14" ry="7" fill="#77b255" transform="rotate(40 35 20)"/>
+  <!-- right leaf pointing up-right -->
+  <ellipse cx="65" cy="20" rx="14" ry="7" fill="#77b255" transform="rotate(-40 65 20)"/>
+  <!-- centre leaf flat -->
+  <ellipse cx="50" cy="20" rx="16" ry="7" fill="#5c913b"/>
+  <!-- stem nub -->
+  <rect x="48" y="12" width="4" height="8" rx="2" fill="#3d7317"/>
+  <!-- berry body -->
+  <path d="M18,34 Q14,50 18,64 Q24,82 50,90 Q76,82 82,64 Q86,50 82,34 Q66,24 50,26 Q34,24 18,34Z" fill="#dd2e44"/>
+  <!-- shadow side -->
+  <path d="M18,34 Q14,55 22,72 Q32,86 50,90 Q38,82 30,68 Q20,52 20,34Z" fill="#be1931" opacity="0.5"/>
+  <!-- seeds -->
+  <ellipse cx="36" cy="50" rx="3.5" ry="4" fill="#ffcc4d"/>
+  <ellipse cx="50" cy="45" rx="3.5" ry="4" fill="#ffcc4d"/>
+  <ellipse cx="64" cy="50" rx="3.5" ry="4" fill="#ffcc4d"/>
+  <ellipse cx="32" cy="64" rx="3.5" ry="4" fill="#ffcc4d"/>
+  <ellipse cx="46" cy="61" rx="3.5" ry="4" fill="#ffcc4d"/>
+  <ellipse cx="62" cy="64" rx="3.5" ry="4" fill="#ffcc4d"/>
+  <ellipse cx="40" cy="77" rx="3.5" ry="4" fill="#ffcc4d"/>
+  <ellipse cx="60" cy="77" rx="3.5" ry="4" fill="#ffcc4d"/>
+  <!-- 1k -->
+  <text x="50" y="86" text-anchor="middle"
+    font-family="'Space Mono', monospace" font-weight="700" font-size="68"
+    stroke="#000000" stroke-width="14" stroke-linejoin="round"
+    paint-order="stroke" fill="#ffffff">1k</text>
+</svg>
