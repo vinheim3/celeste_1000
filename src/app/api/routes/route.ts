@@ -199,6 +199,11 @@ export async function GET(request: NextRequest) {
     });
 
   const hintsBySlotObj = Object.fromEntries(hintsBySlot);
+  const slotAliasMap = Object.fromEntries(
+    [...aliasMap.entries()]
+      .filter(([, alias]) => alias)
+      .map(([player, alias]) => [`Celeste${player}`, alias]),
+  );
   return NextResponse.json({
     routes,
     allAliases,
@@ -207,5 +212,6 @@ export async function GET(request: NextRequest) {
     activeWatches,
     allWatchItems,
     hintsBySlot: hintsBySlotObj,
+    slotAliasMap,
   });
 }

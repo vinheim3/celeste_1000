@@ -32,6 +32,7 @@ interface ApiResponse {
   activeWatches: ActiveWatch[];
   allWatchItems: string[];
   hintsBySlot: Record<string, SlotHint[]>;
+  slotAliasMap: Record<string, string>;
 }
 
 // ---------------------------------------------------------------------------
@@ -491,9 +492,11 @@ function AddWatchForm({
 function WatchList({
   watches,
   onDeleted,
+  slotAliases,
 }: {
   watches: ActiveWatch[];
   onDeleted: (id: string) => void;
+  slotAliases: Map<string, string>;
 }) {
   if (watches.length === 0) return null;
 
@@ -516,7 +519,14 @@ function WatchList({
           <div className="watch-header-row">
             <span className="watch-for-label">watching</span>
             <span className={`watch-slot-name ${w.allMet ? "met" : ""}`}>
-              {w.watchSlot}
+              {slotAliases.get(w.watchSlot) ? (
+                <>
+                  {slotAliases.get(w.watchSlot)}{" "}
+                  <span className="watch-slot-sub">{w.watchSlot}</span>
+                </>
+              ) : (
+                w.watchSlot
+              )}
             </span>
             <button className="watch-delete" onClick={() => deleteWatch(w.id)}>
               ×
@@ -637,6 +647,7 @@ function SlotCard({
   watches,
   allSlots,
   allItems,
+  slotAliases,
   onWatchAdded,
   onWatchDeleted,
 }: {
@@ -645,6 +656,7 @@ function SlotCard({
   watches: ActiveWatch[];
   allSlots: string[];
   allItems: string[];
+  slotAliases: Map<string, string>;
   onWatchAdded: (w: ActiveWatch) => void;
   onWatchDeleted: (id: string) => void;
 }) {
@@ -679,7 +691,11 @@ function SlotCard({
         ))}
       </div>
       <SlotHints hints={slot.hints} />
-      <WatchList watches={watches} onDeleted={onWatchDeleted} />
+      <WatchList
+        watches={watches}
+        onDeleted={onWatchDeleted}
+        slotAliases={slotAliases}
+      />
       <AddWatchForm
         forSlot={slot.slotName}
         allSlots={allSlots}
@@ -745,6 +761,7 @@ export default function Page() {
   }, []);
 
   const grouped = data ? groupRoutes(data.routes, data.hintsBySlot ?? {}) : [];
+  const slotAliases = new Map(Object.entries(data?.slotAliasMap ?? {}));
 
   return (
     <>
@@ -1304,6 +1321,10 @@ export default function Page() {
         .watch-slot-name.met {
           color: var(--teal);
         }
+        .watch-slot-sub {
+          font-size: 0.7rem;
+          opacity: 0.6;
+        }
         .watch-delete {
           background: none;
           border: none;
@@ -1471,6 +1492,7 @@ export default function Page() {
                   watches={watches.filter((w) => w.forSlot === slot.slotName)}
                   allSlots={data?.allSlots ?? []}
                   allItems={data?.allWatchItems ?? []}
+                  slotAliases={slotAliases}
                   onWatchAdded={(w) => setWatches((ws) => [...ws, w])}
                   onWatchDeleted={(id) =>
                     setWatches((ws) => ws.filter((w) => w.id !== id))
