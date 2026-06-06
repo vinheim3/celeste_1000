@@ -15,6 +15,7 @@ import type {
   ActiveWatch,
   SlotHint,
   InventoryCategories,
+  ItemFinder,
 } from "@/lib/types";
 import { enumerateAllRoutes, resolveWatches } from "@/lib/enumerate";
 import { GOAL_CHECKPOINTS } from "@/lib/goals";
@@ -180,6 +181,34 @@ function buildInventoryMap(
   return result;
 }
 
+// ---------------------------------------------------------------------------
+// Chain traversal data
+// ---------------------------------------------------------------------------
+
+/**
+ * Reverse hint index: item name → all slots that hold it (as finding slot).
+ * Built from all hints regardless of filter so chain can traverse freely.
+ */
+function buildItemFinders(
+  hintsBySlot: Map<string, SlotHint[]>,
+): Map<string, ItemFinder[]> {
+  const map = new Map<string, ItemFinder[]>();
+  for (const hints of hintsBySlot.values()) {
+    for (const h of hints) {
+      if (!map.has(h.item)) map.set(h.item, []);
+      map.get(h.item)!.push({
+        item: h.item,
+        findingSlot: h.findingSlot,
+        findingAlias: h.findingAlias,
+        location: h.location,
+        receivingSlot: h.receivingSlot,
+        receivingAlias: h.receivingAlias,
+      });
+    }
+  }
+  return map;
+}
+
 // No Next.js data cache — the 7MB tracker response exceeds its 2MB limit.
 // Instead we keep a module-level in-process cache with a 60s TTL.
 // The serverless function stays warm between requests so this works reliably.
@@ -288,7 +317,7 @@ export async function GET(request: NextRequest) {
 
   // --- Build hint map ---
   const hintsBySlot = buildSlotHints(tracker, datapackage, aliasMap);
-
+  const itemFinders = buildItemFinders(hintsBySlot);
   // --- Run enumeration ---
   const routes = enumerateAllRoutes(
     tracker,
@@ -334,5 +363,6 @@ export async function GET(request: NextRequest) {
     hintsBySlot: hintsBySlotObj,
     slotAliasMap,
     inventoryBySlot,
+    itemFinders: Object.fromEntries(itemFinders),
   });
 }

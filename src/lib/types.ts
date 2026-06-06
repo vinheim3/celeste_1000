@@ -107,6 +107,16 @@ export interface InventoryCategories {
   checkpoints: string[]; // chapter checkpoint unlocks
 }
 
+// Item finder entry — who has this item and where
+export interface ItemFinder {
+  item: string;
+  findingSlot: string;
+  findingAlias: string | null;
+  location: string;
+  receivingSlot: string;
+  receivingAlias: string | null;
+}
+
 // A resolved hint for display against a slot
 export interface SlotHint {
   receivingSlot: string; // e.g. "Celeste518"

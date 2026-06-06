@@ -9,6 +9,7 @@ import type {
   WatchCondition,
   SlotHint,
   InventoryCategories,
+  ItemFinder,
 } from "@/lib/types";
 
 const GOAL_OPTIONS = [
@@ -35,6 +36,7 @@ interface ApiResponse {
   hintsBySlot: Record<string, SlotHint[]>;
   slotAliasMap: Record<string, string>;
   inventoryBySlot: Record<string, InventoryCategories>;
+  itemFinders: Record<string, ItemFinder[]>;
 }
 
 // ---------------------------------------------------------------------------
@@ -598,6 +600,78 @@ function WatchList({
 }
 
 // ---------------------------------------------------------------------------
+// Chain modal — hint dependency chain traversal
+// ---------------------------------------------------------------------------
+
+const MAX_DEPTH = 5;
+
+const formatSlot = (slot: string, alias: string | null) =>
+  alias ? `${alias} (${slot})` : slot;
+
+function ChainNodeRow({
+  item,
+  finder,
+  ancestors,
+  itemFinders,
+  hintsBySlot,
+  depth,
+}: {
+  item: string;
+  finder: ItemFinder;
+  ancestors: Set<string>;
+  itemFinders: Record<string, ItemFinder[]>;
+  hintsBySlot: Record<string, SlotHint[]>;
+  depth: number;
+}) {
+  const [expanded, setExpanded] = useState(false);
+  const isCycle = ancestors.has(finder.findingSlot);
+  // Children are the hints the finding slot has received themselves
+  const childHints = isCycle ? [] : (hintsBySlot[finder.findingSlot] ?? []);
+  const canExpand = !isCycle && depth < MAX_DEPTH && childHints.length > 0;
+  const nextAncestors = isCycle
+    ? ancestors
+    : new Set(ancestors).add(finder.findingSlot);
+
+  return (
+    <div className="chain-node" style={{ marginLeft: depth === 0 ? 0 : 16 }}>
+      <div
+        className={`chain-row ${canExpand ? "chain-row-expandable" : ""}`}
+        onClick={() => canExpand && setExpanded((e) => !e)}
+      >
+        <span className="chain-item">{item}</span>
+        <span className="chain-arrow">→</span>
+        <span className="chain-location">{finder.location}</span>
+        <span className="chain-in">in</span>
+        <span className="chain-finder">
+          {formatSlot(finder.findingSlot, finder.findingAlias)}
+        </span>
+        {canExpand && (
+          <span className="chain-expand-badge">
+            {expanded ? "▾ collapse" : "▸ show chain"}
+          </span>
+        )}
+      </div>
+      {expanded &&
+        childHints.map((childHint, i) =>
+          (itemFinders[childHint.item] ?? [])
+            .filter((f) => f.receivingSlot === finder.findingSlot)
+            .map((childFinder, j) => (
+              <ChainNodeRow
+                key={`${i}-${j}`}
+                item={childHint.item}
+                finder={childFinder}
+                ancestors={nextAncestors}
+                itemFinders={itemFinders}
+                hintsBySlot={hintsBySlot}
+                depth={depth + 1}
+              />
+            )),
+        )}
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
 // Inventory modal
 // ---------------------------------------------------------------------------
 const INV_TABS = ["Items", "Keys / Gems", "Checkpoints"] as const;
@@ -671,26 +745,47 @@ function InventoryModal({
 // ---------------------------------------------------------------------------
 // Slot hints
 // ---------------------------------------------------------------------------
-function SlotHints({ hints }: { hints: SlotHint[] }) {
+function SlotHints({
+  hints,
+  itemFinders,
+  hintsBySlot,
+}: {
+  hints: SlotHint[];
+  itemFinders: Record<string, ItemFinder[]>;
+  hintsBySlot: Record<string, SlotHint[]>;
+}) {
   if (hints.length === 0) return null;
 
-  const formatSlot = (slot: string, alias: string | null) =>
-    alias ? `${alias} (${slot})` : slot;
+  // Deduplicate hints by item+location+findingSlot — strawberries can appear
+  // multiple times in missingItems but represent the same hint
+  const seen = new Set<string>();
+  const uniqueHints = hints.filter((h) => {
+    const key = `${h.item}|${h.location}|${h.findingSlot}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 
   return (
     <div className="slot-hints">
       <div className="slot-hints-label">hints</div>
-      {hints.map((h, i) => (
-        <div key={i} className="hint-row">
-          <span className="hint-item">{h.item}</span>
-          <span className="hint-arrow">→</span>
-          <span className="hint-location">{h.location}</span>
-          <span className="hint-in">in</span>
-          <span className="hint-finder">
-            {formatSlot(h.findingSlot, h.findingAlias)}
-          </span>
-        </div>
-      ))}
+      {uniqueHints.map((h, i) => {
+        const finders = (itemFinders[h.item] ?? []).filter(
+          (f) =>
+            f.receivingSlot === h.receivingSlot && f.location === h.location,
+        );
+        return finders.map((finder, j) => (
+          <ChainNodeRow
+            key={`${i}-${j}`}
+            item={h.item}
+            finder={finder}
+            ancestors={new Set([h.receivingSlot])}
+            itemFinders={itemFinders}
+            hintsBySlot={hintsBySlot}
+            depth={0}
+          />
+        ));
+      })}
     </div>
   );
 }
@@ -744,6 +839,8 @@ function SlotCard({
   allSlots,
   allItems,
   slotAliases,
+  itemFinders,
+  hintsBySlot,
   onViewInventory,
   onWatchAdded,
   onWatchDeleted,
@@ -754,6 +851,8 @@ function SlotCard({
   allSlots: string[];
   allItems: string[];
   slotAliases: Map<string, string>;
+  itemFinders: Record<string, ItemFinder[]>;
+  hintsBySlot: Record<string, SlotHint[]>;
   onViewInventory: (slot: SlotResult) => void;
   onWatchAdded: (w: ActiveWatch) => void;
   onWatchDeleted: (id: string) => void;
@@ -793,7 +892,11 @@ function SlotCard({
           <RoutePill key={i} route={r} />
         ))}
       </div>
-      <SlotHints hints={slot.hints} />
+      <SlotHints
+        hints={slot.hints}
+        itemFinders={itemFinders}
+        hintsBySlot={hintsBySlot}
+      />
       <WatchList
         watches={watches}
         onDeleted={onWatchDeleted}
@@ -1608,6 +1711,44 @@ export default function Page() {
           border-radius: 4px; background: var(--surface2); color: var(--text);
         }
 
+        /* Chain */
+        .chain-node { border-left: 1px solid var(--border); margin-bottom: 2px; }
+        .chain-row {
+          display: flex; flex-wrap: wrap; align-items: center; gap: 5px;
+          padding: 5px 8px; border-radius: var(--radius); cursor: default;
+          font-size: 0.8rem; transition: background 0.1s;
+        }
+        .chain-row:hover { background: var(--surface2); }
+        .chain-row-expandable {
+          cursor: pointer;
+          border-left: 2px solid var(--teal);
+          padding-left: 6px;
+        }
+        .chain-row-expandable:hover { background: color-mix(in srgb, var(--teal) 8%, var(--surface2)); }
+        .chain-item { color: var(--teal); font-weight: 500; }
+        .chain-arrow, .chain-in { color: var(--muted); font-family: var(--mono); font-size: 0.7rem; }
+        .chain-location { color: var(--text); }
+        .chain-finder { color: var(--gold); font-family: var(--mono); font-size: 0.72rem; }
+        .chain-slot-status { margin-left: auto; }
+        .chain-ready { color: var(--teal); font-family: var(--mono); font-size: 0.7rem; }
+        .chain-needs { color: var(--gold); font-family: var(--mono); font-size: 0.7rem; }
+        .chain-expand-badge {
+          margin-left: auto;
+          font-family: var(--mono);
+          font-size: 0.62rem;
+          color: var(--teal);
+          background: color-mix(in srgb, var(--teal) 12%, transparent);
+          border: 1px solid color-mix(in srgb, var(--teal) 30%, transparent);
+          border-radius: 4px;
+          padding: 1px 6px;
+          white-space: nowrap;
+        }
+        .chain-item-link {
+          cursor: pointer; text-decoration: underline;
+          text-decoration-style: dotted; text-underline-offset: 2px;
+        }
+        .chain-item-link:hover { color: var(--teal); }
+
         /* Scrollbar */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
@@ -1722,6 +1863,8 @@ export default function Page() {
                   allSlots={data?.allSlots ?? []}
                   allItems={data?.allWatchItems ?? []}
                   slotAliases={slotAliases}
+                  itemFinders={data?.itemFinders ?? {}}
+                  hintsBySlot={data?.hintsBySlot ?? {}}
                   onViewInventory={setInventorySlot}
                   onWatchAdded={(w) => setWatches((ws) => [...ws, w])}
                   onWatchDeleted={(id) =>
