@@ -271,10 +271,12 @@ export function resolveWatches(
 
     const inventory = buildInventory(tracker, datapackage, idx);
 
+    const strawberriesHave = inventory.get("Strawberry") ?? 0;
+
     const condMet = (cond: WatchCondition) =>
       cond.type === "item"
         ? inventory.has(cond.item)
-        : (inventory.get("Strawberry") ?? 0) >= cond.count;
+        : strawberriesHave >= cond.count;
 
     const andMet = watch.conditions.filter(condMet);
     const andUnmet = watch.conditions.filter((c) => !condMet(c));
@@ -289,7 +291,15 @@ export function resolveWatches(
 
     const allMet = andGroupMet && orGroupMet;
 
-    active.push({ ...watch, andMet, andUnmet, orMet, orUnmet, allMet });
+    active.push({
+      ...watch,
+      andMet,
+      andUnmet,
+      orMet,
+      orUnmet,
+      allMet,
+      strawberriesHave,
+    });
   }
 
   return { active };

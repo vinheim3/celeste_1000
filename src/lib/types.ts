@@ -165,4 +165,5 @@ export interface ActiveWatch extends Watch {
   orMet: WatchCondition[]; // OR conditions already satisfied
   orUnmet: WatchCondition[]; // OR conditions not yet satisfied
   allMet: boolean; // true when both AND and OR groups are satisfied
+  strawberriesHave: number;
 }

@@ -536,8 +536,8 @@ function WatchList({
     onDeleted(id);
   };
 
-  const condLabel = (c: WatchCondition) =>
-    c.type === "item" ? c.item : `🍓 ≥ ${c.count}`;
+  const condLabel = (c: WatchCondition, strawberriesHave: number) =>
+    c.type === "item" ? c.item : `🍓: ${strawberriesHave}/${c.count}`;
 
   return (
     <div className="watch-list">
@@ -565,12 +565,12 @@ function WatchList({
               <div className="watch-conditions">
                 {w.andUnmet.map((c, i) => (
                   <span key={i} className="watch-cond-chip unmet">
-                    {condLabel(c)}
+                    {condLabel(c, w.strawberriesHave)}
                   </span>
                 ))}
                 {w.andMet.map((c, i) => (
                   <span key={i} className="watch-cond-chip met">
-                    {condLabel(c)}
+                    {condLabel(c, w.strawberriesHave)}
                   </span>
                 ))}
               </div>
@@ -582,12 +582,12 @@ function WatchList({
               <div className="watch-conditions">
                 {w.orUnmet.map((c, i) => (
                   <span key={i} className="watch-cond-chip unmet">
-                    {condLabel(c)}
+                    {condLabel(c, w.strawberriesHave)}
                   </span>
                 ))}
                 {w.orMet.map((c, i) => (
                   <span key={i} className="watch-cond-chip met">
-                    {condLabel(c)}
+                    {condLabel(c, w.strawberriesHave)}
                   </span>
                 ))}
               </div>
