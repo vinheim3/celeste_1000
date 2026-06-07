@@ -106,11 +106,11 @@ export function enumerateGoalRoutes(
         ? [cpItem]
         : [];
 
-    const perRoomOptions: Route[][] = cp.rooms.map((roomRoutes) => {
-      const valid = roomRoutes.filter(
+    const perRoomOptions: Route[][] = cp.rooms.map((room) => {
+      const valid = room.routes.filter(
         (r) => !routeIsBlocked(inventory, r, keysanity),
       );
-      return valid.length > 0 ? valid : roomRoutes;
+      return valid.length > 0 ? valid : room.routes;
     });
 
     if (perRoomOptions.length === 0) {

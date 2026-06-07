@@ -5,9 +5,14 @@ export interface Route {
   is_dts?: boolean;
 }
 
+export interface Room {
+  room_name: string;
+  routes: Route[];
+}
+
 export interface Checkpoint {
   item: string | null;
-  rooms: Route[][];
+  rooms: Room[];
 }
 
 export interface GoalDef {
