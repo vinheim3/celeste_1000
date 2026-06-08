@@ -32,6 +32,7 @@ export interface GoalRoute {
   isDts: boolean;
   checkedLocations: number;
   totalLocations: number;
+  hintsAvailable: number;
 }
 
 // Grouped by slot for the UI
@@ -44,6 +45,7 @@ export interface SlotResult {
   bestCount: number; // length of shortest route, for sorting
   checkedLocations: number;
   totalLocations: number;
+  hintsAvailable: number;
   hints: SlotHint[];
   inventory: InventoryCategories | null;
 }

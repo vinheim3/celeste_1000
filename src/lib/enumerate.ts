@@ -124,6 +124,7 @@ export function enumerateGoalRoutes(
         isDts: false,
         checkedLocations: 0,
         totalLocations: 0,
+        hintsAvailable: 0,
       });
       continue;
     }
@@ -158,6 +159,7 @@ export function enumerateGoalRoutes(
         isDts: dts,
         checkedLocations: 0,
         totalLocations: 0,
+        hintsAvailable: 0,
       });
     }
   }
@@ -177,6 +179,7 @@ export function enumerateAllRoutes(
   goalCheckpointsanityList: boolean[],
   aliasMap: Map<number, string>,
   filter: Filter,
+  hintsSentBySlot: Map<string, number> = new Map(),
 ): GoalRoute[] {
   const numPlayers = tracker.player_items_received.length;
   const allViable: GoalRoute[] = [];
@@ -244,9 +247,24 @@ export function enumerateAllRoutes(
       tracker.player_checks_done[i]?.locations.length ?? 0;
     const totalLocations = totalLocMap.get(playerNum) ?? 0;
 
-    // Attach alias and location counts
+    const HINT_COST_PCT = 0.1;
+    const hintCostPerPoint = Math.max(
+      1,
+      Math.floor(totalLocations * HINT_COST_PCT),
+    );
+    const hintPointsEarned = Math.floor(checkedLocations / hintCostPerPoint);
+    const hintsSent = hintsSentBySlot.get(slotName) ?? 0;
+    const hintsAvailable = Math.max(0, hintPointsEarned - hintsSent);
+
+    // Attach alias, location counts, and hint availability
     for (const r of viable) {
-      allViable.push({ ...r, alias, checkedLocations, totalLocations });
+      allViable.push({
+        ...r,
+        alias,
+        checkedLocations,
+        totalLocations,
+        hintsAvailable,
+      });
     }
   }
 

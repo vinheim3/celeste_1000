@@ -60,6 +60,7 @@ function groupRoutes(
         bestCount: Infinity,
         checkedLocations: r.checkedLocations,
         totalLocations: r.totalLocations,
+        hintsAvailable: r.hintsAvailable,
         hints: [],
         inventory: null,
       });
@@ -876,6 +877,9 @@ function SlotCard({
           )}
           <span className="loc-count">
             ({slot.checkedLocations}/{slot.totalLocations})
+          </span>
+          <span className="hints-available" title="hint points available">
+            {slot.hintsAvailable}✦
           </span>
         </span>
         <span className="best-count">

@@ -323,6 +323,11 @@ input[type="number"].filter-input {
   font-family: var(--mono);
   font-size: 0.7rem;
 }
+.hints-available {
+  color: var(--gold);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+}
 .best-count {
   font-family: var(--mono);
   font-size: 0.7rem;

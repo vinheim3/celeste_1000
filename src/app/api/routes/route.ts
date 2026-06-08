@@ -311,6 +311,21 @@ export async function GET(request: NextRequest) {
     tracker.aliases.map((a) => [a.player, a.alias]),
   );
 
+  // Count hints spent per receiving slot (hint points are spent by the requester,
+  // and found hints still cost points — so we read raw from tracker, not hintsBySlot)
+  const hintsSentBySlot = new Map<string, number>();
+  for (const playerHints of tracker.hints) {
+    for (const hint of playerHints.hints) {
+      const [receivingIdx, , , , , , ,] = hint;
+      if (receivingIdx !== playerHints.player) continue; // deduplicate
+      const receivingSlot = `Celeste${receivingIdx}`;
+      hintsSentBySlot.set(
+        receivingSlot,
+        (hintsSentBySlot.get(receivingSlot) ?? 0) + 1,
+      );
+    }
+  }
+
   // --- Build inventory map ---
   const inventoryMap = buildInventoryMap(tracker, datapackage);
   const inventoryBySlot = Object.fromEntries(inventoryMap);
@@ -327,6 +342,7 @@ export async function GET(request: NextRequest) {
     goalCheckpointsanityList,
     aliasMap,
     filter,
+    hintsSentBySlot,
   );
 
   // --- Build available filter options for the UI ---
