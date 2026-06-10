@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Celeste Goaling",
   description: "Route finder for the 1000-player Celeste async",
   icons: { icon: "/favicon.svg" },
+  other: { "theme-color": "#e8325a" },
 };
 
 export default function RootLayout({
