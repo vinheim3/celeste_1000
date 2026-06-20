@@ -349,7 +349,7 @@ export async function GET(request: NextRequest) {
   // These come from the full unfiltered slot data so the dropdowns are always complete
   const allAliases = [
     ...new Set([...aliasMap.values()].filter(Boolean)),
-  ].sort();
+  ].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
 
   const allSlots = slotDataList
     .map((_, i) => `Celeste${i + 1}`)
