@@ -200,12 +200,13 @@ export function enumerateAllRoutes(
 
     if (!goalArea || !GOAL_CHECKPOINTS[goalArea]) continue;
 
-    const inventory = buildInventory(tracker, datapackage, i);
-    const strawbRequired = slotData.strawberries_required ?? 0;
-    const strawbHave = inventory.get("Strawberry") ?? 0;
-    if (inventory.has("Granny's House Keys") && strawbHave >= strawbRequired)
-      continue;
+    const playerNum = i + 1;
+    const checkedLocations =
+      tracker.player_checks_done[i]?.locations.length ?? 0;
+    const totalLocations = totalLocMap.get(playerNum) ?? 0;
+    if (totalLocations > 0 && checkedLocations >= totalLocations) continue;
 
+    const inventory = buildInventory(tracker, datapackage, i);
     const alias = aliasMap.get(i + 1) ?? null;
 
     // Alias filter: skip if alias doesn't match
@@ -241,11 +242,6 @@ export function enumerateAllRoutes(
       filter.mode === "threshold"
         ? routes.filter((r) => r.missingItems.length <= (filter.threshold ?? 3))
         : routes;
-
-    const playerNum = i + 1;
-    const checkedLocations =
-      tracker.player_checks_done[i]?.locations.length ?? 0;
-    const totalLocations = totalLocMap.get(playerNum) ?? 0;
 
     const HINT_COST_PCT = 0.1;
     const hintCostPerPoint = Math.max(
