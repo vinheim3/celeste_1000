@@ -773,7 +773,9 @@ function SlotHints({
       {uniqueHints.map((h, i) => {
         const finders = (itemFinders[h.item] ?? []).filter(
           (f) =>
-            f.receivingSlot === h.receivingSlot && f.location === h.location,
+            f.receivingSlot === h.receivingSlot &&
+            f.location === h.location &&
+            f.findingSlot === h.findingSlot,
         );
         return finders.map((finder, j) => (
           <ChainNodeRow
