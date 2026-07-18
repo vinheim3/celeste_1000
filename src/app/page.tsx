@@ -609,6 +609,18 @@ const MAX_DEPTH = 5;
 const formatSlot = (slot: string, alias: string | null) =>
   alias ? `${alias} (${slot})` : slot;
 
+// Strawberries (and other items) can appear multiple times in missingItems
+// but represent the same hint — dedupe by item+location+findingSlot.
+function dedupeHints(hints: SlotHint[]): SlotHint[] {
+  const seen = new Set<string>();
+  return hints.filter((h) => {
+    const key = `${h.item}|${h.location}|${h.findingSlot}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 function ChainNodeRow({
   item,
   finder,
@@ -626,8 +638,11 @@ function ChainNodeRow({
 }) {
   const [expanded, setExpanded] = useState(false);
   const isCycle = ancestors.has(finder.findingSlot);
-  // Children are the hints the finding slot has received themselves
-  const childHints = isCycle ? [] : (hintsBySlot[finder.findingSlot] ?? []);
+  // Children are the hints the finding slot has received themselves,
+  // deduplicated by item+location+findingSlot (see SlotHints for why).
+  const childHints = isCycle
+    ? []
+    : dedupeHints(hintsBySlot[finder.findingSlot] ?? []);
   const canExpand = !isCycle && depth < MAX_DEPTH && childHints.length > 0;
   const nextAncestors = isCycle
     ? ancestors
@@ -655,7 +670,12 @@ function ChainNodeRow({
       {expanded &&
         childHints.map((childHint, i) =>
           (itemFinders[childHint.item] ?? [])
-            .filter((f) => f.receivingSlot === finder.findingSlot)
+            .filter(
+              (f) =>
+                f.receivingSlot === finder.findingSlot &&
+                f.location === childHint.location &&
+                f.findingSlot === childHint.findingSlot,
+            )
             .map((childFinder, j) => (
               <ChainNodeRow
                 key={`${i}-${j}`}
@@ -757,15 +777,7 @@ function SlotHints({
 }) {
   if (hints.length === 0) return null;
 
-  // Deduplicate hints by item+location+findingSlot — strawberries can appear
-  // multiple times in missingItems but represent the same hint
-  const seen = new Set<string>();
-  const uniqueHints = hints.filter((h) => {
-    const key = `${h.item}|${h.location}|${h.findingSlot}`;
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  });
+  const uniqueHints = dedupeHints(hints);
 
   return (
     <div className="slot-hints">
