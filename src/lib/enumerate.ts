@@ -95,14 +95,36 @@ export function enumerateGoalRoutes(
 
   const results: GoalRoute[] = [];
 
+  // Mid-chapter checkpoint routes (cp.item !== null) let a run start partway
+  // through the chapter. They're offered when:
+  //  - the goal chapter's checkpoints are gated items (checkpointsanity +
+  //    goalCheckpointsanity) — the checkpoint item is then counted as missing
+  //    until it's received; or
+  //  - a DTS runner already has everything needed to clear the chapter from the
+  //    start, so they could equally DTS to any checkpoint and unlock it.
+  //    Whoever picks the slot up afterwards can continue from there without DTS,
+  //    so the (usually non-DTS) checkpoint routes are worth surfacing.
+  const goalCheckpointsGated = checkpointsanity && goalCheckpointsanity;
+
+  const startRouteClear = (r: Route): boolean =>
+    !routeIsBlocked(inventory, r, keysanity) &&
+    missingFromRoute(inventory, r, freeItems).length === 0;
+  const startCp = goalDef.checkpoints.find((cp) => cp.item === null);
+  const canDtsClearFromStart =
+    !!startCp &&
+    startCp.rooms.every((room) => room.routes.some(startRouteClear)) &&
+    startCp.rooms.some((room) =>
+      room.routes.some((r) => (r.is_dts ?? false) && startRouteClear(r)),
+    );
+
   for (const cp of goalDef.checkpoints) {
     const cpItem = cp.item;
 
-    if (cpItem !== null && !(checkpointsanity && goalCheckpointsanity))
+    if (cpItem !== null && !goalCheckpointsGated && !canDtsClearFromStart)
       continue;
 
     const cpMissing: string[] =
-      checkpointsanity && cpItem !== null && !inventory.has(cpItem)
+      goalCheckpointsGated && cpItem !== null && !inventory.has(cpItem)
         ? [cpItem]
         : [];
 
