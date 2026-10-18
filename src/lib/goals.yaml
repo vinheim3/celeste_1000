@@ -465,6 +465,25 @@
                   Dream Blocks,
                   Badeline Boosters,
                 ]
+            - requires:
+                [
+                  Pufferfish,
+                  Blue Clouds,
+                  Coins,
+                  Jellyfish,
+                  Springs,
+                  Swap Blocks,
+                  "Farewell - Power Source Key 1",
+                  "Farewell - Power Source Key 2",
+                  "Farewell - Power Source Key 3",
+                  "Farewell - Power Source Key 4",
+                  "Farewell - Power Source Key 5",
+                  Double Dash Refills,
+                  Red Boosters,
+                  Dream Blocks,
+                  Badeline Boosters,
+                ]
+              if_keysanity: true
             - requires: [
                   Pufferfish,
                   Coins,
@@ -479,6 +498,25 @@
                   Dash Refills,
                 ]
               is_dts: true
+            - requires:
+                [
+                  Pufferfish,
+                  Coins,
+                  Jellyfish,
+                  Swap Blocks,
+                  "Farewell - Power Source Key 1",
+                  "Farewell - Power Source Key 2",
+                  "Farewell - Power Source Key 3",
+                  "Farewell - Power Source Key 4",
+                  "Farewell - Power Source Key 5",
+                  Double Dash Refills,
+                  Red Boosters,
+                  Dream Blocks,
+                  Dash Switches,
+                  Dash Refills,
+                ]
+              if_keysanity: true
+              is_dts: true
             - requires: [
                   Pufferfish,
                   Coins,
@@ -491,6 +529,24 @@
                   Dream
                   Blocks,
                 ]
+              is_dts: true
+            - requires:
+                [
+                  Pufferfish,
+                  Coins,
+                  Jellyfish,
+                  Springs,
+                  Swap Blocks,
+                  "Farewell - Power Source Key 1",
+                  "Farewell - Power Source Key 2",
+                  "Farewell - Power Source Key 3",
+                  "Farewell - Power Source Key 4",
+                  "Farewell - Power Source Key 5",
+                  Double Dash Refills,
+                  Red Boosters,
+                  Dream Blocks,
+                ]
+              if_keysanity: true
               is_dts: true
             - requires: [
                   Pufferfish,
@@ -539,6 +595,24 @@
                   Boosters,
                   Dream Blocks,
                 ]
+            - requires:
+                [
+                  Pufferfish,
+                  Blue Clouds,
+                  Coins,
+                  Jellyfish,
+                  Springs,
+                  Swap Blocks,
+                  "Farewell - Power Source Key 1",
+                  "Farewell - Power Source Key 2",
+                  "Farewell - Power Source Key 3",
+                  "Farewell - Power Source Key 4",
+                  "Farewell - Power Source Key 5",
+                  Double Dash Refills,
+                  Red Boosters,
+                  Dream Blocks,
+                ]
+              if_keysanity: true
     - item: "Farewell - Power Source"
       rooms:
         - room_name: All rooms
@@ -556,6 +630,23 @@
                   Red
                   Boosters,
                 ]
+            - requires:
+                [
+                  Pufferfish,
+                  Blue Clouds,
+                  Coins,
+                  Jellyfish,
+                  Springs,
+                  Swap Blocks,
+                  "Farewell - Power Source Key 1",
+                  "Farewell - Power Source Key 2",
+                  "Farewell - Power Source Key 3",
+                  "Farewell - Power Source Key 4",
+                  "Farewell - Power Source Key 5",
+                  Double Dash Refills,
+                  Red Boosters,
+                ]
+              if_keysanity: true
     - item: "Farewell - Remembered"
       rooms:
         - room_name: All rooms
